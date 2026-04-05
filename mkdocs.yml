@@ -1,0 +1,16 @@
+site_name: Charithw's WF Guide Hub
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+  font:
+    text: Lato
+    code: Roboto Mono
+  features:
+    - navigation.top
+    - navigation.tracking
+
+extra_css:
+  - stylesheets/extra.css
