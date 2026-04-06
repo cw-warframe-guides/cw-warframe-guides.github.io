@@ -2,9 +2,12 @@
 
 {% block extrahead %}
 <style>
-  /* Hide left nav sidebar on home page only */
-  .md-sidebar--primary { display: none !important; }
-  .md-main__inner { margin-left: 0 !important; }
+  /* Hide both sidebars on home page only */
+  .md-sidebar--primary,
+  .md-sidebar--secondary { display: none !important; }
+  /* Let the content column fill the full width */
+  .md-main__inner { margin: 0 !important; }
+  .md-content { max-width: 100% !important; }
 </style>
 {% endblock %}
 
@@ -12,5 +15,7 @@
 <div class="hero-banner">
   <div class="hero-title">Charithw's Guide Hub</div>
 </div>
-{{ super() }}
+<div class="md-typeset home-body">
+  {{ page.content }}
+</div>
 {% endblock %}

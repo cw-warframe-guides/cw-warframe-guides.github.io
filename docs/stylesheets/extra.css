@@ -55,6 +55,10 @@ a {
 /* ── Home page hero banner ───────────────────────── */
 .hero-banner {
   position: relative;
+  /* Full-width escape: breaks out of any content column constraints */
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
   background-image: url('../images/entrati.png');
   background-size: cover;
   background-position: center center;
@@ -62,8 +66,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* break out of the article's side padding and sit flush */
-  margin: -1.6rem -1.6rem 2.5rem;
+  margin-bottom: 2.5rem;
   overflow: hidden;
 }
 
@@ -94,10 +97,15 @@ a {
   white-space: nowrap;
 }
 
-/* Hide any H1 MkDocs/Material renders in the article on the home page.
-   Using h1 (not h1:first-child) because Material may prepend an edit-link
-   anchor before the H1, making it not the literal :first-child. */
-.hero-banner ~ article h1 {
+/* Home page body: centered prose with a comfortable max-width */
+.home-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+/* Hide the H1 that MkDocs injects from the markdown or page title */
+.home-body h1 {
   display: none;
 }
 
@@ -109,4 +117,8 @@ a {
 .md-footer,
 body {
   background-color: #1c1c1c !important;
+}
+
+body {
+  overflow-x: hidden;
 }
