@@ -11,6 +11,10 @@ theme:
   features:
     - navigation.top
     - navigation.tracking
+    - navigation.tabs
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap
