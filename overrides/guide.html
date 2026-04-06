@@ -8,9 +8,12 @@
   /* Hide Material footer generator line */
   .md-footer-meta { display: none !important; }
 
-  /* Reduce right gutter so TOC sits closer to the right edge */
-  .md-main__inner {
-    margin-right: 1.5rem !important;
+  /* Fix TOC into the right gutter, out of the content flow */
+  .md-sidebar--secondary {
+    position: fixed !important;
+    right: 1.5rem !important;
+    top: 3.5rem !important;
+    width: 12.1rem !important;
   }
 
   /* Text + image side by side, image vertically centered */
