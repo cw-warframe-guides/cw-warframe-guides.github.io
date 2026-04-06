@@ -26,7 +26,7 @@ As mentioned in the overview, each puzzle centers around a Paragrimm Hutch (as s
 
 > **Note:** Multiplayer puzzles will have the Hutch initially closed, and will require two players to interact with the side panels of the Hutch to open it.
 
-<div class="guide-text-image">
+<div class="guide-text-image" markdown="1">
 <div class="guide-text-image__text" markdown="1">
 
 There are many variations to these puzzles, including:
