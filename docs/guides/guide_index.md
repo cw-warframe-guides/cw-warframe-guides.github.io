@@ -24,6 +24,36 @@ template: guide-index.html
       </ul>
     </div>
 
+    <div class="guide-category" id="other">
+      <h2>Other</h2>
+      <ul>
+        <li><span class="wip">Platinum Farming Guide (WIP)</span></li>
+        <li><span class="wip">Affinity Farming (WIP)</span></li>
+      </ul>
+    </div>
+
+    <div class="guide-category" id="learning-to-mod">
+      <h2>Learning to Mod</h2>
+      <ul>
+        <li><span class="wip">Learning to Mod: Basics (WIP)</span></li>
+        <li><span class="wip">Learning to Mod: Advanced Concepts (WIP)</span></li>
+        <li><span class="wip">Learning to Mod: A Checklist for Melees (WIP)</span></li>
+        <li><span class="wip">Learning to Mod: A Checklist for Guns (WIP)</span></li>
+        <li><span class="wip">Learning to Mod: A Checklist for Warframes (WIP)</span></li>
+        <li><span class="wip">Learning to Mod: Damage Types &amp; Status Effects (WIP)</span></li>
+      </ul>
+    </div>
+
+    <div class="guide-category" id="tools">
+      <h2>Tools</h2>
+      <ul>
+        <li><span class="wip">WFcolorpicker (WIP)</span></li>
+        <li><span class="wip">AlecaFrame (WIP)</span></li>
+        <li><span class="wip">Warframe.Market! Trading Made Easy! (WIP)</span></li>
+        <li><span class="wip">Galvanized Gun CO Spreadsheet (WIP)</span></li>
+      </ul>
+    </div>
+
   </div>
 
   <aside class="guide-index-sidebar">
@@ -31,6 +61,9 @@ template: guide-index.html
     <ul>
       <li><a href="#puzzles-challenges">Puzzles &amp; Challenges</a></li>
       <li><a href="#late-game-systems">Late Game Systems</a></li>
+      <li><a href="#other">Other</a></li>
+      <li><a href="#learning-to-mod">Learning to Mod</a></li>
+      <li><a href="#tools">Tools</a></li>
     </ul>
   </aside>
 
