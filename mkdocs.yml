@@ -20,8 +20,7 @@ extra_css:
 nav:
   - Home: index.md
   - Guide Index: guides/guide_index.md
-  - Guides:
-    - Duviri Enigmas: guides/duviri-enigmas.md
+  - Duviri Enigmas: guides/duviri-enigmas.md
 
 extra_javascript:
   - https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap

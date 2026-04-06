@@ -1,3 +1,7 @@
+---
+template: guide-index.html
+---
+
 # Guide Index
 
 <div class="guide-index">
