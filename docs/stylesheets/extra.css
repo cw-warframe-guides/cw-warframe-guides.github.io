@@ -173,10 +173,53 @@ body {
 }
 
 /* ── Guide Index ──────────────────────────────────── */
-.guide-index {
-  max-width: 700px;
+.guide-index-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.guide-index-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.guide-index-sidebar {
+  position: sticky;
+  top: 4.5rem;
+  width: 175px;
+  flex-shrink: 0;
+  border-left: 1.5px solid #b59d47;
+  padding-left: 1rem;
+}
+
+.sidebar-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: #b59d47;
+  margin-bottom: 0.6rem;
+}
+
+.guide-index-sidebar ul {
+  list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.guide-index-sidebar li {
+  padding: 0.2rem 0;
+}
+
+.guide-index-sidebar a {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  color: #b59d47 !important;
+  text-decoration: none !important;
+}
+
+.guide-index-sidebar a:hover {
+  color: #dbd2ad !important;
 }
 
 .guide-category {
@@ -195,7 +238,7 @@ body {
 .guide-category ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-left: 0.4rem;
 }
 
 .guide-category li {
