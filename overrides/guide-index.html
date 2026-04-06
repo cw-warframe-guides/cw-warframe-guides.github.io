@@ -2,7 +2,8 @@
 
 {% block extrahead %}
 <style>
-  .md-sidebar--primary { display: none !important; }
+  .md-sidebar--primary,
+  .md-sidebar--secondary { display: none !important; }
 
   /* Equal left/right gutters */
   .md-content__inner {
@@ -10,12 +11,10 @@
     padding-right: 2rem !important;
   }
 
-  /* Larger page title, centered relative to the viewport not the content column */
+  /* Larger page title, centered across the full content width */
   .md-content h1 {
     font-size: 2rem !important;
     text-align: center;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
   }
 
   /* Hide Material footer generator line */
