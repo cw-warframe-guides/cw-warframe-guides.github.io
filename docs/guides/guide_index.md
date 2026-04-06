@@ -11,7 +11,7 @@ template: guide-index.html
     <div class="guide-category" id="puzzles-challenges">
       <h2>Puzzles &amp; Challenges</h2>
       <ul>
-        <li><a href="../guides/duviri-enigmas/">Duviri Enigmas</a></li>
+        <li><a href="../duviri-enigmas/">Duviri Enigmas</a></li>
         <li><a href="#">Gas City Labs</a></li>
         <li><span class="wip">Halls of Ascension (WIP)</span></li>
       </ul>
