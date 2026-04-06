@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+
+{% block extrahead %}
+<style>
+  /* Hide left nav sidebar */
+  .md-sidebar--primary { display: none !important; }
+
+  /* Hide Material footer generator line */
+  .md-footer-meta { display: none !important; }
+
+  /* TOC sidebar: "Table of contents" label */
+  .md-sidebar--secondary .md-nav__title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.85rem !important;
+    color: #b59d47 !important;
+    letter-spacing: 0.05em;
+  }
+</style>
+{% endblock %}

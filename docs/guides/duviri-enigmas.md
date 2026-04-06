@@ -1,3 +1,7 @@
+---
+template: guide.html
+---
+
 # Duviri Enigmas
 
 ## Overview
@@ -6,23 +10,13 @@ Duviri Enigma puzzles are random mini puzzles that populate Duviri and focus aro
 
 Completing the puzzle rewards the player with a collection of Duviri resources, enigma gyrum, and potentially blueprints for the Cinta, a bow with the hitbox the size of a small bus.
 
-These puzzles are fundamentally not that difficult, but a bit of knowledge can make farming enigma gyrum and Cinta parts SIGNIFICANTLY easier.
+These puzzles are fundamentally not that difficult, but a bit of knowledge can make farming enigma gyrum and Cinta parts **significantly** easier.
 
 In this guide I'll cover the two types of puzzles you'll see (random & Archarbor), how you find them, and tips for solving them.
 
 ---
 
-## Table of Contents
-
-- [Randomized Puzzles](#randomized-puzzles)
-- [How to Find Puzzles](#how-to-find-randomized-puzzles)
-- [Archarbors](#archarbors)
-
----
-
 ## Randomized Puzzles
-
-[Return to Table of Contents](#table-of-contents)
 
 When you enter Duviri a set number of enigma puzzles will spawn. If you play solo you will only see single-player puzzles, if you play in a group you will also have multi-player puzzles that spawn as well.
 
@@ -37,7 +31,7 @@ There are many variations to these puzzles, including:
 - Unstable discs that shoot lasers back at you
 - Pressure pads or trigger sockets, which require activation to open other sockets
 - Some sockets may be empty and require you to find a disc to throw into the socket
-    - If there's an energy field over the disc, it will remember the symbol. This is **IMPORTANT** because you may end up with limited discs — match these symbols first
+    - If there's an energy field over the disc, it will remember the symbol. This is **very important** because you may end up with limited discs — match these symbols first
     - Free standing discs can be found in the world in multiple ways (hanging from archways, entangled in plants, hidden in fully sealed drums/sockets that need to be broken or pushed)
 - Some symbols on the Hutch may also be damaged or obscured by bars — you have to brute force those and/or recognize the symbol hidden underneath
 
@@ -45,19 +39,15 @@ There are many variations to these puzzles, including:
 
 ## How to Find Randomized Puzzles
 
-[Return to Table of Contents](#table-of-contents)
-
 There are a fixed number of positions for these puzzles. There's not a guaranteed way to find them, but what I typically do is fly across Duviri and cover the high density areas for spawns (see pic). While flying I keep an eye out for the floating sockets which are typical of Enigma puzzles, or for a white circle to appear on the map.
 
-> **Tip:** If you're just doing this for the Nightwave mission, I recommend rushing Archarbor instead of searching for the randomized puzzles. It's quick to run and oftentimes I find a puzzle on the Archarbor island as well.
+> **Note:** If you're just doing this for the Nightwave mission, I recommend rushing Archarbor instead of searching for the randomized puzzles. It's quick to run and oftentimes I find a puzzle on the Archarbor island as well.
 
 This white circle indicates the presence of a puzzle **and** the area where all the puzzle pieces are. This is useful since it limits the area you have to search to actually find missing discs, pressure pads, and sockets.
 
 ---
 
 ## Archarbors
-
-[Return to Table of Contents](#table-of-contents)
 
 The other main type of Enigma puzzle you'll find is the Archarbor, which only spawns during Joy, Sorrow, and Envy spirals. It is a more complex puzzle but rewards additional Enigma Gyrum, resources, and Cinta drop chance compared to running solo puzzles.
 
