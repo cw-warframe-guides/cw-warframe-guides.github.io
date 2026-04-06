@@ -14,6 +14,12 @@
     right: 1.5rem !important;
     top: 3.5rem !important;
     width: 12.1rem !important;
+    height: fit-content !important;
+    background-color: #1c1c1c !important;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    height: fit-content !important;
     background-color: #1c1c1c !important;
   }
 
@@ -30,13 +36,11 @@
   }
 
   .guide-text-image__text {
-    flex: 1;
-    min-width: 250px;
-    max-width: 75%;
+    flex: 0 0 40%; /* ← adjust this % to control text width; image fills the rest */
   }
 
   .guide-text-image__img {
-    flex: 1 1 300px;
+    flex: 1 1 0;
     min-width: 0;
     margin: 0;
   }
@@ -45,11 +49,6 @@
     width: 100%;
     border-radius: 3px;
     border: 2.5px solid #b59d47;
-  }
-
-  .md-sidebar--secondary .md-sidebar__scrollwrap,
-  .md-sidebar--secondary .md-nav {
-    background-color: #1c1c1c !important;
   }
 
   /* TOC sidebar: "Table of contents" label */
