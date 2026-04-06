@@ -54,25 +54,42 @@ a {
 
 /* ── Home page hero banner ───────────────────────── */
 .hero-banner {
-  background-image: url('../images/Header_BKG.png');
+  position: relative;
+  background-image: url('../images/entrati.jpg');
   background-size: cover;
-  background-position: center top;
-  min-height: 320px;
+  background-position: center center;
+  min-height: 440px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* escape the content area's side padding */
-  margin: -1.2rem -1.2rem 2.5rem;
-  padding: 2rem;
+  /* break out of the article's side padding and sit flush */
+  margin: -1.6rem -1.6rem 2.5rem;
+  overflow: hidden;
+}
+
+/* cinematic dark gradient overlay */
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(28, 28, 28, 0.92) 100%
+  );
 }
 
 .hero-title {
+  position: relative;
+  z-index: 1;
   font-family: 'Cinzel', serif;
   font-weight: 600;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
   color: #dbd2ad;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 1), 0 0 40px rgba(0, 0, 0, 0.7);
   text-align: center;
+  letter-spacing: 0.06em;
   line-height: 1.2;
 }
 

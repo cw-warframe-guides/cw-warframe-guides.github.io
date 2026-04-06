@@ -1,8 +1,16 @@
 {% extends "main.html" %}
 
+{% block extrahead %}
+<style>
+  /* Hide left nav sidebar on home page only */
+  .md-sidebar--primary { display: none !important; }
+  .md-main__inner { margin-left: 0 !important; }
+</style>
+{% endblock %}
+
 {% block content %}
 <div class="hero-banner">
-  <div class="hero-title">{{ page.title }}</div>
+  <div class="hero-title">Charithw's Guide Hub</div>
 </div>
 {{ super() }}
 {% endblock %}
