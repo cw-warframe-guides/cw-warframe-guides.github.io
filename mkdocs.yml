@@ -20,5 +20,8 @@ nav:
   - Home: index.md
   - Guide Index: guides/guide_index.md
 
+markdown_extensions:
+  - md_in_html
+
 extra_javascript:
   - https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap

@@ -22,7 +22,7 @@ When you enter Duviri a set number of enigma puzzles will spawn. If you play sol
 
 As mentioned in the overview, each puzzle centers around a Paragrimm Hutch (as seen in the picture). At its core, you are matching the 3 sockets hidden around the puzzle with the 3 symbols on the Hutch.
 
-![Paragrimm Hutch](../images/duviri-enigmas/Enigma-puzzle.png)
+![Paragrimm Hutch](../images/duviri-enigmas/Enigma-puzzle.webp)
 
 > **Note:** Multiplayer puzzles will have the Hutch initially closed, and will require two players to interact with the side panels of the Hutch to open it.
 
@@ -42,7 +42,7 @@ There are many variations to these puzzles, including:
 
 </div>
 <figure class="guide-text-image__img">
-  <img src="../images/duviri-enigmas/Enigma-sockets.png" alt="Enigma socket variations">
+  <img src="../../images/duviri-enigmas/Enigma-sockets.webp" alt="Enigma socket variations">
 </figure>
 </div>
 
