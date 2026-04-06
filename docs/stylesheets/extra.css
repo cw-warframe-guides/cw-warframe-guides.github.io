@@ -116,14 +116,24 @@ body {
   background-color: #1c1c1c !important;
 }
 
-/* ── Header layout: site name left, nav + search right ── */
+/* ── Header layout: logo+name left, spacer, nav+search right ── */
 
-/* Title takes only its natural width (was flex:1, which centered everything) */
-.md-header__title {
-  flex: 0 1 auto !important;
+/* Remove md-grid's max-width centering from the header nav */
+.md-header__inner {
+  max-width: 100% !important;
+  padding: 0 0.8rem;
+  display: flex;
+  align-items: center;
 }
 
-/* Spacer grows to create the large gap, pushing nav+search to the right */
+/* Title: natural width, no shrinking, no ellipsis collapse */
+.md-header__title {
+  flex: 0 0 auto !important;
+  white-space: nowrap;
+  padding: 0 0.4rem;
+}
+
+/* Spacer grows to fill the gap, pushing nav+search to the right */
 .md-header__spacer {
   flex: 1;
 }
