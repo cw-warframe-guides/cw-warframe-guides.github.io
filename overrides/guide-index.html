@@ -32,6 +32,7 @@
     /* Detach sidebar from flex flow; overflow visible so close tab can poke out */
     .guide-index-sidebar {
       position: fixed;
+      top: 4rem;
       right: 1rem;
       width: 270px;
       overflow: visible;
@@ -152,17 +153,9 @@
   closeBtn.textContent = '✕';
   sidebar.insertBefore(closeBtn, scrollDiv);
 
-  // Align panel top with the first guide-category heading (mobile only)
+  // Set panel position: fixed below header on mobile, cleared on desktop
   function positionPanel() {
-    if (window.innerWidth <= 820) {
-      var firstCategory = document.querySelector('.guide-category');
-      if (firstCategory) {
-        var rect = firstCategory.getBoundingClientRect();
-        sidebar.style.top = rect.top + 'px';
-      }
-    } else {
-      sidebar.style.top = ''; // restore CSS sticky top
-    }
+    sidebar.style.top = window.innerWidth <= 820 ? '4rem' : '';
   }
   positionPanel();
   window.addEventListener('resize', positionPanel);
