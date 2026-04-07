@@ -359,19 +359,14 @@ body {
 /* ── Inline TOC (shown only when sidebar TOC is hidden) ──────── */
 .inline-toc {
   display: none;
-  background-color: #26221a;
-  border: 1.5px solid #b59d47;
-  border-radius: 3px;
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.5rem;
 }
 
 .inline-toc__title {
-  font-family: 'Cinzel', serif;
-  font-size: 0.9rem;
+  font-family: 'Cinzel', serif !important;
+  font-size: 1.5625rem;
   color: #b59d47;
   letter-spacing: 0.05em;
-  margin: 0 0 0.6rem 0;
+  margin: 0 0 0.75rem 0;
 }
 
 .inline-toc ul {
@@ -384,19 +379,29 @@ body {
   padding: 0.2rem 0;
 }
 
+.inline-toc li::before {
+  content: '⬦';
+  color: #b59d47;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
 .inline-toc a {
-  font-size: 0.85rem;
-  color: #b59d47 !important;
+  font-size: 0.9rem;
+  color: #dbd2ad !important;
   text-decoration: none !important;
 }
 
 .inline-toc a:hover {
-  color: #dbd2ad !important;
+  color: #b59d47 !important;
 }
 
 @media (max-width: 1200px) {
   .inline-toc {
     display: block;
+    border-bottom: .05rem solid var(--md-default-fg-color--lightest);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
 }
 
