@@ -4,6 +4,14 @@ template: guide.html
 
 # Gas City Labs
 
+<div class="inline-toc" markdown="1">
+<p class="inline-toc__title">Table of Contents</p>
+
+- [Overview](#overview)
+- [The Lab Guide](#the-lab-guide)
+
+</div>
+
 ## Overview
 
 <div class="guide-text-image" markdown="1">

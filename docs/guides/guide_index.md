@@ -20,7 +20,7 @@ template: guide-index.html
       <ul>
         <li><span class="wip">Affinity Farming(WIP)</span></li>
         <li><span class="wip">Credit Farming(WIP)</span></li>
-        <li><span class="wip">Endo Farming(WIP)</span></li>
+        <li><a href="../endo-farming/">Endo Farming</a></li>
         <li><span class="wip">Platinum Farming(WIP)</span></li>
         <li><span class="wip">Resource Farming(WIP)</span></li>
       </ul>
