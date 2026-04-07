@@ -33,15 +33,15 @@ Once you've completed the Stolen Dreams quest, you'll gain access to Maroo and h
 
 Normally, only 1 Ayatan sculpture can spawn per mission (at roughly a 1/7 chance), but once a week you can talk to Maroo to recieve a "treasure hunt" mission that has a guaranteed Ayatan sculpture.
 
-### Dissolve Mods: 
+### Dissolve Mods
 This is pretty self explanatory. In your mod bench, you can dissolve your high duplicate common/uncommon (bronze/silver) mods into endo. Rarity does impact the amount of endo recieved but do be careful when dissolving rare mods (gold) as those can sometimes be sold to other players for platnium. 
 
-### Deimos bounties: 
+### Deimos bounties
 Deimos bounties have pretty solid endo rewards when you're still early on in the game. Higher tier bounties have better endo rewards so don't be afraid to push your limits and queue publicly or with friends. 
 
 ---
 
-## Mid Game Endo Farms
+## Mid Game Farms
 
 ### Sorties
 Sorties can be run daily and have 40% chance to give you endo on completion:
@@ -59,7 +59,8 @@ Certain bounty tiers in thee Zariman, Sanctum Anatomica, and 1999 have endo rewa
 
 ---
 
-## Late Game / Heavy Investment Endo Farms
+## Late Game / Heavy Investment Farms
 
 ### Arena
-Arena Farming is a pretty complicated strategy which involves running Sedna Arena missions with specific frames, weapons and builds to maximize endo drops from enemies (can get up to 5k/min with it). There's a fantastic guide which explains everything about the process here: [The Ultimate Endo Farming Guide by Mebius, Cyph, Tama, Fumiz](https://wfpedia.com/posts/endo/basics)
+Arena Farming is a pretty complicated strategy which involves running Sedna Arena missions with specific frames, weapons and builds to maximize endo drops from enemies (can get up to 5k/min with it). There's a fantastic guide which explains everything about the process here: 
+[The Ultimate Endo Farming Guide by Mebius, Cyph, Tama, Fumiz](https://wfpedia.com/posts/endo/basics)

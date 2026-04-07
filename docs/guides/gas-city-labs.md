@@ -40,6 +40,6 @@ None of the exclusive mods are particularly strong but if you're a collector of 
 
 ## The Lab Guide
 
-This guide by Darkbowser166 details all 10 puzzles, where you find them, and how to solve them! It's a great guide that I still use whenever my syndicate medallions inevitably end up behind the lab door... 😅 
+This guide by Darkbowser166 details all 10 puzzles, where you find them, and how to solve them! It's a great guide that I still use whenever my syndicate medallions inevitably end up behind the lab door...
 
 [Gas City Labs Guide by Darkbowser166](https://docs.google.com/presentation/d/1bHuzeFmTm99z638HhTXa-x0KYgT-ugYwUUs3r-TPkuI/edit?usp=sharing)
