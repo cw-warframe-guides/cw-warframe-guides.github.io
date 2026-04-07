@@ -258,6 +258,8 @@ body {
 }
 
 .guide-category li {
+  display: flex;
+  align-items: center;
   padding: 0.2rem 0;
   font-size: 0.8rem;
   color: #dbd2ad;
@@ -267,9 +269,8 @@ body {
   content: '⬦';
   color: #b59d47;
   margin-right: 0.5rem;
-  font-size: 1.3rem;
-  line-height: 1;
-  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
 }
 
 .guide-category li a {
