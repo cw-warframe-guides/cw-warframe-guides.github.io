@@ -28,12 +28,12 @@ The farming strategies below cover some of the major/popular methods and are ord
 <div class="guide-text-image" markdown="1">
 <div class="guide-text-image__text" markdown="1">
 
-Dark Sector missions are a special mission type found on most of the planets in the star chart. They're characterized by the special symbol, always having infested enemies, and giving bonuses to resource drop chance and affinity. *See the picture below for an example*
+Dark Sector missions are a special mission type found on most of the planets in the star chart. They're characterized by the special symbol, always having infested enemies, and giving bonuses to resource drop chance and affinity. For example on Mars, the node, Kadesh, is a dark sector mission.
 
 On clearing the mission you'll get an extra 12-20k credits depending on the mission and level. Several of these can be done quite quickly and can be a solid way to make a few early credits.
 
 </div>
-<figure class="guide-text-image__img" style="flex: 0 0 40%;">
+<figure class="guide-text-image__img" style="flex: 0 0 30%;">
   <img src="../../images/credit-farming/dark-sector.webp" alt="Dark-Sector-Mission">
 </figure>
 </div>
@@ -44,11 +44,12 @@ On clearing the mission you'll get an extra 12-20k credits depending on the miss
 
 The Index is a special Corpus node on Neptune where you wager credits and fight in a Corpus arena for large sums of credits. 
 
-![Index Location](../images/credit-farming/index.webp){ .center .bordered}
+![Index Location](../images/credit-farming/index.webp){ .center .bordered width=50%}
 
 ### Credit Rewards
 
 Before entering the Index, you must select a wager amount which affects the return and number of points:
+
 | Risk   | Wager  | Return  | Point Target |
 |--------|--------|---------|--------------|
 | Low    | 30,000 | 105,000 | 50 Points    |
@@ -104,7 +105,8 @@ To further improve this credit farm you ideally want to run Chroma (whose Effigy
 <div class="guide-text-image" markdown="1">
 <div class="guide-text-image__text" markdown="1">
 
-To run this simply hop into a Höllvania mission (I recommend Köbinn West - Legacyte Capture) and
+To run this simply hop into a Höllvania mission 
+(I recommend Köbinn West - Legacyte Capture) and:
 
 1. Search out the safe
 2. Find the biocode (spawns within 70m, is bright blue, makes ping noises, and can be found with the Orokin Eye air support)
@@ -113,7 +115,7 @@ To run this simply hop into a Höllvania mission (I recommend Köbinn West - Leg
 5. Profit! 
 
 </div>
-<figure class="guide-text-image__img">
+<figure class="guide-text-image__img" style="flex: 0 0 30%;">
   <img src="../../images/credit-farming/techrot-safe.webp" alt="Techrot-Safe">
 </figure>
 </div>
@@ -140,7 +142,7 @@ To further improve this credit farm you ideally want to run Chroma (whose Effigy
 | Chroma + Booster             | 500k      | 600k                |
 | Chroma + Booster + Blessing  | 703.1k    | 843.75k             |
 
-> **Note:** Credit blessings unexpectedly double dip with Chroma's Effigy boost, and also apply to the end-of-mission multiplier
+> **Note:** Credit blessings unexpectedly double dip with Chroma's Effigy boost, and also apply to the end-of-mission multiplier. Prosperous rewards were calculated assuming 1 of the 5 credit pickups gets doubled. Numbers will vary on a run to run basis.
 
 ### How to run
 
@@ -149,6 +151,7 @@ You can queue Profit Taker from Fortuna by talking to Eudico in the backroom.
 Profit Taker has several unique phases (immunity to all but one damage type, shield pylons that block shots, parts that are immune to everything but archweapons) so its best not to go into the fight blind. 
 
 To best prepare for Profit Taker, I recommend taking a look at the Profit Taker website below. Their guide does a great job of explaining all the mechanisms and talking about gearing strategies.
+
 [Profit Taker Guide by Uumm, Mebius, Iterniam, Kalaay & others](https://profit-taker.com)
 
 ---
