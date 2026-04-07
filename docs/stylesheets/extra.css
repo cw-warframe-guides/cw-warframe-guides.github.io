@@ -137,6 +137,12 @@ body {
   }
 }
 
+/* Prevent Material JS from fading out the site name on scroll */
+.md-header__topic:first-child {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 /* Title: natural width, no shrinking, no ellipsis collapse */
 .md-header__title {
   flex: 0 0 auto !important;

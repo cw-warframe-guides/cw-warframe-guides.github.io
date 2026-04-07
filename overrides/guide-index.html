@@ -152,12 +152,16 @@
   closeBtn.textContent = '✕';
   sidebar.insertBefore(closeBtn, scrollDiv);
 
-  // Align panel top with the first guide-category heading
+  // Align panel top with the first guide-category heading (mobile only)
   function positionPanel() {
-    var firstCategory = document.querySelector('.guide-category');
-    if (firstCategory) {
-      var rect = firstCategory.getBoundingClientRect();
-      sidebar.style.top = rect.top + 'px';
+    if (window.innerWidth <= 820) {
+      var firstCategory = document.querySelector('.guide-category');
+      if (firstCategory) {
+        var rect = firstCategory.getBoundingClientRect();
+        sidebar.style.top = rect.top + 'px';
+      }
+    } else {
+      sidebar.style.top = ''; // restore CSS sticky top
     }
   }
   positionPanel();
