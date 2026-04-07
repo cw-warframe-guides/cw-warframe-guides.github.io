@@ -277,6 +277,8 @@ body {
   margin-right: 0.5rem;
   font-size: 1.2rem;
   flex-shrink: 0;
+  position: relative;
+  top: -0.1em;
 }
 
 .guide-category li a {

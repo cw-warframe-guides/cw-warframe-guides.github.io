@@ -32,7 +32,6 @@
     /* Detach sidebar from flex flow; overflow visible so close tab can poke out */
     .guide-index-sidebar {
       position: fixed;
-      top: 4rem;
       right: 1rem;
       width: 270px;
       overflow: visible;
@@ -153,19 +152,47 @@
   closeBtn.textContent = '✕';
   sidebar.insertBefore(closeBtn, scrollDiv);
 
-  // Set panel position: fixed below header on mobile, cleared on desktop
-  function positionPanel() {
-    sidebar.style.top = window.innerWidth <= 820 ? '4rem' : '';
+  // Sticky-style positioning for the floating panel
+  var naturalTop   = 0;  // document-offset of first category (set once on load)
+  var thresholdPx  = 0;  // header height in px (set once on load)
+
+  function initPositions() {
+    var firstCategory = document.querySelector('.guide-category');
+    if (firstCategory) {
+      // Document-relative top: doesn't change with scrolling
+      naturalTop = firstCategory.getBoundingClientRect().top + window.scrollY;
+    }
+    // Parse the header's actual rendered height for the threshold
+    var header = document.querySelector('.md-header');
+    thresholdPx = header ? header.offsetHeight + 8 : 60;
   }
-  positionPanel();
-  window.addEventListener('resize', positionPanel);
+
+  function updatePanelTop() {
+    if (window.innerWidth > 820) {
+      sidebar.style.top = '';
+      return;
+    }
+    // Mimic sticky: slide up as user scrolls, but never above threshold
+    var stickyTop = naturalTop - window.scrollY;
+    sidebar.style.top = Math.max(stickyTop, thresholdPx) + 'px';
+  }
+
+  window.addEventListener('load', function () {
+    initPositions();
+    updatePanelTop();
+  });
+  window.addEventListener('resize', function () {
+    initPositions();
+    updatePanelTop();
+  });
+  window.addEventListener('scroll', updatePanelTop, { passive: true });
 
   function open()  { sidebar.classList.add('is-open');    backdrop.classList.add('is-open'); }
   function close() { sidebar.classList.remove('is-open'); backdrop.classList.remove('is-open'); }
 
   fab.addEventListener('click', function (e) {
     e.stopPropagation();
-    positionPanel(); // recalculate in case page shifted
+    updatePanelTop();
     sidebar.classList.contains('is-open') ? close() : open();
   });
 
