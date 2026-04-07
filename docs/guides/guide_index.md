@@ -18,7 +18,7 @@ template: guide-index.html
     <div class="guide-category" id="core-farm">
       <h2>Farming Guides</h2>
       <ul>
-        <li><span class="wip">Affinity Farming(WIP)</span></li>
+        <li><a href="../affinity-farming/">Affinity Farming</a></li>
         <li><a href="../credit-farming/">Credit Farming</a></li>
         <li><a href="../endo-farming/">Endo Farming</a></li>
         <li><span class="wip">Platinum Farming(WIP)</span></li>

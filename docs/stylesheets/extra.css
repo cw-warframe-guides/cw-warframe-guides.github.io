@@ -51,10 +51,6 @@ h3, h4, h5, h6 {
   text-decoration: none !important;
 }
 
-/* Sidebar TOC: H3 items get lighter gold */
-.md-sidebar--secondary .md-nav .md-nav .md-nav__link {
-  color: #c8b87a !important;
-}
 
 /* Links */
 a {

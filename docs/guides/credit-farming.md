@@ -108,7 +108,7 @@ To run this simply hop into a Höllvania mission
 
 1. Search out the safe
 2. Find the biocode (spawns within 70m, is bright blue, makes ping noises, and can be found with the Orokin Eye air support)
-3. Cast Chroma's 4 (Effigy) in front of the safe
+3. Cast Chroma's 4 (Effigy) near the safe
 4. Open safe
 5. Profit! 
 
