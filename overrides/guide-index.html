@@ -33,7 +33,7 @@
     .guide-index-sidebar {
       position: fixed;
       right: 1rem;
-      width: 220px;
+      width: 270px;
       overflow: visible;
       z-index: 200;
       /* hidden state */
@@ -55,20 +55,20 @@
       overflow-y: auto;
     }
 
-    /* Close tab: small box above the top-left corner of the panel */
+    /* Close tab: small box poking out of the left side, flush with the top */
     .jump-to-close-btn {
       display: block;
       position: absolute;
-      bottom: 100%;
-      left: -1px;
+      top: -1px;
+      right: 100%;
       width: 1.8rem;
       height: 1.8rem;
       line-height: 1.8rem;
       text-align: center;
       background: #26221a;
       border: 1.5px solid #b59d47;
-      border-bottom: none;
-      border-radius: 2px 2px 0 0;
+      border-right: none;
+      border-radius: 2px 0 0 2px;
       color: #b59d47;
       font-size: 0.85rem;
       cursor: pointer;
