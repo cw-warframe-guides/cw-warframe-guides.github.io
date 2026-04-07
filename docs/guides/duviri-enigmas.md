@@ -107,7 +107,7 @@ Once at the bottom, you'll see 8 sockets and 8 symbols (4 obscured) to match. Th
 
 4 discs are on the opposite side of the room from the 8 symbols. I recommend working on the standard sockets and sockets with energy plates first. Once you're done, then popping the discs off the energy sockets to work on the remaining sockets.
 
-![Archarbor Puzzle](../images/duviri-enigmas/Archarbor-puzzle.webp){ .center width=60% }
+![Archarbor Puzzle](../images/duviri-enigmas/Archarbor-puzzle.webp){ .center width=80% }
 
 ---
 
