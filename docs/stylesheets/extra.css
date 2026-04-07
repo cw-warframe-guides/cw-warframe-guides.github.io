@@ -361,7 +361,7 @@ body {
   display: none;
 }
 
-.inline-toc__title {
+.md-typeset .inline-toc__title {
   font-family: 'Cinzel', serif !important;
   font-size: 1.5625em;
   color: #b59d47 !important;
@@ -369,30 +369,33 @@ body {
   margin: 0 0 0.75rem 0;
 }
 
-.inline-toc ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0 !important;
+.md-typeset .inline-toc ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.inline-toc li {
+.md-typeset .inline-toc li {
+  display: flex;
+  align-items: center;
   padding: 0.2rem 0;
 }
 
-.inline-toc li::before {
+.md-typeset .inline-toc li::before {
   content: '⬦';
   color: #b59d47;
   margin-right: 0.5rem;
   font-size: 1rem;
+  flex-shrink: 0;
 }
 
-.inline-toc a {
+.md-typeset .inline-toc a {
   font-size: inherit;
   color: #dbd2ad !important;
   text-decoration: none !important;
 }
 
-.inline-toc a:hover {
+.md-typeset .inline-toc a:hover {
   color: #b59d47 !important;
 }
 
