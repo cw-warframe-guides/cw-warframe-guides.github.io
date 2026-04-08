@@ -20,6 +20,17 @@ nav:
   - Home: index.md
   - Guide Index: guides/guide_index.md
 
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+
 markdown_extensions:
   - md_in_html
   - attr_list
