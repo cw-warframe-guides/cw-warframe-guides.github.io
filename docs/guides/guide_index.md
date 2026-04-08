@@ -11,7 +11,7 @@ template: guide-index.html
     <div class="guide-category" id="getting-started">
       <h2>Getting Started</h2>
       <ul>
-        <li><span class="wip">Mastery Rank &amp; Mastery Points(WIP)</span></li>
+        <li><a href="../mastery/">Mastery Rank &amp; Mastery Points</a></li>
       </ul>
     </div>
     
