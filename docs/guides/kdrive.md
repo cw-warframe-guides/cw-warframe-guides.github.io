@@ -39,7 +39,7 @@ Most K-Drive parts can be bought from the Ventkids on Fortuna, and all boards ar
 through Rocky at the Ventkid hideout. However, The infested board and its parts are earned by completing specific races on the Cambion Drift. You technically don't need to build a full infested board, but how else are you going to prove how skilled you are? The Feverspine board is earned by completing the Dead Drop race. The remaining parts come from Exocrine Flow (Nodulite), Muck and Mire (Gristleback), and Pride Before a Fall (Steeba).
 
 <figure style="text-align: center; width: 70%; margin: 0 auto; min-width: min(300px, 100%);">
-  <img src="../../images/kdrive/Enigma-path.webp" alt="My Board" class="bordered" style="width: 100%;">
+  <img src="../../images/kdrive/my-board.webp" alt="My Board" class="bordered" style="width: 100%;">
   <figcaption>My personal board and build!</figcaption>
 </figure>
 

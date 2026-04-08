@@ -96,12 +96,12 @@
   .guide-image-pair {
     display: flex;
     gap: 1.5rem;
-    align-items: flex-start;
+    align-items: center;
     margin: 1rem 0;
   }
 
   .guide-image-pair figure {
-    flex: 1 1 0;
+    flex: 1 1 0; /* default: equal split — override per-figure with style="flex: 0 0 40%" */
     min-width: 0;
     margin: 0;
     text-align: center;
