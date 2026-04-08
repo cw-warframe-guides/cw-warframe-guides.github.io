@@ -74,7 +74,7 @@ Some Nightmare mods are highly sought after due to their strong effects and low 
 > **Note:** New Nightmare missions become available roughly every 8 hours.
 
 </div>
-<figure class="guide-text-image__img">
+<figure class="guide-text-image__img" style="flex: 0 0 30%;">
   <img src="../../images/plat-farming/nightmare.webp" alt="Nightmare mission">
 </figure>
 </div>
@@ -118,7 +118,7 @@ Requiem Relics are cracked by running Requiem Fissures, which function like stan
 > **Note:** A recent update (March 2026) made farming Requiem mods easier, so prices and demand are currently unstable. Check Warframe.market for the latest prices before listing.
 
 </div>
-<figure class="guide-text-image__img">
+<figure class="guide-text-image__img" style="flex: 0 0 30%;">
   <img src="../../images/plat-farming/kuva-relic.webp" alt="Requiem Relic Rewards">
 </figure>
 </div>
