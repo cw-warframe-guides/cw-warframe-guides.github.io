@@ -35,7 +35,7 @@ Normally, only 1 Ayatan sculpture can spawn per mission (at roughly a 1/7 chance
 ### Dissolve Mods
 This is pretty self explanatory. In your mod bench, you can dissolve your high duplicate common/uncommon (bronze/silver) mods into endo. Rarity does impact the amount of endo received but do be careful when dissolving rare mods (gold) as those can sometimes be sold to other players for platinium. 
 
-### Deimos bounties
+### Deimos Bounties
 Deimos bounties have pretty solid endo rewards when you're still early on in the game. Higher tier bounties have better endo rewards, so queue publicly or with friends if needed. 
 
 ---

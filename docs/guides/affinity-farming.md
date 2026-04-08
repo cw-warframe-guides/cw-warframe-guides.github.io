@@ -75,7 +75,7 @@ Running regular missions and passively leveling will always be a viable option, 
 - Utilizes stealth affinity multipliers for big affinity gains
 - Not required but strongly suggested: Aero Vantage and any '+X sec aim glide' mods
 
-### How To Run
+### How to Run
 **Step 1.** Adjust your loadout
 
 - Unequip your melee
@@ -131,7 +131,7 @@ Here's the video guide I personally used. If you're a visual learner and want an
 - Ideally a solo or duo strategy. Larger parties will take longer if leveling Warframes.
 - Great for leveling Warframes (if solo) or weapons (with 2 or more players)
 
-### How To Run
+### How to Run
 
 **Step 1.** Buy a crewmate from Ticker in Fortuna. You want a crewmate with high stats in Combat and Endurance. The **perfect** crewmate would have 5 Combat, 5 Endurance, and the 
 "+150% Critical Chance with Rifles" perk.

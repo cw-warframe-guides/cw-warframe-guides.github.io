@@ -21,7 +21,7 @@ template: guide-index.html
         <li><a href="../affinity-farming/">Affinity Farming</a></li>
         <li><a href="../credit-farming/">Credit Farming</a></li>
         <li><a href="../endo-farming/">Endo Farming</a></li>
-        <li><span class="wip">Platinum Farming(WIP)</span></li>
+        <li><a href="../plat-farming/">Platinum Farming</a></li>
         <li><a href="../resource-farming/">Resource Farming</a></li>
       </ul>
     </div>
@@ -114,7 +114,7 @@ template: guide-index.html
       <li><a href="#game-systems">Game Systems</a></li>
       <li><a href="#gear-systems">Companions &amp; Gear Systems</a></li>
       <li><a href="#mid-late-systems">Mid / Late Game Systems</a></li>
-      <li><a href="open-worlds">Open Worlds</a></li>
+      <li><a href="#open-worlds">Open Worlds</a></li>
       <li><a href="#puzzles-challenges">Puzzles &amp; Challenges</a></li>
       <li><a href="tools-charts">Tools &amp; Charts</a></li>
     </ul>
