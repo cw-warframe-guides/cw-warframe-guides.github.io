@@ -79,7 +79,7 @@ template: guide-index.html
     <div class="guide-category" id="open-worlds">
       <h2>Open Worlds</h2>
       <ul>
-        <li><span class="wip">K-Drive(WIP)</span></li>
+        <li><a href="../kdrive/">K-Drive</a></li>
       </ul>
     </div>
 
