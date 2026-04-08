@@ -22,7 +22,7 @@ template: guide-index.html
         <li><a href="../credit-farming/">Credit Farming</a></li>
         <li><a href="../endo-farming/">Endo Farming</a></li>
         <li><span class="wip">Platinum Farming(WIP)</span></li>
-        <li><span class="wip">Resource Farming(WIP)</span></li>
+        <li><a href="../resource-farming/">Resource Farming</a></li>
       </ul>
     </div>
 
