@@ -545,7 +545,7 @@ img.floored {
 .part-cell {
   background: #1c1c1c;
   border: 1px solid #2a2a1a;
-  padding: 10px 8px;
+  padding: clamp(5px, 1.2vw, 10px) clamp(4px, 1vw, 8px);
   text-align: center;
   vertical-align: top;
   transition: background 0.2s;
@@ -556,20 +556,19 @@ img.floored {
 }
 
 .part-img-wrap {
-  width: 72px;
-  height: 72px;
+  width: min(72px, 100%);
+  aspect-ratio: 1;
   margin: 0 auto 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px dashed #3a3220;
   border-radius: 3px;
   overflow: hidden;
 }
 
 .part-img {
-  width: 72px;
-  height: 72px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   display: block;
   opacity: 0.9;
@@ -650,21 +649,25 @@ img.floored {
 
   .faction-label {
     display: inline-block;
+    white-space: nowrap;
   }
 
   .part-cell {
     padding: 6px 5px;
   }
 
-  .part-img-wrap,
+  .part-img-wrap {
+    width: min(48px, 100%);
+  }
+
   .part-img {
-    width: 48px;
-    height: 48px;
+    width: 100%;
+    height: 100%;
   }
 
   .row-label {
     width: 52px;
-    padding: 6px 1px;
+    padding: 3px 1px;
   }
 
   .row-label .slot-x {

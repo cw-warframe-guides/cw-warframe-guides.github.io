@@ -5,8 +5,7 @@ template: guide.html
 # Amp Chart
 
 <div class="amp-wrap">
-  <div class="amp-title">Amp Parts Reference</div>
-  <div class="amp-subtitle">Prism &middot; Scaffold &middot; Brace</div>
+  
   <div class="amp-scroll-wrap">
     <table class="amp-table">
       <thead>
