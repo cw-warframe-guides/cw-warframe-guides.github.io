@@ -98,8 +98,8 @@ template: guide-index.html
         <li><a href="../aleca/">AlecaFrame</a></li>
         <li><a href="../amp/">Amp Chart</a></li>
         <li><a href="../gun-co/">GunCO Spreadsheet</a></li>
+        <li><a href="../wfm/">Warframe.Market</a></li>
         <li><span class="wip">WFcolorpicker (WIP)</span></li>
-        <li><span class="wip">Warframe.Market! Trading Made Easy! (WIP)</span></li>
       </ul>
     </div>
 

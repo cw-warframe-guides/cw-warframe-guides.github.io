@@ -72,6 +72,7 @@ On the right side of the display is the Timers & Events section. This contains a
 </figure>
 </div>
 
+---
 ## Warframe.Market Integration
 
 Aleca has built-in integration with warframe.market (WFM). As mentioned in our 
@@ -82,4 +83,4 @@ within Aleca. This includes tracking sales, adjusting prices, adding new listing
 your online status. This is especially useful when selling large quantities of items, as it 
 removes the need to manage everything through the WFM website directly.
 
-![Archarbor Puzzle](../images/aleca/wfm.webp){ .center .floored width=70% }
+![Aleca Integration](../images/aleca/wfm.webp){ .center .floored width=70% }
