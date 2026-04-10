@@ -99,7 +99,7 @@ template: guide-index.html
         <li><a href="../amp/">Amp Chart</a></li>
         <li><a href="../gun-co/">GunCO Spreadsheet</a></li>
         <li><a href="../wfm/">Warframe.Market</a></li>
-        <li><span class="wip">WFcolorpicker (WIP)</span></li>
+        <li><a href="../wf-colorpicker/">Warframe Color Picker</a></li>
       </ul>
     </div>
 
