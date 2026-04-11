@@ -12,6 +12,7 @@ template: guide-index.html
       <h2>Getting Started</h2>
       <ul>
         <li><a href="../mastery/">Mastery Rank &amp; Mastery Points</a></li>
+        <li><a href="../prime-vault/">Prime Test</a></li>
       </ul>
     </div>
     

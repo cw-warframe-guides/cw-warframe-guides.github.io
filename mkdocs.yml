@@ -39,3 +39,4 @@ extra_javascript:
   - https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap
   - javascripts/glightbox-scroll-zoom.js
   - javascripts/amp.js
+  - javascripts/prime-rotation.js

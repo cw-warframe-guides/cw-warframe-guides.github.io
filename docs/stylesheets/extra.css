@@ -606,6 +606,97 @@ img.floored {
   z-index: 2;
 }
 
+/* ── Prime Rotation Cards ─────────────────────────── */
+.prime-rotation {
+  margin: 1.5rem 0;
+}
+
+.prime-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 860px) {
+  .prime-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .prime-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 380px) {
+  .prime-grid { grid-template-columns: 1fr; }
+}
+
+.prime-card {
+  position: relative;
+  background: #26221a;
+  border: 1.5px solid #2a2518;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+}
+
+.prime-card:hover {
+  border-color: #b59d47;
+}
+
+.prime-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #1c1c1c;
+}
+
+.prime-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.prime-card__name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: #dbd2ad;
+  text-align: center;
+  padding: 0.55rem 0.4rem;
+  line-height: 1.3;
+}
+
+.prime-badge {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.45rem;
+  border-radius: 2px;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.prime-badge--new {
+  background: #b59d47;
+  color: #1c1c1c;
+}
+
+.prime-badge--cycle {
+  background: transparent;
+  border: 1px solid #b59d47;
+  color: #b59d47;
+}
+
 @media (max-width: 630px) {
   .amp-scroll-wrap {
     overflow-x: auto;
