@@ -754,7 +754,7 @@ img.floored {
 
 .prime-card__back-name {
   font-family: 'Cinzel', serif;
-  font-size: clamp(0.7rem, 1.3vw, 0.88rem);
+  font-size: clamp(0.82rem, 1.5vw, 1rem);
   color: #b59d47 !important;
   text-decoration: none !important;
   text-align: center;
@@ -774,9 +774,9 @@ img.floored {
 }
 
 .prime-card__weapon-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -784,11 +784,19 @@ img.floored {
 }
 
 .prime-card__weapon-list li {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
   text-align: center;
 }
 
+.prime-card__weapon-list li::before,
+.prime-card__weapon-list li::after {
+  display: none !important;
+}
+
 .prime-card__weapon-link {
-  font-size: clamp(0.68rem, 1.1vw, 0.82rem);
+  font-size: clamp(0.78rem, 1.3vw, 0.92rem);
   color: #dbd2ad !important;
   text-decoration: none !important;
   line-height: 1.3;
