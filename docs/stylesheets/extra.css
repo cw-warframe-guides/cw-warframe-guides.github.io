@@ -807,6 +807,54 @@ img.floored {
   text-decoration: underline !important;
 }
 
+/* ── Resurgence tracker ──────────────────────────── */
+
+/* Outer wrapper — just provides the expiry line + grid stacking */
+.resurgence-wrap {
+  margin: 1rem 0;
+}
+
+/* Expiry info line */
+.resurgence-expiry {
+  font-size: 0.8rem;
+  color: #dbd2ad;
+  opacity: 0.7;
+  margin: 0 0 0.85rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.resurgence-expiry__date {
+  color: #b59d47;
+  opacity: 1;
+}
+
+.resurgence-expiry__days {
+  font-style: italic;
+}
+
+/* 2-column grid that centers itself — whitespace fills the outer gaps */
+.resurgence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 260px));
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+/* Resurgence badge variant — amber-orange to distinguish from "Newest" */
+.prime-card__badge--resurgence {
+  background: rgba(190, 100, 30, 0.88);
+}
+
+/* Single column on very narrow screens */
+@media (max-width: 400px) {
+  .resurgence-grid {
+    grid-template-columns: minmax(0, 260px);
+  }
+}
+
+/* ─────────────────────────────────────────────────── */
+
 @media (max-width: 630px) {
   .amp-scroll-wrap {
     overflow-x: auto;

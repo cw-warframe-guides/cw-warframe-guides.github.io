@@ -39,3 +39,4 @@ extra_javascript:
   - javascripts/glightbox-scroll-zoom.js
   - javascripts/amp.js
   - javascripts/prime-list.js
+  - javascripts/resurgence.js
