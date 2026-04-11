@@ -3,8 +3,8 @@
     var el = document.getElementById('recent-primes');
     if (!el) return;
 
-    var base = document.querySelector('base');
-    var dataUrl = (base ? base.href : '/') + 'data/primes.json';
+    var siteRoot = new URL(window.__mkdocsBase || '/', window.location.href).href;
+    var dataUrl = siteRoot.replace(/\/?$/, '/') + 'data/primes.json';
     fetch(dataUrl)
       .then(function (r) { return r.json(); })
       .then(function (data) {
