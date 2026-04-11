@@ -10,6 +10,4 @@ filler
 
 ## Current Primes
 
-<div class="prime-rotation">
-  <div class="prime-grid" id="prime-grid"></div>
-</div>
+<div id="recent-primes"></div>
