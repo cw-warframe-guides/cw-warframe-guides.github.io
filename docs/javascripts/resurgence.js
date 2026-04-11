@@ -142,6 +142,9 @@
       var back = document.createElement('div');
       back.className = 'prime-card__back';
 
+      var nameWrap = document.createElement('div');
+      nameWrap.className = 'prime-card__back-name-wrap';
+
       var backName = document.createElement('a');
       backName.href = p.wiki;
       backName.target = '_blank';
@@ -149,7 +152,8 @@
       backName.className = 'prime-card__back-name';
       backName.textContent = p.name;
       backName.addEventListener('click', function (e) { e.stopPropagation(); });
-      back.appendChild(backName);
+      nameWrap.appendChild(backName);
+      back.appendChild(nameWrap);
 
       var sep = document.createElement('div');
       sep.className = 'prime-card__back-sep';

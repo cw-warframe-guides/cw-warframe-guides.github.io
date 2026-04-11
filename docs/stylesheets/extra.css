@@ -752,12 +752,15 @@ img.floored {
   box-sizing: border-box;
 }
 
-.prime-card__back-name {
+.prime-card__back-name-wrap {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.prime-card__back-name {
   font-family: 'Cinzel', serif;
   font-size: clamp(0.82rem, 1.5vw, 1rem);
   color: #b59d47 !important;
@@ -783,7 +786,7 @@ img.floored {
   margin: 0 !important;
   padding: 0 !important;
   width: 100%;
-  flex: 1;
+  flex: 2;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-evenly !important;
