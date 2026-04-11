@@ -627,20 +627,62 @@ img.floored {
   .prime-grid { grid-template-columns: 1fr; }
 }
 
+/* Flip container — perspective lives here */
+.prime-card-wrap {
+  perspective: 900px;
+}
+
+/* The flipper */
 .prime-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.52s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.prime-card.is-flipped {
+  transform: rotateX(180deg);
+}
+
+/* Shared face rules */
+.prime-card__front,
+.prime-card__back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* Front face — defines the card height */
+.prime-card__front {
   position: relative;
   display: flex;
   flex-direction: column;
   background: #26221a;
   border: 1.5px solid #2a2416;
-  border-radius: 3px;
-  overflow: hidden;
-  text-decoration: none !important;
   transition: border-color 0.15s ease;
 }
 
-.prime-card:hover {
+.prime-card-wrap:hover .prime-card__front {
   border-color: #b59d47;
+}
+
+/* Dog-ear: gold triangle folded at top-right */
+.prime-card__dog-ear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  background: #c8b87a;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  z-index: 3;
+  pointer-events: none;
+  transition: background 0.15s ease;
+}
+
+.prime-card-wrap:hover .prime-card__dog-ear {
+  background: #b59d47;
 }
 
 .prime-card__img-wrap {
@@ -660,7 +702,7 @@ img.floored {
   transition: opacity 0.15s ease;
 }
 
-.prime-card:hover .prime-card__img {
+.prime-card-wrap:hover .prime-card__img {
   opacity: 1;
 }
 
@@ -692,6 +734,78 @@ img.floored {
   text-align: center;
   letter-spacing: 0.03em;
   line-height: 1.3;
+}
+
+/* Back face — absolutely fills the same box as the front */
+.prime-card__back {
+  position: absolute;
+  inset: 0;
+  transform: rotateX(180deg);
+  background: #26221a;
+  border: 1.5px solid #2a2416;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0.6rem;
+  box-sizing: border-box;
+}
+
+.prime-card__back-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.6rem, 1.1vw, 0.75rem);
+  color: #b59d47 !important;
+  text-decoration: none !important;
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+
+.prime-card__back-name:hover {
+  text-decoration: underline !important;
+}
+
+.prime-card__back-sep {
+  width: 60%;
+  height: 1px;
+  background: #3a3020;
+  flex-shrink: 0;
+}
+
+.prime-card__weapon-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.prime-card__weapon-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.prime-card__weapon-list li::before {
+  content: '⬦';
+  color: #b59d47;
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+.prime-card__weapon-link {
+  font-size: clamp(0.6rem, 1vw, 0.72rem);
+  color: #dbd2ad !important;
+  text-decoration: none !important;
+  line-height: 1.3;
+}
+
+.prime-card__weapon-link:hover {
+  color: #b59d47 !important;
+  text-decoration: underline !important;
 }
 
 @media (max-width: 630px) {

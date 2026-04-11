@@ -22,11 +22,20 @@
     grid.className = 'prime-grid';
 
     primes.forEach(function (p, i) {
-      var card = document.createElement('a');
-      card.href = p.wiki;
+      var wrap = document.createElement('div');
+      wrap.className = 'prime-card-wrap';
+
+      var card = document.createElement('div');
       card.className = 'prime-card';
-      card.target = '_blank';
-      card.rel = 'noopener';
+
+      // ── Front ──────────────────────────────────────
+      var front = document.createElement('div');
+      front.className = 'prime-card__front';
+
+      var dogEar = document.createElement('span');
+      dogEar.className = 'prime-card__dog-ear';
+      dogEar.setAttribute('aria-hidden', 'true');
+      front.appendChild(dogEar);
 
       var imgWrap = document.createElement('div');
       imgWrap.className = 'prime-card__img-wrap';
@@ -49,13 +58,57 @@
         imgWrap.appendChild(badge);
       }
 
-      var name = document.createElement('div');
-      name.className = 'prime-card__name';
-      name.textContent = p.name;
+      var frontName = document.createElement('div');
+      frontName.className = 'prime-card__name';
+      frontName.textContent = p.name;
 
-      card.appendChild(imgWrap);
-      card.appendChild(name);
-      grid.appendChild(card);
+      front.appendChild(imgWrap);
+      front.appendChild(frontName);
+
+      // ── Back ───────────────────────────────────────
+      var back = document.createElement('div');
+      back.className = 'prime-card__back';
+
+      var backName = document.createElement('a');
+      backName.href = p.wiki;
+      backName.target = '_blank';
+      backName.rel = 'noopener';
+      backName.className = 'prime-card__back-name';
+      backName.textContent = p.name;
+      backName.addEventListener('click', function (e) { e.stopPropagation(); });
+      back.appendChild(backName);
+
+      var sep = document.createElement('div');
+      sep.className = 'prime-card__back-sep';
+      back.appendChild(sep);
+
+      var weaponList = document.createElement('ul');
+      weaponList.className = 'prime-card__weapon-list';
+      p.weapons.forEach(function (w) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = w.wiki;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.className = 'prime-card__weapon-link';
+        a.textContent = w.name;
+        a.addEventListener('click', function (e) { e.stopPropagation(); });
+        li.appendChild(a);
+        weaponList.appendChild(li);
+      });
+      back.appendChild(weaponList);
+
+      // ── Assemble & flip handler ────────────────────
+      card.appendChild(front);
+      card.appendChild(back);
+
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('a')) return;
+        card.classList.toggle('is-flipped');
+      });
+
+      wrap.appendChild(card);
+      grid.appendChild(wrap);
     });
 
     el.appendChild(grid);
