@@ -842,6 +842,21 @@ img.floored {
   justify-content: center;
 }
 
+/* "Updating" notice — shown when data is more than 7 days stale */
+.resurgence-updating {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: #b59d47;
+  background: #26221a;
+  border: 1.5px solid #b59d47;
+  border-radius: 3px;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  max-width: 480px;
+  margin: 1rem auto;
+}
+
 /* Resurgence badge variant — amber-orange to distinguish from "Newest" */
 .prime-card__badge--resurgence {
   background: rgba(190, 100, 30, 0.88);

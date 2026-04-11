@@ -1,26 +1,63 @@
 (function () {
+  var CACHE_KEY = 'wf_resurgence';
+  var GRACE_MS = 7 * 24 * 60 * 60 * 1000;
+
   function init() {
     var el = document.getElementById('resurgence-frames');
     if (!el) return;
 
     var siteRoot = new URL(window.__mkdocsBase || '/', window.location.href).href.replace(/\/?$/, '/');
 
-    Promise.all([
-      fetch(siteRoot + 'data/resurgence.json').then(function (r) { return r.json(); }),
-      fetch(siteRoot + 'data/primes.json').then(function (r) { return r.json(); })
-    ]).then(function (results) {
-      var resurgence = results[0];
-      var primes = results[1];
+    // ── Check localStorage cache ─────────────────────
+    var cached = null;
+    try { cached = JSON.parse(localStorage.getItem(CACHE_KEY)); } catch (e) {}
 
-      var lookup = {};
-      primes.forEach(function (p) { lookup[p.name] = p; });
+    if (cached && new Date() < new Date(cached.expires)) {
+      loadPrimesAndRender(el, cached.data, siteRoot);
+      return;
+    }
 
-      var matched = resurgence.frames
-        .map(function (name) { return lookup[name] || null; })
-        .filter(Boolean);
+    // ── Fetch fresh resurgence data ──────────────────
+    fetch(siteRoot + 'data/resurgence.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var now = new Date();
+        var expiry = new Date(data.expires);
+        var graceEnd = new Date(expiry.getTime() + GRACE_MS);
 
-      render(el, matched, resurgence.expires, siteRoot);
-    });
+        if (now > graceEnd) {
+          renderUpdating(el);
+          return;
+        }
+
+        try {
+          localStorage.setItem(CACHE_KEY, JSON.stringify({ data: data, expires: data.expires }));
+        } catch (e) {}
+
+        loadPrimesAndRender(el, data, siteRoot);
+      });
+  }
+
+  function loadPrimesAndRender(el, resurgence, siteRoot) {
+    fetch(siteRoot + 'data/primes.json')
+      .then(function (r) { return r.json(); })
+      .then(function (primes) {
+        var lookup = {};
+        primes.forEach(function (p) { lookup[p.name] = p; });
+
+        var matched = resurgence.frames
+          .map(function (name) { return lookup[name] || null; })
+          .filter(Boolean);
+
+        render(el, matched, resurgence.expires, siteRoot);
+      });
+  }
+
+  function renderUpdating(el) {
+    var notice = document.createElement('div');
+    notice.className = 'resurgence-updating';
+    notice.textContent = 'Resurgence data is currently being updated, check back soon.';
+    el.appendChild(notice);
   }
 
   function daysRemaining(expiresStr) {
