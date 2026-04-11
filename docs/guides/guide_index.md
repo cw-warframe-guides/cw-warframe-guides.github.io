@@ -45,7 +45,7 @@ template: guide-index.html
         <li><a href="../dissolution/">Arcane Dissolution</a></li>
         <li><a href="../prime-vault/">Primes, Vaulting, &amp; Resurgence</a></li>
         <li><span class="wip">Invasions(WIP)</span></li>
-        <li><span class="wip">Focus Schools &amp; Focus Farming</span></li>
+        <li><a href="../focus/">Focus and the Five Schools</a></li>
         <li><span class="wip">The Big 6: Your Guide to Faction Syndicates(WIP)</span></li>
         <li><span class="wip">Void Relics Explained! From Farming to Rad Shares(WIP)</span></li>
         <li><span class="wip">Railjack(WIP)</span></li>
