@@ -837,7 +837,7 @@ img.floored {
 /* 2-column grid that centers itself — whitespace fills the outer gaps */
 .resurgence-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 260px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
   gap: 1.25rem;
   justify-content: center;
 }
