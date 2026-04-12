@@ -38,5 +38,6 @@ markdown_extensions:
 extra_javascript:
   - javascripts/glightbox-scroll-zoom.js
   - javascripts/amp.js
+  - javascripts/items-cache.js
   - javascripts/prime-list.js
   - javascripts/resurgence.js

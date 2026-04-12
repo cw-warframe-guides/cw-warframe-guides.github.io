@@ -1,16 +1,20 @@
 (function () {
   var CACHE_KEY_RESURGENCE = 'wf_resurgence';
-  var CACHE_KEY_ITEMS      = 'wf_items_v1';
-  var ITEMS_TTL            = 24 * 60 * 60 * 1000; // 24 hours
-  var GRACE_MS             = 7 * 24 * 60 * 60 * 1000;
   var CDN_BASE             = 'https://cdn.warframestat.us/img/';
-  var WFCD_BASE            = 'https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/';
+  var VAULT_TRADER_URL     = 'https://api.warframestat.us/pc/vaultTrader/';
 
-  var WEAPON_EXCLUSIONS = { 'Sagek Prime': true, 'Galariak Prime': true };
+  var WEAPON_EXCLUSIONS = { 'Sagek Prime': true, 'Galariak Prime': true, 'Akbronco Prime': true };
 
+  // Per-frame hardcoded additions for items WFCD can't match by date
+  // (null introduced date, Arch-Gun category not fetched, or WFCD date mismatch)
   var FRAME_EXTRA_WEAPONS = {
-    'Trinity Prime': [{ name: 'Kavasa Prime Collar', wiki: 'https://wiki.warframe.com/w/Kavasa_Prime_Collar' }],
-    'Xaku Prime':    [{ name: 'Quassus Prime',        wiki: 'https://wiki.warframe.com/w/Quassus_Prime' }]
+    'Frost Prime':   [{ name: 'Latron Prime',         wiki: 'https://wiki.warframe.com/w/Latron_Prime' },
+                      { name: 'Reaper Prime',          wiki: 'https://wiki.warframe.com/w/Reaper_Prime' }],
+    'Loki Prime':    [{ name: 'Wyrm Prime',            wiki: 'https://wiki.warframe.com/w/Wyrm_Prime' }],
+    'Garuda Prime':  [{ name: 'Corvas Prime',          wiki: 'https://wiki.warframe.com/w/Corvas_Prime' }],
+    'Hildryn Prime': [{ name: 'Larkspur Prime',        wiki: 'https://wiki.warframe.com/w/Larkspur_Prime' }],
+    'Trinity Prime': [{ name: 'Kavasa Prime Collar',  wiki: 'https://wiki.warframe.com/w/Kavasa_Prime_Collar' }],
+    'Xaku Prime':    [{ name: 'Quassus Prime',         wiki: 'https://wiki.warframe.com/w/Quassus_Prime' }]
   };
 
   // ── Wiki URL helpers ────────────────────────────────────────────────────────
@@ -26,45 +30,6 @@
   // ── WFCD field accessor ─────────────────────────────────────────────────────
   function introDate(item) {
     return (item.introduced && item.introduced.date) || '';
-  }
-
-  // ── Shared item cache (also used by prime-list.js) ──────────────────────────
-  function loadItems(cb) {
-    var cached = null;
-    try { cached = JSON.parse(localStorage.getItem(CACHE_KEY_ITEMS)); } catch (e) {}
-    if (cached && (Date.now() - cached.fetched) < ITEMS_TTL) {
-      return cb(null, cached);
-    }
-
-    var cats    = ['Warframes', 'Primary', 'Secondary', 'Melee', 'Archwing', 'Sentinels'];
-    var results = new Array(cats.length);
-    var left    = cats.length;
-    var errored = false;
-
-    cats.forEach(function (cat, i) {
-      fetch(WFCD_BASE + cat + '.json')
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          results[i] = data;
-          if (--left === 0) finish();
-        })
-        .catch(function (e) {
-          if (!errored) { errored = true; cb(e, null); }
-        });
-    });
-
-    function finish() {
-      var frames  = results[0].filter(function (f) { return f.isPrime; });
-      var weapons = [];
-      results.slice(1).forEach(function (arr) {
-        arr.forEach(function (w) {
-          if (w.name && w.name.endsWith(' Prime')) weapons.push(w);
-        });
-      });
-      var payload = { frames: frames, weapons: weapons, fetched: Date.now() };
-      try { localStorage.setItem(CACHE_KEY_ITEMS, JSON.stringify(payload)); } catch (e) {}
-      cb(null, payload);
-    }
   }
 
   // ── Weapon list for a frame ─────────────────────────────────────────────────
@@ -83,44 +48,64 @@
     return list;
   }
 
+  // ── Fetch vaultTrader and extract frame names + expiry ──────────────────────
+  // Filters inventory to warframe suits only (uniqueName contains /Powersuits/
+  // but not /Packages/, which are the bundle packs).
+  function fetchVaultTrader(cb) {
+    fetch(VAULT_TRADER_URL)
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var frames = data.inventory
+          .filter(function (item) {
+            return item.uniqueName.indexOf('/Powersuits/') !== -1 &&
+                   item.uniqueName.indexOf('/Packages/')   === -1;
+          })
+          .map(function (item) { return item.item; });
+
+        cb(null, { frames: frames, expiry: data.expiry });
+      })
+      .catch(function (e) { cb(e, null); });
+  }
+
   // ── Entry point ─────────────────────────────────────────────────────────────
   function init() {
     var el = document.getElementById('resurgence-frames');
     if (!el) return;
 
-    // ── Check resurgence localStorage cache ─────────
+    // ── Check resurgence cache ──────────────────────────────────────────────
     var cached = null;
     try { cached = JSON.parse(localStorage.getItem(CACHE_KEY_RESURGENCE)); } catch (e) {}
 
-    if (cached && new Date() < new Date(cached.expires)) {
-      loadItemsAndRender(el, cached.data);
+    if (cached && new Date() < new Date(cached.expiry)) {
+      scheduleExpiryNotice(el, cached.expiry);
+      renderWithItems(el, cached.frames, cached.expiry);
       return;
     }
 
-    // ── Fetch fresh resurgence data ──────────────────
-    fetch('https://gist.githubusercontent.com/cw-warframe-site/af2366dd0b29a878fb03a7f62f0411c9/raw/resurgence.json')
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        var now      = new Date();
-        var expiry   = new Date(data.expires);
-        var graceEnd = new Date(expiry.getTime() + GRACE_MS);
+    // ── Fetch fresh from vaultTrader API ────────────────────────────────────
+    fetchVaultTrader(function (err, result) {
+      if (err || !result) {
+        el.textContent = 'Could not load resurgence data. Please try again later.';
+        return;
+      }
 
-        if (now > graceEnd) {
-          renderUpdating(el);
-          return;
-        }
+      if (new Date() >= new Date(result.expiry)) {
+        showRotationEndedNotice(el);
+        return;
+      }
 
-        try {
-          localStorage.setItem(CACHE_KEY_RESURGENCE, JSON.stringify({ data: data, expires: data.expires }));
-        } catch (e) {}
+      try {
+        localStorage.setItem(CACHE_KEY_RESURGENCE, JSON.stringify(result));
+      } catch (e) {}
 
-        loadItemsAndRender(el, data);
-      });
+      scheduleExpiryNotice(el, result.expiry);
+      renderWithItems(el, result.frames, result.expiry);
+    });
   }
 
-  // ── Cross-reference resurgence frame names against WFCD data ────────────────
-  function loadItemsAndRender(el, resurgence) {
-    loadItems(function (err, data) {
+  // ── Cross-reference frame names against WFCD items ──────────────────────────
+  function renderWithItems(el, frameNames, expiry) {
+    window.WFItems.load(function (err, data) {
       if (err || !data) {
         el.textContent = 'Could not load prime data. Please try again later.';
         return;
@@ -129,7 +114,7 @@
       var lookup = {};
       data.frames.forEach(function (f) { lookup[f.name] = f; });
 
-      var matched = resurgence.frames
+      var matched = frameNames
         .map(function (name) {
           var frame = lookup[name];
           if (!frame) return null;
@@ -142,18 +127,71 @@
         })
         .filter(Boolean);
 
-      render(el, matched, resurgence.expires);
+      render(el, matched, expiry);
     });
   }
 
-  // ── Helpers ─────────────────────────────────────────────────────────────────
-  function renderUpdating(el) {
+  // ── Set a timer to swap in the rotation-ended notice at expiry ───────────────
+  function scheduleExpiryNotice(el, expiry) {
+    var msLeft = new Date(expiry) - Date.now();
+    if (msLeft <= 0) return;
+    setTimeout(function () {
+      try { localStorage.removeItem(CACHE_KEY_RESURGENCE); } catch (e) {}
+      el.innerHTML = '';
+      showRotationEndedNotice(el);
+    }, msLeft);
+  }
+
+  // ── Rotation-ended notice with a refresh button and 10s cooldown ─────────────
+  function showRotationEndedNotice(el) {
     var notice = document.createElement('div');
     notice.className = 'resurgence-updating';
-    notice.textContent = 'Resurgence data is currently being updated, check back soon.';
+
+    var msg = document.createElement('p');
+    msg.textContent = 'This Resurgence rotation has ended — new data is on its way from DE. Check back in a few hours.';
+    notice.appendChild(msg);
+
+    var btn = document.createElement('button');
+    btn.className = 'resurgence-refresh-btn';
+    btn.textContent = 'Check for updated data';
+
+    btn.addEventListener('click', function () {
+      btn.disabled = true;
+      btn.textContent = 'Checking\u2026';
+
+      fetchVaultTrader(function (err, result) {
+        if (!err && result && new Date() < new Date(result.expiry)) {
+          // New rotation is live — cache and render
+          try {
+            localStorage.setItem(CACHE_KEY_RESURGENCE, JSON.stringify(result));
+          } catch (e) {}
+          el.innerHTML = '';
+          scheduleExpiryNotice(el, result.expiry);
+          renderWithItems(el, result.frames, result.expiry);
+          return;
+        }
+
+        // Still expired — 10s cooldown before allowing another try
+        var secs = 10;
+        btn.textContent = 'Try again in ' + secs + 's';
+        var interval = setInterval(function () {
+          secs--;
+          if (secs <= 0) {
+            clearInterval(interval);
+            btn.disabled = false;
+            btn.textContent = 'Check for updated data';
+          } else {
+            btn.textContent = 'Try again in ' + secs + 's';
+          }
+        }, 1000);
+      });
+    });
+
+    notice.appendChild(btn);
     el.appendChild(notice);
   }
 
+  // ── Helpers ─────────────────────────────────────────────────────────────────
   function daysRemaining(expiresStr) {
     var diff = new Date(expiresStr) - new Date();
     if (diff <= 0) return 0;
@@ -186,7 +224,7 @@
       expiry.innerHTML =
         'Available until <span class="resurgence-expiry__date">' + formatDate(expires) + '</span>' +
         ' at <span class="resurgence-expiry__time">' + formatTime(expires) + '</span>' +
-        ' - <span class="resurgence-expiry__days">' + days + ' day' + (days === 1 ? '' : 's') + ' remaining</span>';
+        ' \u2013 <span class="resurgence-expiry__days">' + days + ' day' + (days === 1 ? '' : 's') + ' remaining</span>';
     } else {
       expiry.innerHTML = '<span class="resurgence-expiry__days">This Resurgence has ended.</span>';
     }

@@ -870,6 +870,33 @@ img.floored {
   margin: 1rem auto;
 }
 
+/* Refresh button inside the rotation-ended notice */
+.resurgence-refresh-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border: 1.5px solid #b59d47;
+  border-radius: 3px;
+  color: #b59d47;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.resurgence-refresh-btn:hover:not(:disabled) {
+  background: #b59d47;
+  color: #1c1c1c;
+}
+
+.resurgence-refresh-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
 /* Resurgence badge variant — amber-orange to distinguish from "Newest" */
 .prime-card__badge--resurgence {
   background: rgba(190, 100, 30, 0.88);

@@ -1,16 +1,19 @@
 (function () {
-  var CDN_BASE  = 'https://cdn.warframestat.us/img/';
-  var WFCD_BASE = 'https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/';
-  var CACHE_KEY = 'wf_items_v1';
-  var CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
+  var CDN_BASE = 'https://cdn.warframestat.us/img/';
 
   // Weapons that share a prime access date but were NOT prime access drops
-  var WEAPON_EXCLUSIONS = { 'Sagek Prime': true, 'Galariak Prime': true };
+  var WEAPON_EXCLUSIONS = { 'Sagek Prime': true, 'Galariak Prime': true, 'Akbronco Prime': true };
 
   // Per-frame hardcoded additions for items WFCD can't match by date
+  // (null introduced date, Arch-Gun category not fetched, or WFCD date mismatch)
   var FRAME_EXTRA_WEAPONS = {
-    'Trinity Prime': [{ name: 'Kavasa Prime Collar', wiki: 'https://wiki.warframe.com/w/Kavasa_Prime_Collar' }],
-    'Xaku Prime':    [{ name: 'Quassus Prime',        wiki: 'https://wiki.warframe.com/w/Quassus_Prime' }]
+    'Frost Prime':   [{ name: 'Latron Prime',         wiki: 'https://wiki.warframe.com/w/Latron_Prime' },
+                      { name: 'Reaper Prime',          wiki: 'https://wiki.warframe.com/w/Reaper_Prime' }],
+    'Loki Prime':    [{ name: 'Wyrm Prime',            wiki: 'https://wiki.warframe.com/w/Wyrm_Prime' }],
+    'Garuda Prime':  [{ name: 'Corvas Prime',          wiki: 'https://wiki.warframe.com/w/Corvas_Prime' }],
+    'Hildryn Prime': [{ name: 'Larkspur Prime',        wiki: 'https://wiki.warframe.com/w/Larkspur_Prime' }],
+    'Trinity Prime': [{ name: 'Kavasa Prime Collar',  wiki: 'https://wiki.warframe.com/w/Kavasa_Prime_Collar' }],
+    'Xaku Prime':    [{ name: 'Quassus Prime',         wiki: 'https://wiki.warframe.com/w/Quassus_Prime' }]
   };
 
   // ── Wiki URL helpers ────────────────────────────────────────────────────────
@@ -29,45 +32,6 @@
   // ── WFCD field accessor ─────────────────────────────────────────────────────
   function introDate(item) {
     return (item.introduced && item.introduced.date) || '';
-  }
-
-  // ── Shared item cache (also used by resurgence.js) ──────────────────────────
-  function loadItems(cb) {
-    var cached = null;
-    try { cached = JSON.parse(localStorage.getItem(CACHE_KEY)); } catch (e) {}
-    if (cached && (Date.now() - cached.fetched) < CACHE_TTL) {
-      return cb(null, cached);
-    }
-
-    var cats    = ['Warframes', 'Primary', 'Secondary', 'Melee', 'Archwing', 'Sentinels'];
-    var results = new Array(cats.length);
-    var left    = cats.length;
-    var errored = false;
-
-    cats.forEach(function (cat, i) {
-      fetch(WFCD_BASE + cat + '.json')
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          results[i] = data;
-          if (--left === 0) finish();
-        })
-        .catch(function (e) {
-          if (!errored) { errored = true; cb(e, null); }
-        });
-    });
-
-    function finish() {
-      var frames  = results[0].filter(function (f) { return f.isPrime; });
-      var weapons = [];
-      results.slice(1).forEach(function (arr) {
-        arr.forEach(function (w) {
-          if (w.name && w.name.endsWith(' Prime')) weapons.push(w);
-        });
-      });
-      var payload = { frames: frames, weapons: weapons, fetched: Date.now() };
-      try { localStorage.setItem(CACHE_KEY, JSON.stringify(payload)); } catch (e) {}
-      cb(null, payload);
-    }
   }
 
   // ── Weapon list for a frame ─────────────────────────────────────────────────
@@ -94,7 +58,7 @@
     var el = document.getElementById('recent-primes');
     if (!el) return;
 
-    loadItems(function (err, data) {
+    window.WFItems.load(function (err, data) {
       if (err || !data) {
         el.textContent = 'Could not load prime data. Please try again later.';
         return;
