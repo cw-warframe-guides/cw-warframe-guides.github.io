@@ -1,12 +1,7 @@
 {% extends "main.html" %}
 
-{% block tabs %}
-<div class="hero-banner">
-  <div class="hero-title">Charithw's Guide Hub</div>
-</div>
-{% endblock %}
-
 {% block extrahead %}
+<meta name="darkreader-lock">
 <style>
   /* Hide both sidebars on home page (but not on mobile — drawer uses the primary sidebar) */
   @media (min-width: 631px) {
@@ -14,6 +9,12 @@
     .md-sidebar--secondary { display: none !important; }
   }
 </style>
+{% endblock %}
+
+{% block tabs %}
+<div class="hero-banner">
+  <div class="hero-title">Charithw's Guide Hub</div>
+</div>
 {% endblock %}
 
 {% block content %}
