@@ -21,7 +21,7 @@ AlecaFrame is a companion app for Warframe that tracks player progression, inven
 Check out the website here to download AlecaFrame:
 [https://alecaframe.com](https://alecaframe.com)
 
-> **Disclaimer:** AlecaFrame operates in a grey zone of 3rd-party apps since Digital Extremes (DE) neither approves nor disapproves of 3rd-party apps. Historically apps that stay within Warframe's TOS remained unbanned, and Aleca currently does that. That said, people have blamed bans on AlecaFrame. Most have been reversed through DE support tickets, but please use Aleca at your own discretion. 
+> **Disclaimer:** AlecaFrame operates in a grey zone of 3rd-party apps since Digital Extremes (DE) neither approves nor disapproves of 3rd-party apps. Historically apps that stay within Warframe's TOS remained unbanned, and Aleca currently does that. Additionally, DE has direct communication with Overwolf to guarantee that all its apps (including Aleca) do not breach Warframe's EULA or TOS. That said, people have blamed bans on AlecaFrame. Most have been reversed through DE support tickets, but please use Aleca at your own discretion. 
 
 ---
 ## Inventory Management
@@ -76,7 +76,7 @@ On the right side of the display is the Timers & Events section. This contains a
 ## Warframe.Market Integration
 
 Aleca has built-in integration with warframe.market (WFM). As mentioned in our 
-warframe.market guide, WFM is a great tool that facilitates easier trading between players.
+[warframe.market guide](wfm.md), WFM is a great tool that facilitates easier trading between players.
 
 Once you link your WFM account to AlecaFrame, you can manage your sale postings directly 
 within Aleca. This includes tracking sales, adjusting prices, adding new listings, and setting 

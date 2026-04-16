@@ -33,6 +33,7 @@ Due to all these unintuitive interactions, several players have done extensive t
 ---
 ## Link
 *Spreadsheet last updated for Version 40.0.0*
+
 [Galvanized GunCO on Projectiles Spreadsheet](https://docs.google.com/spreadsheets/d/1ryemX4Y2vWy9LjuJ355bWVNuBhzLaHTTFqPeTNto9RA/edit?gid=883121879#gid=883121879)
 
 ---

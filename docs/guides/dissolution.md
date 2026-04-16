@@ -35,7 +35,7 @@ If you don't have arcanes to dissolve or would rather not, there are other ways 
 
 1. Elite Deep Archimedea awards Vosfor at the 28 point tier (20 Vosfor) and 37 point tier (50 Vosfor)
 2. Höllvania Faceoff missions can award varying amounts of Vosfor
-3. 200 Vosfor packs can be bought from the [6 Faction Syndicates](#) for 30,000 standing
+3. 200 Vosfor packs can be bought from the [6 Faction Syndicates](faction-syndicates.md) for 30,000 standing
 4. Kaya sells a 200 Vosfor pack for 6 Pix Chips, earned through Temporal Archimedea
 
 ---

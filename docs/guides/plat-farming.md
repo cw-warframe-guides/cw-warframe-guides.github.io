@@ -24,7 +24,7 @@ Platinum is Warframe's main premium currency. It's used primarily for purchasing
 
 This guide covers several reliable ways to earn platinum early on, before reaching the New War and Steel Path. This is not an exhaustive guide, but it focuses on methods that are accessible and practical for newer players.
 
-I also strongly encourage using [Warframe.market](https://warframe.market/), a site built to make trading significantly easier. Check out my guide if you want help getting started with it!
+I also strongly encourage using [Warframe.market](https://warframe.market/), a site built to make trading significantly easier. Check out my [guide](wfm.md) if you want help getting started with it!
 
 ---
 ## Prime Parts / Prime Sets
@@ -87,7 +87,7 @@ Some Nightmare mods are highly sought after due to their strong effects and low 
 ---
 ## Veiled Rivens
 
-Riven mods are special weapon-specific mods originally designed to boost underused or niche weapons. For a deeper dive into Rivens, check out my Riven Guide.
+Riven mods are special weapon-specific mods originally designed to boost underused or niche weapons. For a deeper dive into Rivens, check out my [Riven Guide](#).
 
 On acquisition, Riven mods start out veiled. They can be sold veiled for a modest amount, or unveiled for potentially more plat. Unveiling is essentially a gamble though. You might land a Riven for a popular weapon like the Dual Toxocyst or Torid and 'hit it big', but more often than not you will end up with something unpopular and harder to sell. If you need plat quickly, selling veiled is the safer option.
 

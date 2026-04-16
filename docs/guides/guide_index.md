@@ -59,8 +59,8 @@ template: guide-index.html
         <li><span class="wip">Companions: Beasts(WIP)</span></li>
         <li><span class="wip">Companions: Sentinels; Focus Farming</span></li>
         <li><span class="wip">Companions: Other Robotics</span></li>
-        <li><span class="wip">Riven Guide(WIP)</span></li>
-        <li><span class="wip">Valence Fusions(WIP)</span></li>
+        <li><a href="../rivens/">Riven Guide</a></li>
+        <li><a href="../valence/">Valence Fusion</a></li>
         <li><span class="wip">Helminth: Subsumes, Invigorations, and Archon Shards</span></li>
       </ul>
     </div>
@@ -68,11 +68,11 @@ template: guide-index.html
     <div class="guide-category" id="mid-late-systems">
       <h2>Mid / Late Game Systems</h2>
       <ul>
-        <li><span class="wip">Kuva Liches and Sisters of Parvos(WIP)</span></li>
-        <li><span class="wip">Technocyte Codas(WIP)</span></li>
-        <li><span class="wip">Arbitrations</span></li>
+        <li><a href="../adversaries/">Kuva Liches &amp; Sisters of Parvos</a></li>
+        <li><a href="../coda/">Technocyte Codas</a></li>
+        <li><a href="../arbitrations/">Arbitrations</a></li>
         <li><a href="../eidolons/">Eidolon Hunting</a></li>
-        <li><span class="wip">Cascade Guide</span></li>
+        <li><a href="../cascade/">Void Cascades</a></li>
       </ul>
     </div>
 
@@ -88,7 +88,7 @@ template: guide-index.html
       <ul>
         <li><a href="../duviri-enigmas/">Duviri Enigmas</a></li>
         <li><a href="../gas-city-labs/">Gas City Labs</a></li>
-        <li><span class="wip">Halls of Ascension (WIP)</span></li>
+        <li><span class="wip">Halls of Ascension (TBD)</span></li>
       </ul>
     </div>
 

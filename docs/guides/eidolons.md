@@ -18,6 +18,7 @@ Eidolons are towering spectral fragments of a giant, shattered Sentient that onc
 
 There are 3 Eidolons you can fight: the Teralyst, Gantulyst, and Hydrolyst. The Teralyst will naturally appear at night, but the others will require a successful capture of the smaller version and summoning at the shrine on Gara Toht Lake, which commemorates the ancient battle. Killing or capturing an Eidolon will reward you with Warframe Arcanes, Eidolon shards and numerous Sentient Cores
 
+---
 ## Guide Resources
 
 Eidolon hunting is a complex and nuanced activity, and the community has spent years developing resources that go far beyond the scope of what this guide could provide. Rather than attempting to cover everything here, the following resources are recommended as further reading and viewing.

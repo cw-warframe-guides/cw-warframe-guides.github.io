@@ -45,7 +45,7 @@ Sorties can be run daily and have 40% chance to give endo related rewards. This 
 - 12% for 4k endo
 
 ### Arbitrations
-Arbitrations are hourly missions, that have a high chance to reward endo or Ayatan sculptures per reward round. You can definitely run this casually, but if you want a meta strategy, a guide to 'Meta' Arbitrations can be found here: **LINK**
+Arbitrations are hourly missions, that have a high chance to reward endo or Ayatan sculptures per reward round. You can definitely run this casually, but if you want a meta strategy, check out the [Arbitrations Guide](arbitrations.md) for more details.
 
 ### Railjack 
 Veil Proxima missions have decent endo caches rewards and give a lot of scrap parts which you can dissolve into endo. Once you or your friends have a solid Railjack, then this can be a casual way to farm Endo along with a lot of other rewards like corrupted holokeys, relics, etc.

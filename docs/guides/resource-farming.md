@@ -79,7 +79,7 @@ Below is a list of uncommon/rare resources I've been asked about and my personal
 - **Gallium** - Ophelia, Uranus. Fantastic multi-purpose farm (Polymer Bundles, Plastids, Gallium, and Tellurium).
 - **Hexenon** - Elara or Cameria, Jupiter. Elara has been consistently reliable, and Io is a nice alternative that doubles as an Oxium farm.
 - **Morphics** - Hellas, Mars or Illiad, Phobos. For small quantities, bring a box breaker to these. For larger quantities, try Kadesh, Mars (Survival).
-- **Mutagen Mass, Fieldron, and Detonite Injectors** - These are Invasion rewards. You can run Tier 4 Fortuna bounties, but it's generally much easier to just complete Invasions as they come.
+- **Mutagen Mass, Fieldron, and Detonite Injectors** - These are Invasion rewards. You can run Tier 4 Fortuna bounties, but it's generally much easier to just complete Invasions as they show up.
 - **Neural Sensors** - Themisto, Jupiter. For small quantities, rushing and killing the boss while using a box breaker works well. For large quantities, Taveuni on the Kuva Fortress is the better option.
 - **Neurodes** - E Prime / Mariana, Earth. Works well early on. Post Second Dream: Tycho, Lua (Survival) or Magnacidium, Deimos (Assassination) both work.
 - **Orokin Cells** - Ceres, Gabii. An Infested Survival mission with boosted drop rates, making it great for farming large quantities of Orokin Cells.
