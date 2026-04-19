@@ -10,7 +10,7 @@ template: guide.html
 - [Overview](#overview)
 - [Modding Concepts](#modding-concepts)
 - [Special Companion Mod Types](#special-companion-mod-types)
-- [Synergies & Notable Combos](#synergies--notable-combos)
+- [Synergies & Notable Combos](#synergies-notable-combos)
 
 </div>
 
@@ -81,34 +81,48 @@ Retriever mods are beast companion **exclusive** mods that give a chance to doub
 
 This section covers some personal cool mod combinations and synergies that I think are worth knowing about. This list is not exhaustive but should make you aware of some of the more impactful combos. 
 
-**Reinforced Bond**
+- **Reinforced Bond & 350 Base Shields**
 
-Reinforced bond gives a +60% fire rate buff as long as your companion has over 1200 shields. If your companion has a max shield value over 1200, then this becomes a permanent buff (while the companion is alive). This can be achieved with Calculated Redirection on any companion with 350 or more base shields. Additionally beast companions with paired with Link Redirection and a high shield frame can also meet this threshold. 
+    Reinforced bond gives a +60% fire rate buff as long as your companion has over 1200 shields. If your companion has a max shield value over 1200, then this becomes a permanent buff (while the companion is alive). This can be achieved with Calculated Redirection on any companion with 350 or more base shields. Additionally beast companions with paired with Link Redirection and a high shield frame can also meet this threshold. 
 
-**Tenacious Bond**
+&nbsp;
 
-Tenacious Bond grants a 1.2x crit damage buff when your companion's crit chance is over 50%. All beast companions can comfortably hit this threshold with Bite. For Sentinels, only a few weapons can reach this without a Riven, including the Burst Laser Prime and Laser Rifle Prime. 
+- **Tenacious Bond**
 
-**Momentous Bond**
+    Tenacious Bond grants a 1.2x crit damage buff when your companion's crit chance is over 50%. All beast companions can comfortably hit this threshold with Bite. For Sentinels, only a few weapons can reach this without a Riven, including the Burst Laser Prime and Laser Rifle Prime. 
 
-Momentous Bond is near mandatory on most companions builds and effectively replaces the need for a Regen mod on Sentinels. Each Eximus kill reduces your companion's recovery timer by 18 seconds. It also grants your companion additional elemental damage types, which synergizes very well with Manifold Bond and Condition Overload-like effects. 
+&nbsp;
 
-**Synth Deconstruct & Equilibrium**
+- **Momentous Bond**
 
-This combination is a very reliable energy generation method. Synth Deconstruct causes enemies damaged by your companions to drop health orbs, and Equilibrium on your Warframe will convert those orbs into energy. This really shines in high density missions, where you can maintain a high kill rate and produce lots of health orbs.
+    Momentous Bond is near mandatory on most companions builds and effectively replaces the need for a Regen mod on Sentinels. Each Eximus kill reduces your companion's recovery timer by 18 seconds. It also grants your companion additional elemental damage types, which synergizes very well with Manifold Bond and Condition Overload-like effects. 
 
-**Manifold Bond & High Cooldown Precepts**
+&nbsp;
 
-Manifold bond is a mod that allows Robotics' (Sentinels, Hounds, & MOAs) damaging abilities to apply statuses based on all damage types on their weapon. Additionally, when you or your companion kill an enemy with 3 or more status effects on them, it will reduce your companions cooldowns by 3 seconds. This synergizes really well with high impact, high cooldown precepts like Guardian which restores shields or Cordon which groups enemies. Give your companion a weapon that can easily prime enemies and you can create a quick looping effect. 
+- **Synth Deconstruct & Equilibrium**
 
-**Mystic Bond**
+    This combination is a very reliable energy generation method. Synth Deconstruct causes enemies damaged by your companions to drop health orbs, and Equilibrium on your Warframe will convert those orbs into energy. This really shines in high density missions, where you can maintain a high kill rate and produce lots of health orbs.
 
-Mystic Bond generate a free ability cast after your companion uses a precept ability 5 times. Precepts that trigger rapidly, like Diriga's Arc Coil, can generate free ability casts at a high rate. This can be further scaled through Manifold Bond's cooldown reduction, which will allow precepts to trigger more frequently.
+&nbsp;
 
-**Contagious Bond & Heat**
+- **Manifold Bond & High Cooldown Precepts**
 
-Contagious Bond causes enemies killed by your companion to spread half of their statuses to nearby enemies, and this effect can chain between enemies, leading to damage numbers in the millions or billions with the right setup. Heat is the ideal element for this combo since Heat procs refresh with each new stack applied. Any companion weapon with high status chance and consistent damage output, like the Verglas, can really abuse this. 
+    Manifold bond is a mod that allows Robotics' (Sentinels, Hounds, & MOAs) damaging abilities to apply statuses based on all damage types on their weapon. Additionally, when you or your companion kill an enemy with 3 or more status effects on them, it will reduce your companions cooldowns by 3 seconds. This synergizes really well with high impact, high cooldown precepts like Guardian which restores shields or Cordon which groups enemies. Give your companion a weapon that can easily prime enemies and you can create a quick looping effect. 
 
-**Martyr Symbiosis**
+&nbsp;
 
-Martyr Symbiosis is a Vulpaphyla exclusive mod, that lets your companion sacrifice itself to heal you when you drop below 10% health. Pairing this with Momentous Bond can rapidly reduce the recovery timer minimizing the downside significantly.
+- **Mystic Bond**
+
+    Mystic Bond generate a free ability cast after your companion uses a precept ability 5 times. Precepts that trigger rapidly, like Diriga's Arc Coil, can generate free ability casts at a high rate. This can be further scaled through Manifold Bond's cooldown reduction, which will allow precepts to trigger more frequently.
+
+&nbsp;
+
+- **Contagious Bond & Heat**
+
+    Contagious Bond causes enemies killed by your companion to spread half of their statuses to nearby enemies, and this effect can chain between enemies, leading to damage numbers in the millions or billions with the right setup. Heat is the ideal element for this combo since Heat procs refresh with each new stack applied. Any companion weapon with high status chance and consistent damage output, like the Verglas, can really abuse this. 
+
+&nbsp;
+
+- **Martyr Symbiosis**
+
+    Martyr Symbiosis is a Vulpaphyla exclusive mod, that lets your companion sacrifice itself to heal you when you drop below 10% health. Pairing this with Momentous Bond can rapidly reduce the recovery timer minimizing the downside significantly.
