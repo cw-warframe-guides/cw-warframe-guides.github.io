@@ -69,6 +69,8 @@ The following are commonly recommended methods for farming Focus, but they are b
 ---
 ## Artifacts & Tauron Strikes
 
+> **Note:** This following section discusses spoilers for The Old Peace. Please do not read further unless you have completed it or do not mind spoilers.
+
 After completing The Old Peace, you gain access to La Cathédrale, which houses the Devil's Triad: Marie, Lyon, and Roathe. Marie sells Tektolyst Artifacts, which permanently unlock a school's ultimate ability, the Tauron Strike.
 
 ### Obtaining an Artifact
