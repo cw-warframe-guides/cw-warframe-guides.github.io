@@ -17,6 +17,7 @@ template: guide.html
 
 This page covers some of the core stats and combat terminology in Warframe that I thought was worth bringing up. You'll see a lot of these terms mentioned in build guides or when discussing the game with other players, so it doesn't really hurt to know what they are and understand a bit about them.
 
+---
 ## Warframe Stats
 
 **Shields**
@@ -77,7 +78,7 @@ Warframe abilities are scaled by four stats: Strength, Range, Duration, and Effi
 
 Critical hits (crits) are hits that deal increased damage. The chance of a crit occurring is based on the weapon's crit chance, and the damage boost is determined by the weapon's crit damage. In game, standard crits are indicated by yellow damage numbers.
 
-Crit chance can exceed 100%, at which point all hits are guaranteed to crit and now have a chance to upgrade their crits to a higher tier, indicated by orange and then red damage numbers. I cover more on crit tiers in the [Advanced Concepts](#tbd) page but the core takeaway here is that having a crit chance over 100% isn't wasteful.
+Crit chance can exceed 100%, at which point all hits are guaranteed to crit and now have a chance to upgrade their crits to a higher tier, indicated by orange and then red damage numbers. I cover more on crit tiers in the [Advanced Concepts](mod-adv.md) page but the core takeaway here is that having a crit chance over 100% isn't wasteful.
 
 </div>
 <figure class="guide-text-image__img" style="flex: 0 0 30%;">
@@ -89,7 +90,7 @@ Crit chance can exceed 100%, at which point all hits are guaranteed to crit and 
 
 Status chance is the probability that a hit from your weapon will trigger a status effect, also known as a status proc. Each damage type on your weapon has its own associated status chance and the likelihood of each one proccing is proportional to its percentage of your total damage. For example, a weapon that deals mostly slash damage and a little impact damage will apply slash procs much more frequently than impact procs. 
 
-The full breakdown on status effects and what they do can be found on the [Damage Types & Status Effects](#TBD) page.
+The full breakdown on status effects and what they do can be found on the [Damage Types & Status Effects](mod-damage.md) page.
 
 &nbsp;
 
@@ -154,7 +155,7 @@ There are mods, arcanes, and weapons that can help generate combo, extend the 5 
 
 Heavy attacks are powerful melee strikes that consume combo on swing. By default, heavy attacks consume 100% of your combo, but you can mod for heavy attack efficiency which lowers the amount of combo consumed down to a minimum of 10%. Heavy attacks also have an extra windup animation but this can be reduced with heavy attack wind up speed mods.
 
-Tennokai is a special combat art which allows you to perform heavy attacks without consuming combo and with a faster windup animation. With a Tennokai mod, while landing melee hits you'll occasionally gain a brief 2 second window to perform a Tennokai heavy attack. This is indicated by a burst of energy effects around the warframe and a Tennokai symbol around your reticle. Mentor's Legacy, your first Tennokai mod is earned on completion of the Whispers in the Walls quest, and the remaining Tennokai mods can either be farmed from Cambire, Deimos (Alchemy) or bought in a bundle from the Market for 100 plat.
+Tennokai is a special combat art which allows you to perform heavy attacks without consuming combo and with a faster windup animation. With a Tennokai mod, while landing melee hits you'll occasionally gain a brief 2 second window to perform a Tennokai heavy attack. This is indicated by a burst of energy effects around the Warframe and a Tennokai symbol around your reticle. Mentor's Legacy, your first Tennokai mod is earned on completion of the Whispers in the Walls quest, and the remaining Tennokai mods can either be farmed from Cambire, Deimos (Alchemy) or bought in a bundle from the Market for 100 plat.
 
 > **Note:** While yes, these mods are tradeable. The price of the two rarest Tennokai mods (Discipline's Merit & Dreamer's Wrath) is close to 100p, so if you are planning to buy those two, you may as well buy the full set from the Market.
 

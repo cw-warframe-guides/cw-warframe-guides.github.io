@@ -29,14 +29,14 @@ template: guide-index.html
     <div class="guide-category" id="modding-and-optimization">
       <h2>Learning Modding &amp; Optimization</h2>
       <ul>
-        <li><a href="../mod-basics-1/">The Basics: Modding Terminology</span></li>
-        <li><a href="../mod-basics-2/">The Basics: Stats &amp; Combat Terminology</span></li>
-        <li><span class="wip">Modding Advanced Concepts(WIP)</span></li>
-        <li><span class="wip">Damage Types &amp; Status Effects (WIP)</span></li>
+        <li><a href="../mod-basics-1/">The Basics: Modding Terminology</a></li>
+        <li><a href="../mod-basics-2/">The Basics: Stats &amp; Combat Terminology</a></li>
+        <li><a href="../mod-damage/">Damage Types &amp; Status Effects</a></li>
+        <li><a href="../mod-adv/">Modding: Advanced Concepts</a></li>
         <li><span class="wip">Learning to Mod: A Checklist for Melees (WIP)</span></li>
         <li><span class="wip">Learning to Mod: A Checklist for Guns (WIP)</span></li>
         <li><span class="wip">Learning to Mod: A Checklist for Warframes (WIP)</span></li>
-        <li><span class="wip">Railjack Optimization(WIP)</span></li>
+        <li><a href="../railjack-max/">Railjack Optimization</a></li>
       </ul>
     </div>
 

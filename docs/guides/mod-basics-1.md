@@ -17,6 +17,7 @@ template: guide.html
 Modding is the main way players customize and strengthen their gear in Warframe. 
 With so many mods, stats, and interactions, modding can feel overwhelming at first, but the core modding concepts are a lot easier to digest than they appear. Understanding even the basics will pay off at any point in the game, and most players will hit a 'wall' at some point where the game becomes harder to handle without either good modding skills or the knowledge to find and follow reliable build guides. This page, along with others in this section, aims to explain modding concepts at multiple levels to give you that foundation. 
 
+---
 ## Modding Fundamentals
 
 **Mods**
@@ -95,6 +96,7 @@ Arcanes are special enhancements like mods, but have a condition to activate or 
 
 Weapon arcane slots are hidden until you unlock the Steel Path, at which point you can obtain Arcane Adapters for them from various vendors including Teshin and Acrithis.
 
+---
 ## Mod Types & Rarities
 
 Mods come in several rarity levels and a few special types, like Aura and Stance mods which I discussed above. The following broadly covers other mod rarities and types and where you can find them. 

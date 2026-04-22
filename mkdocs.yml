@@ -34,6 +34,8 @@ plugins:
 markdown_extensions:
   - md_in_html
   - attr_list
+  - pymdownx.snippets:
+      base_path: docs/data
 
 extra_javascript:
   - javascripts/glightbox-scroll-zoom.js
