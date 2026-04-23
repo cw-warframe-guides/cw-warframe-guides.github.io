@@ -142,6 +142,7 @@ I've put together a list of a few practical notes on some status effects:
 - Enemies on the Cambion Drift are immune to Viral procs and have Viral resistance.
 - Elemental DoTs scale with their elemental modifier. Having a 90% Heat mod means your Heat procs will do 90% more
 - Secondary elemental DoTs don't scale with their component's elemental modifiers. For example, Blast procs will scale with Blast modifiers but not with Heat or Cold modifiers
+- Viral + Heat is a pretty generic elemental combo that will do decently against a lot of factions
 - Slash procs do not scale with Slash damage modifiers, which is partially why IPS mods are rarely recommended on builds. 
 
 ---

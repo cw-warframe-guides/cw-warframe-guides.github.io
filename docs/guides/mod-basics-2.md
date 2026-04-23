@@ -96,9 +96,9 @@ The full breakdown on status effects and what they do can be found on the [Damag
 
 **Multishot**
 
-Multishot is the chance for your weapon to fire extra projectiles per shot (without consuming extra ammo). These extra projectiles behave identically to the original shot and fire at the same time as the initial shot. Additionally, they can independently crit and apply status procs, which makes multishot an incredibly valuable stat to mod for. 
+Multishot is the chance for your weapon to fire extra projectiles per shot (without consuming extra ammo). These extra projectiles behave identically to the original shot and fire at the same time as the initial shot. Additionally, they can independently crit and apply status procs, which makes Multishot an incredibly valuable stat to mod for. 
 
-Beam weapons handle multishot differently. With multishot, each damage tick has a chance to deal additional damage. This causes weird interactions with damaging status effects, causing them to be greatly boosted by multishot affecting both the weapon's status chance and the damage of its status procs.
+Beam weapons handle Multishot differently. With Multishot, each damage tick has a chance to deal additional damage. This causes weird interactions with damaging status effects, causing them to be greatly boosted by Multishot affecting both the weapon's status chance and the damage of its status procs.
 
 &nbsp;
 
