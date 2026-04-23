@@ -308,8 +308,13 @@ body {
   color: #b59d47 !important;
 }
 
-.guide-category li .wip {
-  opacity: 0.5;
+.guide-category li .tbd {
+  color: #7c7464;
+}
+
+.guide-category li .tbd .wip-tag {
+  color: #b59d47;
+  font-style: bold;
 }
 
 /* ── Guide Index: sub-group (e.g. Companions) ────── */

@@ -35,7 +35,7 @@ template: guide-index.html
         <li><a href="../mod-adv/">Modding: Advanced Concepts</a></li>
         <li><a href="../mod-warframes/">Modding: A Checklist for Warframes</a></li>
         <li><a href="../mod-guns/">Modding: A Checklist for Guns</a></li>
-        <li><span class="wip">Learning to Mod: A Checklist for Melees (WIP)</span></li>
+        <li><a href="../mod-melees/">Modding: A Checklist for Melees</a></li>
         <li><a href="../railjack-max/">Railjack Optimization</a></li>
       </ul>
     </div>
@@ -49,7 +49,7 @@ template: guide-index.html
         <li><a href="../invasions/">Invasions</a></li>
         <li><a href="../prime-vault/">Primes, Vaulting, &amp; Resurgence</a></li>
         <li><a href="../void-relics/">Void Relics Explained</a></li>
-        <li><span class="wip">Railjack (TBD)</span></li>
+        <li><span class="tbd">Railjack (TBD)</span></li>
       </ul>
     </div>
 
@@ -95,7 +95,7 @@ template: guide-index.html
       <ul>
         <li><a href="../duviri-enigmas/">Duviri Enigmas</a></li>
         <li><a href="../gas-city-labs/">Gas City Labs</a></li>
-        <li><span class="wip">Halls of Ascension (TBD)</span></li>
+        <li><span class="tbd">Halls of Ascension (TBD)</span></li>
       </ul>
     </div>
 
@@ -105,6 +105,7 @@ template: guide-index.html
         <li><a href="../aleca/">AlecaFrame</a></li>
         <li><a href="../amp/">Amp Chart</a></li>
         <li><a href="../gun-co/">GunCO Spreadsheet</a></li>
+        <li><span class="tbd">Riven Stat Checker <span class="wip-tag">(WIP)</span></span></li>
         <li><a href="../wfm/">Warframe.Market</a></li>
         <li><a href="../wf-colorpicker/">Warframe Color Picker</a></li>
       </ul>
