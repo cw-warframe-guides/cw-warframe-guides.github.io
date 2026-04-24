@@ -38,19 +38,16 @@ Capacity determines the number and rank of the mods that you can fit on a given 
 
 > **Note:** Applying an Orokin Reactor or Catalyst to an item will double its capacity (max 60 capacity)
 
-&nbsp;
-
-**Polarities & Forma**
-
 <div class="guide-text-image" markdown="1">
 <div class="guide-text-image__text" markdown="1">
+**Polarities & Forma**
 
 Polarities are symbols on both mods and mod slots. Putting a mod into a slot with a matching polarity will turn the symbol green and either half the drain on the mod or double the capacity boost (for auras and stances). Mismatch the polarities and the symbol will turn red, increasing the mod's capacity by 25% and decreasing the capacity boost (for auras and stances).
 
 Forma is a consumable that changes or adds 1 polarity to an item. The item must be at max possible rank to use Forma on it and using Forma will reset the rank to 0 again. Forma blueprints are mainly earned through Void Relics, but they can also be obtained from alerts, invasions, and other sources. Additionally, you can just buy Forma from the Market for 20 plat. You can purchases bundle of 3 Forma for 35 plat (saves ~8 plat per forma) which is a significantly better deal.
 
 </div>
-<figure class="guide-text-image__img" style="flex: 0 0 30%;">
+<figure class="guide-text-image__img" style="flex: 0 0 25%;">
   <img src="../../images/modding/basics1-polar.webp" alt="polarity states">
   <figcaption>These 3 mods have 16 drain. Matching 1/2's the cost (8). Mismatching 1.25x's it (20)</figcaption>
 </figure>
@@ -76,7 +73,7 @@ Aura mods are special Warframe exclusive mods that occupy a dedicated slot and p
 Stances are similar to Aura mods, but apply only to melee weapons. Like auras, they provide bonus capacity and have their own slot. Uniquely, each stance is tied to a specific melee category (swords, hammers, etc) and comes with its own series of melee combos.
 
 </div>
-<figure class="guide-text-image__img" style="flex: 0 0 30%;">
+<figure class="guide-text-image__img" style="flex: 0 0 15%;">
   <img src="../../images/modding/basics1-aura.webp" alt="no-aura">
   <figcaption>Warframe build with and without Aura mod</figcaption>
 </figure>

@@ -168,3 +168,9 @@ Tennokai is a special combat art which allows you to perform heavy attacks witho
 **CO & GunCO**
 
 Condition Overload (CO) and its ranged equivalents (GunCO) refer to a group of mods that scale your weapon's direct damage based on the number of unique status effects on a target. Condition Overload is the melee version and GunCO refers to the 3 Galvanized mods (Aptitude, Savvy, and Shot) that affect primary and secondary weapons. These mods have enormous damage potential in builds that can consistently apply multiple status types. However, there are a number of unique interactions worth knowing about which can be found [here](gun-co.md).
+
+&nbsp;
+
+**Primers**
+
+A primer is any weapon, ability, or companion that's good at applying multiple debuffing status effects to an enemy. Since CO and GunCO scale with the number of unique status types on a target, a good primer can really increase your damage output for your main weapons. Some common primers include the Epitaph and Nukor secondaries and the Diriga and Hound companions.

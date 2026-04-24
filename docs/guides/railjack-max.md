@@ -220,7 +220,7 @@ Best Perk Options:
 
 **Gunner**
 
-- Gunnery 5 >> Endurance 5 > Repair 5
+- Gunnery 5 > Endurance 5 > Repair 5
 
 Best Perk Options:
 
@@ -228,11 +228,11 @@ Best Perk Options:
 
 &nbsp;
 
-**Pilot** 
+**Pilot (pseudo-Gunner)** 
 
-Crewmate piloting AI is a bit too slow to be worth using as an actual pilot. However, the elite crew trait "+25% speed for X engines" gives a global speed buff to your Railjack. This means we can turn a 'pilot' crewmate into a gunner.
+Crewmate piloting AI is a bit too slow to be worth using as an actual pilot. However, the elite crew trait "+25% speed for X engines" gives a global speed buff to your Railjack. This means we can turn a 'pilot' crewmate into a bootleg-gunner.
 
-- Pilot 5 > Gunnery 5 >> Endurance 5
+- Pilot 5 >> Gunnery 5 = Endurance 5
 
 Best Perk Options:
 
