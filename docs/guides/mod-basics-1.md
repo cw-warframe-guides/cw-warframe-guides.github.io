@@ -73,7 +73,7 @@ Aura mods are special Warframe exclusive mods that occupy a dedicated slot and p
 Stances are similar to Aura mods, but apply only to melee weapons. Like auras, they provide bonus capacity and have their own slot. Uniquely, each stance is tied to a specific melee category (swords, hammers, etc) and comes with its own series of melee combos.
 
 </div>
-<figure class="guide-text-image__img" style="flex: 0 0 15%;">
+<figure class="guide-text-image__img" style="flex: 0 0 55%;">
   <img src="../../images/modding/basics1-aura.webp" alt="no-aura">
   <figcaption>Warframe build with and without Aura mod</figcaption>
 </figure>
