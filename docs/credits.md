@@ -11,7 +11,9 @@ A huge thank you to the following Tenno who helped review, test, and improve the
 - **My amazing partner, Divya** - Who gave tons of love and support while I was setting this website up and also helped correct all my UI / UX design mistakes
 - **Dio** - Who roasted me on my lack of good HTML design concepts and who subsequently helped me fix all of these issues
 - **Jeff, Joaquin, Kitty, Vic, Ooga, and SelVsTheWorld** - For feedback, memes, support, and proofreading
+- [**SubHimOutCoach**](https://www.twitch.tv/subhimoutcoach) - for helping promote the site and being a great streamer to hang out with
 - **Parrish** - For making me who I am today
+
 
 ---
 ## Asset Attribution
