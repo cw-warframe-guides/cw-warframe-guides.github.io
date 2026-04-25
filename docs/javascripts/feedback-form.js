@@ -19,6 +19,19 @@ document.addEventListener('DOMContentLoaded', function () {
   var error   = document.getElementById('feedback-error');
 
   if (form) {
+    var reset = document.getElementById('feedback-reset');
+    if (reset) {
+      reset.addEventListener('click', function (e) {
+        e.preventDefault();
+        form.reset();
+        form.style.display       = '';
+        success.style.display    = 'none';
+        var submit = form.querySelector('.feedback-form__submit');
+        submit.disabled    = false;
+        submit.textContent = 'Submit';
+      });
+    }
+
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
@@ -33,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var submit = form.querySelector('.feedback-form__submit');
       submit.disabled    = true;
       submit.textContent = 'Sending...';
-      error.hidden   = true;
-      success.hidden = true;
+      success.style.display = 'none';
+      error.style.display   = 'none';
 
       var payload = { name, email, subject, type, message };
       var ok = false;
@@ -73,13 +86,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       if (ok) {
-        form.hidden    = true;
-        success.hidden = false;
+        form.style.display    = 'none';
+        success.style.display = 'block';
         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         submit.disabled    = false;
         submit.textContent = 'Submit';
-        error.hidden       = false;
+        error.style.display = 'block';
       }
     });
   }

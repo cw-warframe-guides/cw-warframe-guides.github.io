@@ -18,7 +18,7 @@
   <!-- ── Left: Submission form ── -->
   <div class="feedback-layout__form">
     <h1>Feedback</h1>
-    <p class="feedback-page__intro">If you have thoughts on the site, got a guide you'd like to see, or you've found something that's broken, send a message below! Submission status updates roughly every hour or so </p>
+    <p class="feedback-page__intro">If you have thoughts on the site, got a guide you'd like to see, or you've found something that's broken, send a message below!</p>
 
     <form id="feedback-form" class="feedback-form" novalidate>
 
@@ -97,7 +97,8 @@
 
     <div id="feedback-success" class="feedback-status feedback-status--success" hidden>
       <strong>Submission received!</strong><br>
-      Thanks for reaching out — I'll take a look soon.
+      Thanks for reaching out! I'll take a look soon.<br>
+      <a id="feedback-reset" href="#" style="color:inherit;text-decoration:underline;font-size:0.85rem;">Send another message</a>
     </div>
     <div id="feedback-error" class="feedback-status feedback-status--error" hidden>
       Something went wrong on our end. Please try again in a moment.
@@ -107,7 +108,7 @@
   <!-- ── Right: Open tickets ── -->
   <div class="feedback-layout__status">
     <h1>Open Submissions</h1>
-    <p class="feedback-page__intro">Current open submissions. Accepted means I plan to work on it. Closed and rejected tickets are hidden.</p>
+    <p class="feedback-page__intro">Current open submissions. Accepted means I plan to work on it. Closed and rejected tickets are hidden. Note: Submission status updates roughly every hour</p>
 
     <div id="tickets-meta" class="tickets-meta" hidden>
       Last updated: <span id="tickets-updated"></span> &nbsp;·&nbsp;
