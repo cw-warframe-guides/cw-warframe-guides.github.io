@@ -1,0 +1,1295 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cw-warframe-guides.github.io/guides/companion-sent/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Companions: Sentinels - Charithw's WF Guide Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+<meta name="darkreader-lock">
+<script>window.__mkdocsBase = "../..";</script>
+<style>
+  /* Hide left nav sidebar (but not on mobile — drawer uses it) */
+  @media (min-width: 631px) {
+    .md-sidebar--primary { display: none !important; }
+  }
+
+  /* Hide Material footer generator line */
+  .md-footer-meta { display: none !important; }
+
+  /* Expand layout to full viewport width, dead space on left only */
+  .md-main__inner {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: clamp(0rem, 12vw, 12.1rem) !important;
+    padding-right: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TOC: sticky in normal flow, sits at right edge */
+  .md-sidebar--secondary {
+    position: sticky !important;
+    top: 3.5rem !important;
+    width: 12.1rem !important;
+    flex-shrink: 0 !important;
+    height: fit-content !important;
+    background-color: #1c1c1c !important;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    height: fit-content !important;
+    overflow: visible !important;
+    background-color: #1c1c1c !important;
+  }
+
+  /* Text + image side by side, image vertically centered */
+  .guide-text-image {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .guide-text-image__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .guide-text-image__img {
+    flex: 0 0 50%; /* ← default image column width; override per-instance via inline style on <figure> */
+    min-width: 0;
+    margin: 0;
+  }
+
+  .guide-text-image__img img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-text-image__img figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* Hide TOC sidebar earlier than Material's default ~960px breakpoint */
+  @media (max-width: 1200px) {
+    .md-sidebar--secondary { display: none !important; }
+  }
+
+  /* Stack text above image at narrow widths */
+  @media (max-width: 1000px) {
+    .guide-text-image {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-text-image__text {
+      width: 100%;
+    }
+
+    .guide-text-image__img {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Two images side by side */
+  .guide-image-pair {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .guide-image-pair figure {
+    flex: 1 1 0; /* default: equal split — override per-figure with style="flex: 0 0 40%" */
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .guide-image-pair figure img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-image-pair figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  figure > .guide-image-pair ~ figcaption {
+    display: block;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  @media (max-width: 1000px) {
+    .guide-image-pair {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-image-pair figure {
+      width: 100%;
+      max-width: 480px;
+    }
+  }
+
+  /* Page title: centered, matching guide index size */
+  .md-content h1 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  /* TOC sidebar: "Table of contents" label */
+  .md-sidebar--secondary .md-nav__title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.85rem !important;
+    color: #b59d47 !important;
+    letter-spacing: 0.05em;
+  }
+
+  /* Back to top button: hidden on wide screens */
+  .back-to-top-btn { display: none; }
+
+  @media (max-width: 1200px) {
+    .back-to-top-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      z-index: 201;
+      background: #26221a;
+      border: 1.5px solid #b59d47;
+      border-radius: 3px;
+      color: #b59d47;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+      text-decoration: none !important;
+    }
+
+    .back-to-top-btn:hover {
+      background: #b59d47;
+      color: #1c1c1c !important;
+    }
+  }
+</style>
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#companions-sentinels" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner" aria-label="Header">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-header__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <span class="md-header__topic">Charithw's WF Guide Hub</span>
+    </div>
+    <div class="md-header__spacer"></div>
+    <nav class="md-header-nav" aria-label="Site navigation">
+      
+      
+      <a href="../.." class="md-header-nav__link">
+        Home
+      </a>
+      
+      
+      
+      <a href="../../guide_index/" class="md-header-nav__link">
+        Guide Index
+      </a>
+      
+      
+      
+      <div class="md-header-nav__item--dropdown" data-md-dropdown="">
+        <button class="md-header-nav__link md-header-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          More
+        </button>
+        <ul class="md-header-nav__dropdown-menu" role="menu">
+          
+          <li role="none">
+            <a href="../../feedback/" class="md-header-nav__dropdown-link" role="menuitem">
+              Feedback
+            </a>
+          </li>
+          
+          <li role="none">
+            <a href="../../credits/" class="md-header-nav__dropdown-link" role="menuitem">
+              Credits
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
+    </nav>
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide_index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../feedback/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-nav__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    Charithw's WF Guide Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    More
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentinel-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sentinel Breakdown
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sentinel Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taxon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taxon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shade-prime-prisma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shade / Prime / Prisma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dethcube-prime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dethcube / Prime
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wyrm-prime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wyrm / Prime
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carrier-prime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Carrier / Prime
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diriga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diriga
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#djinn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Djinn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helios-prime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helios / Prime
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oxylus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oxylus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nautilus-prime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nautilus / Prime
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notable-sentinel-weapons-combos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notable Sentinel Weapons Combos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notable Sentinel Weapons Combos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cold-crowd-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cold Crowd Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enemy-melters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enemy Melters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifold-bond-primers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manifold Bond Primers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fortuna-exclusives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fortuna Exclusives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+
+<h1 id="companions-sentinels">Companions: Sentinels</h1>
+<div class="inline-toc">
+<p class="inline-toc__title">Table of Contents</p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#sentinel-breakdown">Sentinel Breakdown</a></li>
+<li><a href="#notable-sentinel-weapons-combos">Notable Sentinel Weapons Combos</a></li>
+</ul>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Sentinels are floating robotic companions that hover behind the player and provide assistance. When a Sentinel's health reaches zero, it enters an inactive state and follows the player until it has fully repaired itself. </p>
+<p>Most sentinel blueprints can be obtained from the Market or Dojo for credits, but others will require you to run specific missions, open relics, or purchase them from different vendors.</p>
+<blockquote>
+<p><strong>Note:</strong> Each Sentinel comes with its own unique weapon, but these weapons can be freely swapped between Sentinels.</p>
+</blockquote>
+<hr>
+<h2 id="sentinel-breakdown">Sentinel Breakdown</h2>
+<h3 id="taxon">Taxon</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>Taxon is the beginner Sentinel and comes equipped with the Artax, a cold-based beam weapon.</p>
+<p><strong>Precepts:</strong></p>
+<ol>
+<li><strong>Molecular Conversion</strong> - damages enemies in an AOE and converts a portion of the damage into shields for the player.</li>
+</ol>
+<p><strong>Obtaining:</strong></p>
+<p>Taxon's blueprint is awarded for completing one of the tasks for Venus Junction on Earth and can also be
+purchased from the Market for 5,000 credits.</p>
+<p><strong>Opinion:</strong></p>
+<p>Taxon is your starter Sentinel. In the early game, it'll work great, as you progress you'll find multiple stronger options. However, the Artax does have mid to late game utility as a great AOE freeze weapon.</p>
+</div>
+<figure class="guide-text-image__img" data-sentinel="Taxon" style="flex: 0 0 25%;"></figure>
+</div>
+<h3 id="shade-prime-prisma">Shade / Prime / Prisma</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>Shade is a stealth-oriented Sentinel that comes equipped with the Burst Laser.</p>
+<p><strong>Precepts:</strong></p>
+<ol>
+<li><strong>Ghost</strong> - shade cloaks both itself and the player when it spots a nearby enemy. The invisibility lasts until either no enemies are around or it is broken by the player attacking. Ability casts do not break the cloak.</li>
+<li><strong>Revenge</strong> - directs Shade to not attack enemies unless they are within 10 meters and damage the player</li>
+<li><strong>Ambush</strong> - buffs weapon damage for a short duration when dropping Shade's cloak. Available from Cephalon Simaris for 75,000 standing</li>
+</ol>
+<p><strong>Obtaining:</strong></p>
+<p>Shade is available in three variants, each obtained from a different source:</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>Market - 100,000 credits</td>
+</tr>
+<tr>
+<td>Prime</td>
+<td>Prime Resurgence (vaulted w/ Hildryn Prime)</td>
+</tr>
+<tr>
+<td>Prisma</td>
+<td>Baro Ki'teer (random offering every 2 weeks)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opinion:</strong></p>
+<p>Since Ghost doesn't break on ability cast, it makes Shade a great companion for ability focused frames like Xaku since they can keep the invisibility up for extended periods of time.</p>
+</div>
+<figure class="guide-text-image__img" data-sentinel="Shade" style="flex: 0 0 25%;"></figure>
+</div>
+<h3 id="dethcube-prime">Dethcube / Prime</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>Dethcube was the original offensive Sentinel option, equipped with a Deth Machine Rifle.</p>
+<p><strong>Precepts:</strong></p>
+<ol>
+<li><strong>Vaporize</strong> - periodically blasts enemies with a high damage beam</li>
+<li><strong>Energy Generator</strong> - generates energy orbs after Dethcube assists in 10 kills. Available from Cephalon Simaris for 75,000 standing</li>
+</ol>
+<p><strong>Obtaining:</strong></p>
+<p>Dethcube is available in two variants, each obtained from different sources:</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>Market - 100,000 credits</td>
+</tr>
+<tr>
+<td>Prime</td>
+<td>Prime Resurgence (vaulted w/ Atlas Prime)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opinion:</strong>
+Energy Generator is a decent energy generation tool, but has mostly been replicated in other companions through specific synergies. Dethcube is still a capable Sentinel but does not offer much that other companions don't already do.</p>
+</div>
+<figure class="guide-text-image__img" data-sentinel="Dethcube" style="flex: 0 0 25%;"></figure>
+</div>
+<h3 id="wyrm-prime">Wyrm / Prime</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>Wyrm was the original utility Sentinel and comes equipped with the Laser Rifle.</p>
+<p><strong>Precepts:</strong></p>
+<ol>
+<li><strong>Crowd Dispersion</strong> - periodically knocks down nearby enemies</li>
+<li><strong>Negate</strong> - blocks one status effect from being applied to the player every 5 seconds. Available from Cephalon Simaris for 75,000 standing.</li>
+</ol>
+<p><strong>Obtaining:</strong></p>
+<p>Wyrm is available in two variants, each obtained from different sources:</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>Market - 100,000 credits</td>
+</tr>
+<tr>
+<td>Prime</td>
+<td>Prime Resurgence (vaulted with Loki Prime)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opinion:</strong></p>
+<p>Negate's status cleanse makes Wyrm scale incredibly well into the late game. Additionally, Wyrm Prime's stats allow it to utilize Reinforced Bond, which greatly boosts your weapon's fire rate. Overall, Wyrm remains a very solid option amongst the Sentinels.</p>
+</div>
+<figure class="guide-text-image__img" data-sentinel="Wyrm" style="flex: 0 0 25%;"></figure>
+</div>
+<h3 id="carrier-prime">Carrier / Prime</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>Carrier is the ammo factory Sentinel and comes with the Sweeper, a short range sentinel shotgun.</p>
+<p><strong>Precepts:</strong></p>
+<ol>
+<li><strong>Ammo Case</strong> - converts ammo pickups into the appropriate type for your equipped weapon and increases your ammo maximum.</li>
+<li><strong>Looter</strong> - emits pulses once per second to break all containers within 22m. Pulses do not need line of sight (LOS) but Carrier will need LOS to one crate to emit a pulse. Available from Cephalon Simaris for 75,000 standing</li>
+</ol>
+<p><strong>Obtaining:</strong></p>
+<p>Carrier is available in two variants, each obtained from different sources:</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>Market - 100,000 credits</td>
+</tr>
+<tr>
+<td>Prime</td>
+<td>Prime Resurgence (vaulted with Ash Prime)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opinion:</strong>
+Carrier is a great option when running ammo-hungry weapons that would otherwise struggle to stay stocked up. However, the Sentinel does not offer much outside of that.</p>
+</div>
+<figure class="guide-text-image__img" data-sentinel="Carrier" style="flex: 0 0 25%;"></figure>
+</div>
+<h3 id="diriga">Diriga</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>Diriga is a Grineer-based combat Sentinel equipped with the Vulklok, a long range sniper and three unique precepts.</p>
+<p><strong>Precepts:</strong></p>
+<ol>
+<li><strong>Calculated Shot</strong> - allows Diriga to sniper targets at up to 70m away</li>
+<li><strong>Electro Pulse</strong> - shocks and stuns a nearby enemy every 5 seconds</li>
+<li><strong>Arc Coil</strong> - zaps up to 7 nearby targets every second, dealing a small amount of electricity damage</li>
+</ol>
+<p><strong>Obtaining:</strong></p>
+<p>Diriga's blueprint can be obtained from the Market for 100,000 credits.</p>
+<p><strong>Summary:</strong></p>
+<p>Diriga is an incredibly powerful sentinel and is a "must grab" in my opinion. Arc Coil when combined with Manifold Bond turns Diriga into a low range status spreading machine, which synergizes really well with melee-oriented gameplay. Its early sniping potential is nice, but becomes less relevant as you progress.</p>
+</div>
+<figure class="guide-text-image__img" data-sentinel="Diriga" style="flex: 0 0 25%;"></figure>
+</div>
+<h3 id="djinn">Djinn</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>The Djinn is the Infested-based Sentinel and comes equipped with the Stinger, a toxin dart gun.</p>
+<p><strong>Precepts:</strong></p>
+<ol>
+<li><strong>Thumper</strong> - allows Djinn to target enemies up to 60m away</li>
+<li><strong>Fatal Attraction</strong> - attracts enemies towards Djinn before detonating a burst of corrosive damage.</li>
+<li><strong>Reawaken</strong> - reduces Djinn's recovery time by 6 seconds on energy pickup and gives extra shields to Djinn on energy pickup. Available from Cephalon Simaris for 75,000 standing</li>
+</ol>
+<p><strong>Obtaining:</strong></p>
+<p>Djinn's blueprint is available in the Bio Labs of your clan's Dojo.</p>
+<p><strong>Opinion:</strong></p>
+<p>Djinn has been outpaced by other companion options, and the two phase companion rework in 2023 and 2024 only served to widen this gap. Djinn did not receive any high impact changes and the addition of bond mods also replaced its previously unique enhanced revival mechanic. Worth building and leveling for the 9,000 mastery points but would avoid use outside of that.</p>
+</div>
+<figure class="guide-text-image__img" data-sentinel="Djinn" style="flex: 0 0 25%;"></figure>
+</div>
+<h3 id="helios-prime">Helios / Prime</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>Helios is the Corpus-based support Sentinel and comes equipped with the Deconstructor, a weapon that rips parts of the Helios off to throw at the enemy.</p>
+<p><strong>Precepts:</strong></p>
+<ol>
+<li><strong>Investigator</strong> - scans enemies, Cephalon fragments, and other objects into your Codex</li>
+<li><strong>Detect Vulnerability</strong> - marks random enemies with a vulnerable point that takes 2.75x damage when targeted. Available from Cephalon Simaris for 75,000 standing</li>
+</ol>
+<p><strong>Obtaining:</strong></p>
+<p>Helios is available in two variants, each obtained from different sources:</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>Energy Labs (Dojo)</td>
+</tr>
+<tr>
+<td>Prime</td>
+<td>Prime Resurgence (Vaulted with Banshee Prime)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opinion:</strong></p>
+<p>Helios is worth using purely for Investigator's automatic scanning. Scanned enemies can be summoned in the Simulacrum for Weapon and Warframe testing. Do note that Investigator will consume your Codex and Synthesis scans, so you should pick up the Sol-Widget Battery from Cephalon Simaris for 50,000 standing as soon as possible.</p>
+</div>
+<figure class="guide-text-image__img" data-sentinel="Helios" style="flex: 0 0 25%;"></figure>
+</div>
+<h3 id="oxylus">Oxylus</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>Oxylus is a conservation-focused support Sentinel that comes with the Multron, a mini-rifle with explosive rounds.</p>
+<p><strong>Precepts:</strong></p>
+<ol>
+<li><strong>Scan Aquatic Lifeforms</strong> - reveals nearby fishing hotspots and automatically applies Luminous Dye at no cost</li>
+<li><strong>Scan Matter</strong> - marks minerals and resources in a 60m radius and automatically loots one resource container or one mineral deposit every 3 seconds</li>
+<li><strong>Botanist</strong> - collect plants in Oxylus's line of sight up to 50m away. Available from Cephalon Simaris for 75,000 standing</li>
+</ol>
+<p><strong>Obtaining:</strong></p>
+<p>Oxylus's blueprint is available from The Business in Fortuna for 20,000 standing after reaching Rank 5 (Old Mate) with the Solaris United.</p>
+<p><strong>Opinion:</strong></p>
+<p>Oxylus is a niche Sentinel that is very useful for open world activities. I primarily use the Oxylus for its fishing utility since free dye and hotspot marking are huge quality of life effects. With Scan Matter, I'll also pick up a few resources as I move around the bodies of water to fish.</p>
+</div>
+<figure class="guide-text-image__img" data-sentinel="Oxylus" style="flex: 0 0 25%;"></figure>
+</div>
+<h3 id="nautilus-prime">Nautilus / Prime</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>Nautilus is a Railjack-focused support Sentinel equipped with the Verglas, a high damage cold laser.</p>
+<p><strong>Precepts:</strong></p>
+<ol>
+<li><strong>Auto Omni</strong> - repairs hull breaches and fires in your Railjack on a 20 second cooldown</li>
+<li><strong>Cordon</strong> - pulls enemies within 30m and cluster them on a 15 second cooldown</li>
+</ol>
+<p><strong>Obtaining:</strong></p>
+<p>Nautilus is available in two variants, each obtained from different sources:</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>Neptune Proxima Defense (rot. B and C) or Point of Interest markers</td>
+</tr>
+<tr>
+<td>Prime</td>
+<td>Void Relics (vaulting summer 2026)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> This is currently the only regular sentinel with tradeable blueprints. However, if you're going to buy it, just get the fully built version from the Market. It costs 75 platinum and includes an Orokin Reactor and Orokin Catalyst for the weapon (40p value). Buying the set of Nautilus blueprint from warframe.market or trade chat will cost around 70p.</p>
+</blockquote>
+<p><strong>Opinion:</strong></p>
+<p>Nautilus is another of the strongest Sentinels available and is a "must grab" in my opinion. Cordon is an exceptional grouping tool and when paired with Manifold Bond, you can greatly reduce its cooldown to enable back-to-back pulls. Verglas and Verglas Prime are also two of the highest damage Sentinel weapons available and can easily melt Steel Path enemies.</p>
+</div>
+<figure class="guide-text-image__img" data-sentinel="Nautilus" style="flex: 0 0 25%;"></figure>
+</div>
+<hr>
+<h2 id="notable-sentinel-weapons-combos">Notable Sentinel Weapons Combos</h2>
+<h3 id="cold-crowd-control">Cold Crowd Control</h3>
+<p><strong>Artax &amp; Tazicor</strong>
+Both the Artax and the Tazicor are high status beam weapons, which can rapidly apply cold procs to enemies. When paired with Shivering Contagion, they can rapidly freeze groups of enemies and apply a critical damage boost to their damage taken.</p>
+<p>The Artax is a single target beam that will uniquely retarget to unfrozen enemies once the current target reaches 10 cold stacks. For pure cold crowd control setup, this is the better option by a slight margin. The Tazicor, on the other hand, chains its beam to 4 targets, which makes it more effective for shield and armor stripping multiple enemies with a corrosive + magnetic + cold hybrid build.</p>
+<blockquote>
+<p><strong>Note:</strong> The Tazicor is one of 4 unique sentinel weapons can only be obtained through Legs in Fortuna.</p>
+</blockquote>
+<h3 id="enemy-melters">Enemy Melters</h3>
+<p><strong>Verglas &amp; Verglas Prime</strong></p>
+<p>The Verglas and Verglas Prime are some of the highest damage Sentinel weapons currently. Both are cold beam weapons with high status chance and decent critical stats. Modding for crit, viral, and heat will let you easily cut through Steel Path and Archimedea-level enemies. If you like using Tenacious Bond, the Verglas Prime can get over 50% crit chance, <strong>but</strong> you'll need a Riven to do so. </p>
+<h3 id="manifold-bond-primers">Manifold Bond Primers</h3>
+<p><strong>Burst Laser Prime &amp; Prime Laser Rifle</strong></p>
+<p>Manifold Bond is a mod that allows Sentinel damaging abilities to apply statuses based on all damage types on the Sentinel's weapon. With the current mods in the game, you can comfortably reach 7 unique statuses on most Sentinel weapons: Impact, Puncture, Slash, Radiation, Magnetic, Secondary element, &amp; primary element of your choice. This synergizes very nicely with Condition Overload and GunCO effects which scale damage based on the number of unique statuses on a target. </p>
+<p>Burst Laser Prime &amp; Prime Laser Rifle are notable here because on top of being able to reach 7 unique status effects, they also have enough base crit chance to reach the 50% crit chance threshold for Tenacious Bond. </p>
+<h3 id="fortuna-exclusives">Fortuna Exclusives</h3>
+<p><strong>Cryotra, Helstrum, Vulcax &amp; Tazicor</strong></p>
+<p>These four weapons are unique in that they're not associated with any specific Sentinel. To obtain them, you'll need to purchase their blueprints from Legs in Fortuna once you reach Rank 5 (Old Mate) with the Solaris United. </p>
+<p>The Cryotra fires cold grenades which leave a lingering cold AOE, and the Helstrum shoots mini AOE rockets. Both can function as pretty decent primers. The Vulcax, on the other hand, is more focused on damage and fires a laser beam similar to the Opticor. None of these weapons are particularly bad, but outside of the Tazicor, none of them stand out in the current arsenal of options. </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+<a class="back-to-top-btn" href="#" aria-label="Back to top">
+  <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+    <path d="M8 2 L15 13 L1 13 Z"></path>
+  </svg>
+  Top
+</a>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/glightbox-scroll-zoom.js"></script>
+      
+        <script src="../../javascripts/amp.js"></script>
+      
+        <script src="../../javascripts/items-cache.js"></script>
+      
+        <script src="../../javascripts/prime-list.js"></script>
+      
+        <script src="../../javascripts/resurgence.js"></script>
+      
+        <script src="../../javascripts/sentinel-images.js"></script>
+      
+        <script src="../../javascripts/nav-dropdown.js"></script>
+      
+        <script src="../../javascripts/feedback-form.js"></script>
+      
+        <script src="../../javascripts/riven-stats.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

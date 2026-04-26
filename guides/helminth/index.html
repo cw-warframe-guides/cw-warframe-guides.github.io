@@ -1,0 +1,1110 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cw-warframe-guides.github.io/guides/helminth/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Helminth System Guide - Charithw's WF Guide Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+<meta name="darkreader-lock">
+<script>window.__mkdocsBase = "../..";</script>
+<style>
+  /* Hide left nav sidebar (but not on mobile — drawer uses it) */
+  @media (min-width: 631px) {
+    .md-sidebar--primary { display: none !important; }
+  }
+
+  /* Hide Material footer generator line */
+  .md-footer-meta { display: none !important; }
+
+  /* Expand layout to full viewport width, dead space on left only */
+  .md-main__inner {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: clamp(0rem, 12vw, 12.1rem) !important;
+    padding-right: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TOC: sticky in normal flow, sits at right edge */
+  .md-sidebar--secondary {
+    position: sticky !important;
+    top: 3.5rem !important;
+    width: 12.1rem !important;
+    flex-shrink: 0 !important;
+    height: fit-content !important;
+    background-color: #1c1c1c !important;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    height: fit-content !important;
+    overflow: visible !important;
+    background-color: #1c1c1c !important;
+  }
+
+  /* Text + image side by side, image vertically centered */
+  .guide-text-image {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .guide-text-image__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .guide-text-image__img {
+    flex: 0 0 50%; /* ← default image column width; override per-instance via inline style on <figure> */
+    min-width: 0;
+    margin: 0;
+  }
+
+  .guide-text-image__img img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-text-image__img figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* Hide TOC sidebar earlier than Material's default ~960px breakpoint */
+  @media (max-width: 1200px) {
+    .md-sidebar--secondary { display: none !important; }
+  }
+
+  /* Stack text above image at narrow widths */
+  @media (max-width: 1000px) {
+    .guide-text-image {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-text-image__text {
+      width: 100%;
+    }
+
+    .guide-text-image__img {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Two images side by side */
+  .guide-image-pair {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .guide-image-pair figure {
+    flex: 1 1 0; /* default: equal split — override per-figure with style="flex: 0 0 40%" */
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .guide-image-pair figure img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-image-pair figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  figure > .guide-image-pair ~ figcaption {
+    display: block;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  @media (max-width: 1000px) {
+    .guide-image-pair {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-image-pair figure {
+      width: 100%;
+      max-width: 480px;
+    }
+  }
+
+  /* Page title: centered, matching guide index size */
+  .md-content h1 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  /* TOC sidebar: "Table of contents" label */
+  .md-sidebar--secondary .md-nav__title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.85rem !important;
+    color: #b59d47 !important;
+    letter-spacing: 0.05em;
+  }
+
+  /* Back to top button: hidden on wide screens */
+  .back-to-top-btn { display: none; }
+
+  @media (max-width: 1200px) {
+    .back-to-top-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      z-index: 201;
+      background: #26221a;
+      border: 1.5px solid #b59d47;
+      border-radius: 3px;
+      color: #b59d47;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+      text-decoration: none !important;
+    }
+
+    .back-to-top-btn:hover {
+      background: #b59d47;
+      color: #1c1c1c !important;
+    }
+  }
+</style>
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#helminth-system-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner" aria-label="Header">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-header__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <span class="md-header__topic">Charithw's WF Guide Hub</span>
+    </div>
+    <div class="md-header__spacer"></div>
+    <nav class="md-header-nav" aria-label="Site navigation">
+      
+      
+      <a href="../.." class="md-header-nav__link">
+        Home
+      </a>
+      
+      
+      
+      <a href="../../guide_index/" class="md-header-nav__link">
+        Guide Index
+      </a>
+      
+      
+      
+      <div class="md-header-nav__item--dropdown" data-md-dropdown="">
+        <button class="md-header-nav__link md-header-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          More
+        </button>
+        <ul class="md-header-nav__dropdown-menu" role="menu">
+          
+          <li role="none">
+            <a href="../../feedback/" class="md-header-nav__dropdown-link" role="menuitem">
+              Feedback
+            </a>
+          </li>
+          
+          <li role="none">
+            <a href="../../credits/" class="md-header-nav__dropdown-link" role="menuitem">
+              Credits
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
+    </nav>
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide_index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../feedback/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-nav__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    Charithw's WF Guide Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    More
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unlocking-the-helminth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unlocking the Helminth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unlocking the Helminth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temporary-access-the-helminth-cyst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporary Access &amp; The Helminth Cyst
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feeding-your-helminth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feeding Your Helminth
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-subsuming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Subsuming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranking-up-helminth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ranking Up Helminth
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-invigoration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Invigoration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archon-shard-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archon Shard Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Archon Shard Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-shards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary Shards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-shards-fusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secondary Shards &amp; Fusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-archon-shards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtaining Archon Shards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+
+<h1 id="helminth-system-guide">Helminth System Guide</h1>
+<div class="inline-toc">
+<p class="inline-toc__title">Table of Contents</p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#unlocking-the-helminth">Unlocking the Helminth</a></li>
+<li><a href="#feeding-your-helminth">Feeding Your Helminth</a></li>
+<li><a href="#feature-subsuming">Feature: Subsuming</a></li>
+<li><a href="#ranking-up-helminth">Ranking Up Helminth</a></li>
+<li><a href="#feature-invigoration">Feature: Invigoration</a></li>
+<li><a href="#archon-shard-management">Archon Shard Management</a></li>
+</ul>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Helminth is a being that resides in the infirmary of the Orbiter and is responsible for the ship's biological functions, repairs, and Warframe maintenance. While the Helminth technically encompasses the whole room and its infestation, it does have a large mouth in the back of the infirmary that functions as the "main body".</p>
+<p>The helminth has three major features:</p>
+<ol>
+<li>Subsuming Warframe abilities</li>
+<li>Invigorating Warframes with temporary buffs</li>
+<li>Managing Archon Shards</li>
+</ol>
+<p>To interact with these features, you'll simply need to sit in the infested chair in the center of the room.</p>
+<hr>
+<h2 id="unlocking-the-helminth">Unlocking the Helminth</h2>
+<h3 id="temporary-access-the-helminth-cyst">Temporary Access &amp; The Helminth Cyst</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>At first, the infirmary will be locked. To temporarily gain access, you'll need either Nidus or a Warframe infected with a Helminth cyst. These cysts can be obtained by coming into contact with other infected players and take 7 days to fully grow. A fully grown cyst will allow you to open the infirmary door to remove the cyst and innoculate your Warframe. Once a Warframe has been innoculated, it cannot regain a cyst. </p>
+</div>
+<figure class="guide-text-image__img" style="flex: 0 0 15%;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/helminth/cyst.webp" data-desc-position="bottom"><img src="../../images/helminth/cyst.webp" alt="Cyst"></a>
+</figure>
+</div>
+<h3 id="full-access">Full Access</h3>
+<p>To permanently unlock the Helminth and the infirmary, you'll need to purchase and craft the Helminth Segment from Son in the Necralisk. It requires 15,000 standing, Rank 3 (Associate) with the Entrati Family, and Mastery Rank 8. Alternatively, you can purchase it as part of the Helminth Segments Bundle for 300p on the market. Once crafted, install the segment by sitting on the infirmary infested chair. At this point you will get to name your Helminth.</p>
+<hr>
+<h2 id="feeding-your-helminth">Feeding Your Helminth</h2>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>The Helminth is quite hungry and will need food (resources) to convert to Secretions for its special functions. To feed it, sit in the chair, click the "FEED \&lt;Helminth Name&gt;" in the bottom right corner. <em>Mine is named Adephagia, after the Greek goddess of Gluttony</em></p>
+<p>This opens a resource page, as seen below, that displays the Helminth's 6 food groups: Oxides, Calx, Biotics, Synthetics, Pheromones, and Bile.</p>
+<p>The Helminth also desires diversity. Feeding the same resource in a short period of time will increasingly reduce its effectiveness. Helminth's interest in a resource is shown by a green triangle (interested) or a red triangle (disinterested). Given enough time, Helminth will start to desire resources again, but this can take up to 24 hours to fully restore interest. </p>
+<p>These resource costs can add up quite a lot in the mid game, so I've listed a few resources that I recommend using and saving. As a general rule of thumb, if you can easily farm the resource or have a lot of it, then it should be safe to feed it to Helminth.</p>
+</div>
+<figure class="guide-text-image__img" style="flex: 0 0 40%;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/helminth/food.webp" data-desc-position="bottom"><img src="../../images/helminth/food.webp" alt="Food"></a>
+</figure>
+</div>
+<p><strong>Oxides</strong></p>
+<ul>
+<li>Feed: Salvage, Ferrite, and Railjack resources</li>
+<li>Avoid: Tellurium</li>
+</ul>
+<p><strong>Calx</strong></p>
+<ul>
+<li>Feed: Rubedo, Grokdrul, Iradite, and Railjack resources</li>
+<li>Avoid: Hexenon (needed in large amounts for several Warframes and weapons)</li>
+</ul>
+<p><strong>Biotics</strong></p>
+<ul>
+<li>Feed: Whichever plants you have lots of (I use Ganglion, Maprico, and Nistlepods)</li>
+<li>Avoid: Duviri plants (required in large amounts for several mid and late game weapons)</li>
+</ul>
+<p><strong>Synthetics</strong></p>
+<ul>
+<li>Feed: Detonite Ampules, Fieldron Samples, and Control Modules</li>
+<li>Avoid: Orokin Cells and Neural Sensors</li>
+</ul>
+<p><strong>Pheromones</strong></p>
+<ul>
+<li>Feed: Nano Spores, and Juggernaut parts (Husk, Bile Sac, Tubercles, Palpators)</li>
+<li>Avoid: Plastids and Neurodes</li>
+</ul>
+<p><strong>Bile</strong></p>
+<ul>
+<li>Feed: Argon Crystals, Nav Coordinates, Voidgel Orbs, Orokin Ciphers, and Ticor Plate</li>
+<li>Avoid: Everything else in low quantities. This category has limited options so feed efficiently.</li>
+</ul>
+<hr>
+<h2 id="feature-subsuming">Feature: Subsuming</h2>
+<p>Non-Prime Warframes can be fed to Helminth which will digest the frame over 23 hours and permanently learn that frame's subsume ability. These abilities can then be injected into other Warframes, replacing one of their existing abilties. This can make up for a frame's weaknesses, add fun effects, or just add a lot of extra damage.</p>
+<p>To infuse an ability onto your Warframe, simply select the subsume, choose which ability to replace, and choose which configs should be affected. Each config page can only have 1 subsumed ability, but you can use multiple subsumes across different config slots to allow for build variety.</p>
+<blockquote>
+<p><strong>Note:</strong> You cannot have a subsumed ability replace different abilities across config slots. For example, I cannot have the Roar subsume replace Nidus's 4th ability in Config A and his 3rd ability in Config B. </p>
+</blockquote>
+<p>Additionally, Helminth will grow a flower for each Warframe consumed. The flower will inherit its colors from your Warframe's fashion at the time it was subsumed. Over time you will end up with a flower graveyard documenting the frames you've fed to the flesh wall.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/helminth/graveyard.webp" data-desc-position="bottom"><img alt="Flower" class="center bordered floored" src="../../images/helminth/graveyard.webp" width="70%"></a></p>
+<hr>
+<h2 id="ranking-up-helminth">Ranking Up Helminth</h2>
+<p>As you feed Helminth, subsume Warframes, and infuse abilities, your Helminth system will gain experience and gain Metamorphosis Ranks, unlocking more subsume slots and Helminth exclusive subsumes.</p>
+<p>Early on, you'll hit a bottleneck that limits the number of Warframes you can subsume. At Rank 10, you'll get unlimited subsume slots and this bottleneck will disappear. Before that you'll need to focus on injecting abilities, feeding helminth, or injecting invigorations to raise your rank. Experience
+is gained through the following activities:</p>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Experience Gained</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subsuming a Warframe</td>
+<td>1,600 xp</td>
+</tr>
+<tr>
+<td>Injecting an ability</td>
+<td>8 xp per 1% of material used</td>
+</tr>
+<tr>
+<td>Feeding the Helminth</td>
+<td>~6.66 xp per 1% of material gained</td>
+</tr>
+<tr>
+<td>Injecting an Invigoration</td>
+<td>4,800 xp</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="feature-invigoration">Feature: Invigoration</h2>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>The second feature of Helminth is to invigorate Warframes, giving them randomized buffs lasting one real-world week. To unlock this feature, you'll need to craft the Helminth Invigoration Segment from Son in the Necralisk. The blueprint for this segment requires 30,000 standing, Rank 5 (Family) with the Entrati Family, and Mastery Rank 8. Additionally, just like the Helminth Segment you can buy it as part of the Helminth Segments Bundle for 300p.</p>
+<p>Each week, your Helminth will offer 3 randomized invigoration buffs for 3 random Warframes. Each invigoration grants 1 offensive buff and 1 utility buff. </p>
+<p>After 10 invigorations, you'll gain the ability to apply your next invigoration to any frame without restriction. After doing so, this feature will reset.</p>
+</div>
+<figure class="guide-text-image__img" style="flex: 0 0 30%;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/helminth/invig.webp" data-desc-position="bottom"><img src="../../images/helminth/invig.webp" alt="Invigorations"></a>
+</figure>
+</div>
+<hr>
+<h2 id="archon-shard-management">Archon Shard Management</h2>
+<p>The third feature of the Helminth system is Archon Shard management. Archon Shards are stat shards that can be embedded into Warframes to grant passive bonuses. Shards are considered semi-consumable since they cannot be shared but can be removed (for a cost) and reused. Each Warframe can hold up to 5 Archon Shards. </p>
+<p>To access this system you'll need the Helminth Archon Shard Segment whose blueprint is given after completing the Veilbreaker.</p>
+<h3 id="primary-shards">Primary Shards</h3>
+<p>Shards come in 2 forms: regular and Tauforged. Tauforged shards are stronger variants with a 50% increase in stats. There are 3 primary shard types, each offering several stat options to pick from.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/helminth/primary.webp" data-desc-position="bottom"><img alt="Primary Shard" class="center bordered floored" src="../../images/helminth/primary.webp" width="60%"></a></p>
+<h3 id="secondary-shards-fusions">Secondary Shards &amp; Fusions</h3>
+<p>Additionally, after reaching Rank 2 with the Cavia, you can purchase the Helminth Coalescent Segment blueprint from Bird 3 for 30,000 Cavia standing. Crafting this segment unlocks two functions:</p>
+<ul>
+<li><strong>Coalescent Fusion</strong> - Fuse two primary shards together to create a secondary shard</li>
+<li><strong>Ascent Fusion</strong> - Fuse 3 regular shards of the same type to create a Tauforged version. </li>
+</ul>
+<p>Just like primary shards, there are 3 secondary shards that have their own unique stat options to pick from.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/helminth/secondary.webp" data-desc-position="bottom"><img alt="Secondary Shard" class="center bordered floored" src="../../images/helminth/secondary.webp" width="60%"></a></p>
+<h3 id="obtaining-archon-shards">Obtaining Archon Shards</h3>
+<p>Archon shards can be earned from many weekly methods including:</p>
+<ul>
+<li><strong>Weekly Archon Hunt</strong><ul>
+<li>Rewards 1 primary regular or Tauforged shard on completion</li>
+</ul>
+</li>
+<li><strong>Bird 3</strong><ul>
+<li>Requires Rank 5 Cavia</li>
+<li>Rewards 1 primary regular shard for 30,000 Cavia standing</li>
+</ul>
+</li>
+<li><strong>Weekly SP Descendia</strong><ul>
+<li>Can potentially reward one primary shard as the final reward</li>
+</ul>
+</li>
+<li><strong>Weekly 1999 Calendar</strong><ul>
+<li>Can randomly offer a primary or secondary shard as a reward</li>
+</ul>
+</li>
+</ul>
+<p>The following methods can also give Archon Shards but share a pool of 5 charges per week:</p>
+<ul>
+<li><strong>Netracells</strong><ul>
+<li>Drains 1 charge on completion</li>
+<li>0-1 primary regular or Tauforged shard on completion</li>
+</ul>
+</li>
+<li><strong>Deep Archimedea and Elite Deep Archimedea (DA &amp; EDA)</strong><ul>
+<li>Requires Rank 5 Cavia</li>
+<li>Costs 2 charges to unlock, and can be run repeatedly to improve scores and gain missed rewards</li>
+<li>Rewards 0-5 primary regular or Tauforged shards based on the highest challenge score and drop rates. Matching challenge options = more points = more rewards</li>
+</ul>
+</li>
+<li><strong>Temporal Archimedea and Elite Temporal Archimedea (TA &amp; ETA)</strong><ul>
+<li>Requires Rank 5 Hex</li>
+<li>Costs 2 charges to unlock, and can be run repeatedly to improve scores and gain missed rewards</li>
+<li>Rewards 0-5 primary or secondary regular or Tauforged shards based on the highest challenge score and drop rates. Matching challenge options = more points = more rewards</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+<a class="back-to-top-btn" href="#" aria-label="Back to top">
+  <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+    <path d="M8 2 L15 13 L1 13 Z"></path>
+  </svg>
+  Top
+</a>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/glightbox-scroll-zoom.js"></script>
+      
+        <script src="../../javascripts/amp.js"></script>
+      
+        <script src="../../javascripts/items-cache.js"></script>
+      
+        <script src="../../javascripts/prime-list.js"></script>
+      
+        <script src="../../javascripts/resurgence.js"></script>
+      
+        <script src="../../javascripts/sentinel-images.js"></script>
+      
+        <script src="../../javascripts/nav-dropdown.js"></script>
+      
+        <script src="../../javascripts/feedback-form.js"></script>
+      
+        <script src="../../javascripts/riven-stats.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
