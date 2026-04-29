@@ -1,0 +1,922 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cw-warframe-guides.github.io/guides/resource-farming/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Resource Farming - Charithw's WF Guide Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+<meta name="darkreader-lock">
+<script>window.__mkdocsBase = "../..";</script>
+<style>
+  /* Hide left nav sidebar (but not on mobile — drawer uses it) */
+  @media (min-width: 631px) {
+    .md-sidebar--primary { display: none !important; }
+  }
+
+  /* Hide Material footer generator line */
+  .md-footer-meta { display: none !important; }
+
+  /* Expand layout to full viewport width, dead space on left only */
+  .md-main__inner {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: clamp(0rem, 12vw, 12.1rem) !important;
+    padding-right: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TOC: sticky in normal flow, sits at right edge */
+  .md-sidebar--secondary {
+    position: sticky !important;
+    top: 3.5rem !important;
+    width: 12.1rem !important;
+    flex-shrink: 0 !important;
+    height: fit-content !important;
+    background-color: #1c1c1c !important;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    height: fit-content !important;
+    overflow: visible !important;
+    background-color: #1c1c1c !important;
+  }
+
+  /* Text + image side by side, image vertically centered */
+  .guide-text-image {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .guide-text-image__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .guide-text-image__img {
+    flex: 0 0 50%; /* ← default image column width; override per-instance via inline style on <figure> */
+    min-width: 0;
+    margin: 0;
+  }
+
+  .guide-text-image__img img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-text-image__img figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* Hide TOC sidebar earlier than Material's default ~960px breakpoint */
+  @media (max-width: 1200px) {
+    .md-sidebar--secondary { display: none !important; }
+  }
+
+  /* Stack text above image at narrow widths */
+  @media (max-width: 1000px) {
+    .guide-text-image {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-text-image__text {
+      width: 100%;
+    }
+
+    .guide-text-image__img {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Two images side by side */
+  .guide-image-pair {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .guide-image-pair figure {
+    flex: 1 1 0; /* default: equal split — override per-figure with style="flex: 0 0 40%" */
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .guide-image-pair figure img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-image-pair figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  figure > .guide-image-pair ~ figcaption {
+    display: block;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  @media (max-width: 1000px) {
+    .guide-image-pair {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-image-pair figure {
+      width: 100%;
+      max-width: 480px;
+    }
+  }
+
+  /* Page title: centered, matching guide index size */
+  .md-content h1 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  /* TOC sidebar: "Table of contents" label */
+  .md-sidebar--secondary .md-nav__title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.85rem !important;
+    color: #b59d47 !important;
+    letter-spacing: 0.05em;
+  }
+
+  /* Back to top button: hidden on wide screens */
+  .back-to-top-btn { display: none; }
+
+  @media (max-width: 1200px) {
+    .back-to-top-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      z-index: 201;
+      background: #26221a;
+      border: 1.5px solid #b59d47;
+      border-radius: 3px;
+      color: #b59d47;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+      text-decoration: none !important;
+    }
+
+    .back-to-top-btn:hover {
+      background: #b59d47;
+      color: #1c1c1c !important;
+    }
+  }
+</style>
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#resource-farming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner" aria-label="Header">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-header__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <span class="md-header__topic">Charithw's WF Guide Hub</span>
+    </div>
+    <div class="md-header__spacer"></div>
+    <nav class="md-header-nav" aria-label="Site navigation">
+      
+      
+      <a href="../.." class="md-header-nav__link">
+        Home
+      </a>
+      
+      
+      
+      <a href="../../guide_index/" class="md-header-nav__link">
+        Guide Index
+      </a>
+      
+      
+      
+      <div class="md-header-nav__item--dropdown" data-md-dropdown="">
+        <button class="md-header-nav__link md-header-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          More
+        </button>
+        <ul class="md-header-nav__dropdown-menu" role="menu">
+          
+          <li role="none">
+            <a href="../../feedback/" class="md-header-nav__dropdown-link" role="menuitem">
+              Feedback
+            </a>
+          </li>
+          
+          <li role="none">
+            <a href="../../credits/" class="md-header-nav__dropdown-link" role="menuitem">
+              Credits
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
+    </nav>
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide_index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../feedback/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-nav__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    Charithw's WF Guide Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    More
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-find-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to Find Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boosting-loot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boosting Loot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boosting Loot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategy-1-more-death-more-loot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy 1: More Death. More Loot.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategy-2-bull-in-a-china-shop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy 2: Bull in a China Shop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal Recommendations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+
+<h1 id="resource-farming">Resource Farming</h1>
+<div class="inline-toc">
+<p class="inline-toc__title">Table of Contents</p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#where-to-find-resources">Where to Find Resources</a></li>
+<li><a href="#boosting-loot">Boosting Loot</a></li>
+<li><a href="#personal-recommendations">Personal Recommendations</a></li>
+</ul>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Throughout most of the early and mid game, you're going to hit multiple walls when it comes to farming various materials. This guide covers the most effective ways to boost your drops, what options you have for farming locations, and where to go for key resources. By the end, you should have a solid plan for whatever resource is giving you trouble.</p>
+<hr>
+<h2 id="where-to-find-resources">Where to Find Resources</h2>
+<p>In-game, when viewing a planet, look to the bottom right corner for the Nightwave/Resource toggle button. Switch to the resource side and hover over the extractor icon to see what drops are available on that planet. Check out the chart below for a list of all the major drops for each system.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/resource-farming/resource-map.webp" data-desc-position="bottom"><img alt="Resource Map" class="center bordered floored" src="../../images/resource-farming/resource-map.webp" width="90%"></a></p>
+<hr>
+<h2 id="boosting-loot">Boosting Loot</h2>
+<p>There are two main ways you're going to find resources in a mission:</p>
+<ol>
+<li>Killing enemies</li>
+<li>Breaking crates and specialized resource containers</li>
+</ol>
+<p>Most resource optimization strategies focus on boosting the effectiveness of one of these two methods, which are covered below.</p>
+<h3 id="strategy-1-more-death-more-loot">Strategy 1: More Death. More Loot.</h3>
+<p>When an enemy dies, it has a chance to drop resources. You can capitalize on this in two ways:</p>
+<p><strong>Boosting drop rates and values</strong>
+- Nekros' Desecrate
+- Augments (e.g Hydroid's Pilfering Swarm, Khora's Pilfering Strangledome, Atlas's Ore Gaze) 
+- Chesa's Retrieve
+- Any beast companion using Resourceful Retriever</p>
+<p><strong>Boosting enemy spawns</strong>
+- Warframe missions have a spawn cap, meaning once a set number of enemies are active, no more will spawn until some are killed
+- Nova's Molecular Prime in speed mode causes enemies to move faster, getting them to you quicker and keeping your kill rate high, which in turn keeps new enemies spawning consistently</p>
+<p>An ideal team composition using this can look like this:
+- Nekros (for Desecrate)
+- Nova
+- Khora (for Pilfering Strangledome)
+- Flexible (ideally a rhino or wisp that can buff the team)</p>
+<blockquote>
+<p><strong>Note:</strong> Every player should also run a beast companion with Resourceful Retriever for the chance to double drop pickups. If you only have two players, Nekros + Nova is my ideal combo.</p>
+</blockquote>
+<p>Steel Path mode gives a 2x boost to resource and mod drops, so it's always ideal to run this strategy this mode if you can maintain a good kill rate. Resource boosters (orange), resource drop chance boosters (blue), and resource blessings are also great for increasing your overall drops.</p>
+<h3 id="strategy-2-bull-in-a-china-shop">Strategy 2: Bull in a China Shop</h3>
+<p>Throughout mission tiles you'll find containers that drop general loot, and specialized resource containers that drop a specific resource (like Argon Pegmatite, which drops Argon Crystals). For rare resources that you only need in small amounts (like Argon Crystals and Neural Sensors), breaking every container in a mission quickly gives a good chance of getting anywhere from 1 to 5 of that resource.</p>
+<p>This strategy focuses on two things: moving fast and breaking containers. The ideal box-breaking options I've seen are:</p>
+<ul>
+<li>Limbo's Cataclysm with max range</li>
+<li>Xaku's The Vast Untime with max range</li>
+<li>Any fast frame with the Null Star subsume and Neutron Star augment</li>
+</ul>
+<p>To speed things up, bring parkour Archon Shards, use the Praedos, and equip parkour velocity mods like Amalgam Barrel Diffusion. The same boosters and blessings from Strat 1 apply here as well, though you'll often see people skip Steel Path for this strategy. Running normal missions lets players use more offense-focused builds, and at low levels a good box-breaking ability will often clear both containers and enemies in a room.</p>
+<hr>
+<h2 id="personal-recommendations">Personal Recommendations</h2>
+<p>Below is a list of uncommon/rare resources I've been asked about and my personal farming recommendations for each. If you have a resource not on the list, let me know through my discord and I'll add it!</p>
+<ul>
+<li><strong>Argon Crystals</strong> - Hepit, Void. Argon Crystals decay over time and are rarely needed in large quantities, so a box breaker works perfectly here. Mot, Void survival is also a decent option.</li>
+<li><strong>Cryotic</strong> - Any excavation mission works. Hieracon, Pluto is a personal favorite for the added chance at Neo and Axi relics.</li>
+<li><strong>Gallium</strong> - Ophelia, Uranus. Fantastic multi-purpose farm (Polymer Bundles, Plastids, Gallium, and Tellurium).</li>
+<li><strong>Hexenon</strong> - Elara or Cameria, Jupiter. Elara has been consistently reliable, and Io is a nice alternative that doubles as an Oxium farm.</li>
+<li><strong>Morphics</strong> - Hellas, Mars or Illiad, Phobos. For small quantities, bring a box breaker to these. For larger quantities, try Kadesh, Mars (Survival).</li>
+<li><strong>Mutagen Mass, Fieldron, and Detonite Injectors</strong> - These are Invasion rewards. You can run Tier 4 Fortuna bounties, but it's generally much easier to just complete Invasions as they show up.</li>
+<li><strong>Neural Sensors</strong> - Themisto, Jupiter. For small quantities, rushing and killing the boss while using a box breaker works well. For large quantities, Taveuni on the Kuva Fortress is the better option.</li>
+<li><strong>Neurodes</strong> - E Prime / Mariana, Earth. Works well early on. Post Second Dream: Tycho, Lua (Survival) or Magnacidium, Deimos (Assassination) both work.</li>
+<li><strong>Orokin Cells</strong> - Ceres, Gabii. An Infested Survival mission with boosted drop rates, making it great for farming large quantities of Orokin Cells.</li>
+<li><strong>Oxium</strong> - Io, Jupiter. This mission consistently spawns large numbers of Oxium Ospreys, making it the go-to spot.</li>
+<li><strong>Plastids</strong> - Ophelia, Uranus. Fantastic multi-purpose farm (Polymer Bundles, Plastids, Gallium, and Tellurium). For an extra strategy, the Cambion Drift on Deimos has crates that can contain Plastids, so bringing a box breaker works well there too.</li>
+<li><strong>Polymer Bundles</strong> - Ophelia, Uranus. Reasoning explained above.</li>
+<li><strong>Tellurium</strong> - Ophelia, Uranus. Reasoning explained above.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+<a class="back-to-top-btn" href="#" aria-label="Back to top">
+  <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+    <path d="M8 2 L15 13 L1 13 Z"></path>
+  </svg>
+  Top
+</a>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/glightbox-scroll-zoom.js"></script>
+      
+        <script src="../../javascripts/amp.js"></script>
+      
+        <script src="../../javascripts/items-cache.js"></script>
+      
+        <script src="../../javascripts/prime-list.js"></script>
+      
+        <script src="../../javascripts/resurgence.js"></script>
+      
+        <script src="../../javascripts/sentinel-images.js"></script>
+      
+        <script src="../../javascripts/nav-dropdown.js"></script>
+      
+        <script src="../../javascripts/feedback-form.js"></script>
+      
+        <script src="../../javascripts/riven-stats.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
