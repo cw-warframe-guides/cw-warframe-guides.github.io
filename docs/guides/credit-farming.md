@@ -148,6 +148,12 @@ To best prepare for Profit Taker, I recommend taking a look at the Profit Taker 
 
 [Profit Taker Guide by Uumm, Mebius, Iterniam, Kalaay & others](https://profit-taker.com)
 
+Also the current holder of the world record clear time (Endryx_ow0 at 46.450 seconds) has posted his own video guide here:
+
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/watch?v=JkFgsX6YTWw" title="Solo Profit-Taker Kill in under 2 minutes MADE EASY by Endryx_ow" allowfullscreen></iframe>
+</div>
+
 ---
 ## Secura Lecta Farming
 
