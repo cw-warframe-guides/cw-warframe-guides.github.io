@@ -12,7 +12,6 @@ template: guide.html
 - [The Index](#the-index)
 - [Techrot Safes](#techrot-safes)
 - [Profit Taker](#profit-taker)
-- [Secura Lecta Farming](#secura-lecta-farming)
 
 </div>
 
@@ -151,18 +150,5 @@ To best prepare for Profit Taker, I recommend taking a look at the Profit Taker 
 Also the current holder of the world record clear time (Endryx_ow0 at 46.450 seconds) has posted his own video guide here:
 
 <div class="video-embed">
-  <iframe src="https://www.youtube.com/watch?v=JkFgsX6YTWw" title="Solo Profit-Taker Kill in under 2 minutes MADE EASY by Endryx_ow" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/JkFgsX6YTWw?si=QDgYqRW5yGZD94N8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
----
-## Secura Lecta Farming
-
-The Secura Lecta will drop additional credits based on your Mastery Rank, capping out at MR18 at a 4x credit multiplier. 
-
-Additionally, when an enemy dies they are briefly 'alive' as they go through their death animation. The gas and electricity status effects from the lecta inherit its credit passive and can thus 'kill' the dying enemy multiple times, causing more credit drops.
-
-To further improve this credit farm you ideally want to run Chroma (whose Effigy doubles nearby credit pickups), have a credit booster and credit blessing, and have a companion equipped with Prosperous Retriever. This method is by far the most efficient credit farm but is somewhat boring and does require a decent bit of investment and practice to pull off.
-
-For a full explanation of the tech, builds, and example videos, check out the guide below.
-
-[Secura Lecta Credit Farming by Keymapperplus, BaroKachow](https://wfpedia.com/posts/credits/secura-lecta/introduction/basics)
