@@ -1,0 +1,1251 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cw-warframe-guides.github.io/guides/companion-beast/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Companions: Beasts - Charithw's WF Guide Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+<meta name="darkreader-lock">
+<script>window.__mkdocsBase = "../..";</script>
+<style>
+  /* Hide left nav sidebar (but not on mobile — drawer uses it) */
+  @media (min-width: 631px) {
+    .md-sidebar--primary { display: none !important; }
+  }
+
+  /* Hide Material footer generator line */
+  .md-footer-meta { display: none !important; }
+
+  /* Expand layout to full viewport width, dead space on left only */
+  .md-main__inner {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: clamp(0rem, 12vw, 12.1rem) !important;
+    padding-right: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TOC: sticky in normal flow, sits at right edge */
+  .md-sidebar--secondary {
+    position: sticky !important;
+    top: 3.5rem !important;
+    width: 12.1rem !important;
+    flex-shrink: 0 !important;
+    height: fit-content !important;
+    background-color: #1c1c1c !important;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    height: fit-content !important;
+    overflow: visible !important;
+    background-color: #1c1c1c !important;
+  }
+
+  /* Text + image side by side, image vertically centered */
+  .guide-text-image {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .guide-text-image__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .guide-text-image__img {
+    flex: 0 0 50%; /* ← default image column width; override per-instance via inline style on <figure> */
+    min-width: 0;
+    margin: 0;
+  }
+
+  .guide-text-image__img img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-text-image__img figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* Hide TOC sidebar earlier than Material's default ~960px breakpoint */
+  @media (max-width: 1200px) {
+    .md-sidebar--secondary { display: none !important; }
+  }
+
+  /* Stack text above image at narrow widths */
+  @media (max-width: 1000px) {
+    .guide-text-image {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-text-image__text {
+      width: 100%;
+    }
+
+    .guide-text-image__img {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Two images side by side */
+  .guide-image-pair {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .guide-image-pair figure {
+    flex: 1 1 0; /* default: equal split — override per-figure with style="flex: 0 0 40%" */
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .guide-image-pair figure img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-image-pair figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  figure > .guide-image-pair ~ figcaption {
+    display: block;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  @media (max-width: 1000px) {
+    .guide-image-pair {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-image-pair figure {
+      width: 100%;
+      max-width: 480px;
+    }
+  }
+
+  /* Page title: centered, matching guide index size */
+  .md-content h1 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  /* TOC sidebar: "Table of contents" label */
+  .md-sidebar--secondary .md-nav__title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.85rem !important;
+    color: #b59d47 !important;
+    letter-spacing: 0.05em;
+  }
+
+  /* Back to top button: hidden on wide screens */
+  .back-to-top-btn { display: none; }
+
+  @media (max-width: 1200px) {
+    .back-to-top-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      z-index: 201;
+      background: #26221a;
+      border: 1.5px solid #b59d47;
+      border-radius: 3px;
+      color: #b59d47;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+      text-decoration: none !important;
+    }
+
+    .back-to-top-btn:hover {
+      background: #b59d47;
+      color: #1c1c1c !important;
+    }
+  }
+</style>
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#companions-beasts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner" aria-label="Header">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-header__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <span class="md-header__topic">Charithw's WF Guide Hub</span>
+    </div>
+    <div class="md-header__spacer"></div>
+    <nav class="md-header-nav" aria-label="Site navigation">
+      
+      
+      <a href="../.." class="md-header-nav__link">
+        Home
+      </a>
+      
+      
+      
+      <a href="../../guide_index/" class="md-header-nav__link">
+        Guide Index
+      </a>
+      
+      
+      
+      <div class="md-header-nav__item--dropdown" data-md-dropdown="">
+        <button class="md-header-nav__link md-header-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          More
+        </button>
+        <ul class="md-header-nav__dropdown-menu" role="menu">
+          
+          <li role="none">
+            <a href="../../feedback/" class="md-header-nav__dropdown-link" role="menuitem">
+              Feedback
+            </a>
+          </li>
+          
+          <li role="none">
+            <a href="../../credits/" class="md-header-nav__dropdown-link" role="menuitem">
+              Credits
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
+    </nav>
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide_index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../feedback/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-nav__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    Charithw's WF Guide Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    More
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breeding-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breeding Basics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubrows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kubrows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kubrows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-kubrow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting a Kubrow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breeds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breeds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kavats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kavats
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kavats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-kavat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting a Kavat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breeds_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breeds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predasites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predasites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Predasites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-predasite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting a Predasite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antigens-mutagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antigens &amp; Mutagens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subspecies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subspecies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulpaphyla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vulpaphyla
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vulpaphyla">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-vulpaphyla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting a Vulpaphyla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antigens-mutagens_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antigens &amp; Mutagens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subspecies_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subspecies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helminth-chargers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helminth Chargers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+
+<h1 id="companions-beasts">Companions: Beasts</h1>
+<div class="inline-toc">
+<p class="inline-toc__title">Table of Contents</p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#breeding-basics">Breeding Basics</a></li>
+<li><a href="#kubrows">Kubrows</a></li>
+<li><a href="#kavats">Kavats</a></li>
+<li><a href="#predasites">Predasites</a></li>
+<li><a href="#vulpaphyla">Vulpaphyla</a></li>
+<li><a href="#helminth-chargers">Helminth Chargers</a></li>
+</ul>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Beast companions are animal companions that roam around the battlefield, providing support and assisting in combat. When a beast companion's health reaches zero, it will fall down and slowly recover. Revival can be sped up through mods or by manually reviving it like you would for a downed ally. Beasts also have access to unique and powerful beast-exclusive mods.</p>
+<hr>
+<h2 id="breeding-basics">Breeding Basics</h2>
+<p>Beasts have several inheritable traits that can be passed down to offspring through
+genetic imprints:</p>
+<ul>
+<li>Pedigree - companion type</li>
+<li>Build - Normal, Slim, Bulky (Kubrows and Helminth Chargers only)</li>
+<li>Fur pattern &amp; Body Type</li>
+<li>Fur Colors</li>
+<li>Eye Color</li>
+<li>Tail Patterns (Kavats only)</li>
+<li>Head type (Kavats only)</li>
+<li>Mutation (Predasites and Vulpaphyla only)</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Height and gender are <strong>not</strong> inheritable traits. Any imprint seller charging a premium for "tall" pets is either misinformed or scamming.</p>
+</blockquote>
+<p>To breed a companion, open the Incubator, and start an incubation. You can then choose between a random incubation or a combined incubation which uses two imprints to control what traits the companion will have. Breeding pets for profit is possible but is a lengthy and luck-based process, so I don't recommend exploring this until the late game.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/companion/incubation.webp" data-desc-position="bottom"><img alt="Incubation Tab" class="center bordered floored" src="../../images/companion/incubation.webp" width="60%"></a></p>
+<hr>
+<h2 id="kubrows">Kubrows</h2>
+<p>Kubrows are your first beast companions, which are unlocked through the Howl of the Kubrow quest.</p>
+<h3 id="getting-a-kubrow">Getting a Kubrow</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>To incubate a Kubrow you'll need to find a Kubrow Egg and craft an Incubator Power Core. </p>
+<p>Kubrow Eggs can be found in Earth forest missions by destroying Feral Kubrow Dens and are picked up automatically when dropped. If you're destroying every den, you'll typically find an egg in 4 to 5 missions. Mantle, Earth is a great location since capture missions are relatively short, and you'll have plenty of time to explore. Alternatively, you can purchase eggs from the Market for 10 platinum.</p>
+<p>Incubator Power Core blueprints can be bought in the market for credits, or the fully built item can be bought for 35 platinum.</p>
+<p>Once you have both items, you can start incubating your Kubrow.</p>
+</div>
+<figure class="guide-text-image__img" style="flex: 0 0 30%;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/companion/den.webp" data-desc-position="bottom"><img src="../../images/companion/den.webp" alt="Feral Kubrow Den"></a>
+</figure>
+</div>
+<h3 id="breeds">Breeds</h3>
+<p><strong>Chesa</strong></p>
+<p>Chesa are your 'looting' Kubrows. Neutralize disarms and Retrieve desecrates corpses for a chance at extra loot.</p>
+<p><strong>Huras</strong></p>
+<p>The stealth Kubrow. Stalk cloaks both the Kubrow and the player when enemies are nearby. Just like Shade's Ghost precept, Stalk's invisibility is broken by gunfire and melee attacks but not by warframe abilities. The Huras also has solid crit stats on its claws, making it a very capable damage dealer. </p>
+<p><strong>Raksa</strong></p>
+<p>The Raksa is your guardian Kubrow. Protect allows it to restore large amounts of your Warframe's shields and pairs very well with Hildryn due to her high shields. Howl also provides the Raksa with an AOE slow.</p>
+<p><strong>Sahasa</strong></p>
+<p>The Sahasa is the utility Kubrow. Dig lets the Sahasa produce health, energy, and ammo drops. Dig can be inconsistent at times, but it's very nice when using energy heavy setups or archgun combat.</p>
+<p><strong>Sunika</strong></p>
+<p>The Sunika is your combat Kubrow. It has the highest base damage of any Kubrow claws and a hefty 3.5x crit multiplier. Savagery rushes up to 8 nearby enemies attacking each target and knocking them down. With Unleashed, the Sunika is also able to prioritize Eximi units and gains a damage bonus against their overguard. </p>
+<hr>
+<h2 id="kavats">Kavats</h2>
+<p>Kavats are the second type of beast companion. To get a Kavat, you need to first complete the Howl of the Kubrow quest and upgrade your incubator with the Kavat Incubator Upgrade Segment. The upgrade segment drops from Grineer Hyekka Masters and is found in the Tenno Labs of a clan's Dojo.</p>
+<h3 id="getting-a-kavat">Getting a Kavat</h3>
+<p>To incubate a Kavat, you'll need 10 Kavat Genetic Codes and an Incubator Power Core. 
+Kavat Genetic Code can be farmed by scanning Feral Kavats in Deimos (except the Cambion Drift) or bought on the Market for 5 platinum each. Power Cores, as mentioned above can be bought on the Market for credits (blueprint) or platinum (fully built).</p>
+<p>A few tips for farming Genetic Codes:</p>
+<ul>
+<li>Bring a crowd control or sleep ability to avoid accidentally killing Feral Kavats</li>
+<li>Kavats can go invisible and will not appear on the map's radar. Use the Codex / Synthesis Scanner to spot them</li>
+<li>Farming in a group increases Feral Kavat pack size</li>
+<li>Drop chance boosters, drop boosters, resourceful retriever, Steel Path drop chance buff, and the Synthesis Scanner Cross-Matrix widget affect Kavat Genetic Code drops.</li>
+<li>The Inaros quest has one mission which spawns up to 50 Feral Kavats. If you haven't already done the quest its a great place to get genetic code.</li>
+</ul>
+<p>Once you have 10 Genetic Codes, incubate them to receive either an Adarza or Smeeta Kavat.</p>
+<h3 id="breeds_1">Breeds</h3>
+<p><strong>Adarza</strong></p>
+<p>The Adarza is your crit-focused cat. Cat's Eye gives allies an absolute 60% crit chance. The Adarza has high crit damage stats on its claws, but compared to Kubrows, Kavats have much lower base damage. </p>
+<p><strong>Smeeta</strong></p>
+<p>Smeeta is the premier affinity and focus farming Kavat. Every 27 seconds, Charm has a 40% chance to grant a buff to the player. These include:</p>
+<ul>
+<li>Crit chance set to 200% (guaranteed orange-tier crits)</li>
+<li>Infinite energy for 10 seconds</li>
+<li>3x Affinity for 2 minutes</li>
+<li>Instantly reload once</li>
+<li>Negate next hit</li>
+<li>Generate one rare resource from the current planet</li>
+</ul>
+<p><strong>Vasca</strong></p>
+<p>The Vasca has a unique acquisition method. Take any Kavat to the Plains of Eidolon at night and have your Kavat be attacked and infected by a wild Vasca Kavat. Once infected, create an imprint of the Kavat to cure it and gain one Vasca imprint. Repeat this, and you can use your two Vasca imprints to incubate a Vasca.</p>
+<p>The Vasca is your vampire Kavat. Draining Bite heals your Vasca, and Transfusion lets it revive the player on a 2 minute cooldown. </p>
+<hr>
+<h2 id="predasites">Predasites</h2>
+<p>Predasites are infested beast companions, similar to kubrows, that can be found roaming the Cambion Drift.</p>
+<h3 id="getting-a-predasite">Getting a Predasite</h3>
+<p>To get a Predasite you'll need to capture a weakened Predasite from the Cambion Drift and then ask Son to revive it. Wild Predasites that are attacked by the Infested will enter a weakened state, where they are capturable.</p>
+<p>Once captured, bring it to Son in the Necralisk, along with one Antigen and one Mutagen to revive the Predasite and create your new companion. Blueprints for both of these can also be bought through Son.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/companion/predasite.webp" data-desc-position="bottom"><img alt="Weakened Predasite" class="center bordered floored" src="../../images/companion/predasite.webp" width="60%"></a></p>
+<h3 id="antigens-mutagens">Antigens &amp; Mutagens</h3>
+<p>There are 4 options to pick from for both your Antigen and Mutagen:</p>
+<p><strong>Antigen</strong></p>
+<table>
+<thead>
+<tr>
+<th>Antigen</th>
+<th>Polarity</th>
+<th>Mutation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Iranon</td>
+<td>Vazarin</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Elasmun</td>
+<td>Madurai</td>
+<td>Infestation through the horn</td>
+</tr>
+<tr>
+<td>Ibexan</td>
+<td>Naramon</td>
+<td>Infestation through the jaw</td>
+</tr>
+<tr>
+<td>Tethron</td>
+<td>Penjaga</td>
+<td>Infestation through the spine</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mutagen</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mutagen</th>
+<th>Resistances</th>
+<th>Mutation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leptosam</td>
+<td>Heat, Puncture</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chiten</td>
+<td>Electricity, Slash</td>
+<td>Rigid tail scales</td>
+</tr>
+<tr>
+<td>Arioli</td>
+<td>Cold, Impact</td>
+<td>Infestation through the tail</td>
+</tr>
+<tr>
+<td>Monachod</td>
+<td>Toxin, Slash</td>
+<td>Cartilage exoskeleton</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> Imprints will carry both physical mutations and damage resistances, meaning Kubrow Egg incubations with two different Predasite imprints, will pass on the traits of both companions. A Predasite with all four Mutagen and Antigen traits is referred to as a '4x4' and there is a small market for people selling these imprints.</p>
+</blockquote>
+<h3 id="subspecies">Subspecies</h3>
+<p><strong>Vizier</strong></p>
+<p>The common Predasite subspecies. Its precepts focus on corrosive crowd control and ally healing. Its claws deal Impact and Corrosive damage and have a high status chance.</p>
+<p><strong>Medjay</strong></p>
+<p>A rarer subspecies found primarily during Vome. The Medjay focuses on viral damage and setting up enemies for finishers. Its claws deal Slash and Viral damage and has good crit.</p>
+<p><strong>Pharaoh</strong></p>
+<p>The other rarer subspecies, found primarily during Fass. The Pharaoh focuses on buffing ally Toxin damage and shooting sticky viral grenades. Its claws deal Gas and Puncture damage and run the middle path, with balanced crit chance and status chance.</p>
+<hr>
+<h2 id="vulpaphyla">Vulpaphyla</h2>
+<p>Vulpaphyla are infested fox-like beasts, similar to kavats, that can be found roaming the Cambion Drift.</p>
+<h3 id="getting-a-vulpaphyla">Getting a Vulpaphyla</h3>
+<p>The process for getting a Vulpaphyla is identical to the Predasite. Capture a weakened Vulpaphyla, bring it to Son in the Necralisk, and have one Antigen and Mutagen for revivification. </p>
+<h3 id="antigens-mutagens_1">Antigens &amp; Mutagens</h3>
+<p>There are 4 options to pick from for both your Antigen and Mutagen:</p>
+<p><strong>Antigens</strong></p>
+<table>
+<thead>
+<tr>
+<th>Antigen</th>
+<th>Polarity</th>
+<th>Mutation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desus</td>
+<td>Vazarin</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Virox</td>
+<td>Madurai</td>
+<td>Tumorous jaw growth</td>
+</tr>
+<tr>
+<td>Plagen</td>
+<td>Naramon</td>
+<td>Scaled mane</td>
+</tr>
+<tr>
+<td>Poxi</td>
+<td>Penjaga</td>
+<td>Shoulder protrusions</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mutagens</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mutagen</th>
+<th>Resistances</th>
+<th>Mutation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adra</td>
+<td>Heat, Puncture</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Elsa</td>
+<td>Electricity, Slash</td>
+<td>Chitinous shell over tail</td>
+</tr>
+<tr>
+<td>Zarim</td>
+<td>Cold, Impact</td>
+<td>Tentacle tail</td>
+</tr>
+<tr>
+<td>Phijar</td>
+<td>Toxin, Slash</td>
+<td>Tail skin recedes</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> Imprints will carry both physical mutations and damage resistances, meaning Kavat incubations with two different Vulpaphyla imprints, will pass on the traits of both companions. A Vulpaphyla with all four Mutagen and Antigen traits is referred to as a '4x4' and there is a small market for people selling these imprints.</p>
+</blockquote>
+<h3 id="subspecies_1">Subspecies</h3>
+<p><strong>Sly</strong></p>
+<p>The common Vulpaphyla subspecies. Its precepts focus on creating decoys to draw aggro
+and avoiding death through a larval state that reduces enemy accuracy while killing enemies.</p>
+<p><strong>Crescent</strong></p>
+<p>A rarer subspecies found primarily during Vome. The Crescent Vulpaphyla focuses on throwing enemies into the air, debuffing enemies with puncture procs, and avoiding death through a larval form that will attack enemies.</p>
+<p><strong>Panzer</strong></p>
+<p>The other rarer subspecies, found primarily during Fass. Its precepts focus on spreading viral spores similarly to Saryn's spores and avoiding death through a larval state that fires more viral projectiles at enemies while it self-revives.</p>
+<hr>
+<h2 id="helminth-chargers">Helminth Chargers</h2>
+<p>The Helminth Charger is an Infested Kubrow created by combining the Helminth strain with a Kubrow egg. To obtain one, you'll need to get infected with the Helminth cyst and let it fully grow (7 days). Then begin a standard Kubrow incubation and when asked to put imprints, select the option to drain the cyst over the egg instead.  </p>
+<p>It has two precepts which focus on pulling enemies, knocking them over, and gaining temporary buffs. </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+<a class="back-to-top-btn" href="#" aria-label="Back to top">
+  <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+    <path d="M8 2 L15 13 L1 13 Z"></path>
+  </svg>
+  Top
+</a>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/glightbox-scroll-zoom.js"></script>
+      
+        <script src="../../javascripts/amp.js"></script>
+      
+        <script src="../../javascripts/items-cache.js"></script>
+      
+        <script src="../../javascripts/prime-list.js"></script>
+      
+        <script src="../../javascripts/resurgence.js"></script>
+      
+        <script src="../../javascripts/sentinel-images.js"></script>
+      
+        <script src="../../javascripts/nav-dropdown.js"></script>
+      
+        <script src="../../javascripts/feedback-form.js"></script>
+      
+        <script src="../../javascripts/riven-stats.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

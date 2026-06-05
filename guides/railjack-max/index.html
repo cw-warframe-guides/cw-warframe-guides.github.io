@@ -1,0 +1,1423 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cw-warframe-guides.github.io/guides/railjack-max/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Railjack Optimization - Charithw's WF Guide Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+<meta name="darkreader-lock">
+<script>window.__mkdocsBase = "../..";</script>
+<style>
+  /* Hide left nav sidebar (but not on mobile — drawer uses it) */
+  @media (min-width: 631px) {
+    .md-sidebar--primary { display: none !important; }
+  }
+
+  /* Hide Material footer generator line */
+  .md-footer-meta { display: none !important; }
+
+  /* Expand layout to full viewport width, dead space on left only */
+  .md-main__inner {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: clamp(0rem, 12vw, 12.1rem) !important;
+    padding-right: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TOC: sticky in normal flow, sits at right edge */
+  .md-sidebar--secondary {
+    position: sticky !important;
+    top: 3.5rem !important;
+    width: 12.1rem !important;
+    flex-shrink: 0 !important;
+    height: fit-content !important;
+    background-color: #1c1c1c !important;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    height: fit-content !important;
+    overflow: visible !important;
+    background-color: #1c1c1c !important;
+  }
+
+  /* Text + image side by side, image vertically centered */
+  .guide-text-image {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .guide-text-image__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .guide-text-image__img {
+    flex: 0 0 50%; /* ← default image column width; override per-instance via inline style on <figure> */
+    min-width: 0;
+    margin: 0;
+  }
+
+  .guide-text-image__img img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-text-image__img figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* Hide TOC sidebar earlier than Material's default ~960px breakpoint */
+  @media (max-width: 1200px) {
+    .md-sidebar--secondary { display: none !important; }
+  }
+
+  /* Stack text above image at narrow widths */
+  @media (max-width: 1000px) {
+    .guide-text-image {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-text-image__text {
+      width: 100%;
+    }
+
+    .guide-text-image__img {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Two images side by side */
+  .guide-image-pair {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .guide-image-pair figure {
+    flex: 1 1 0; /* default: equal split — override per-figure with style="flex: 0 0 40%" */
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .guide-image-pair figure img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-image-pair figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  figure > .guide-image-pair ~ figcaption {
+    display: block;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  @media (max-width: 1000px) {
+    .guide-image-pair {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-image-pair figure {
+      width: 100%;
+      max-width: 480px;
+    }
+  }
+
+  /* Page title: centered, matching guide index size */
+  .md-content h1 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  /* TOC sidebar: "Table of contents" label */
+  .md-sidebar--secondary .md-nav__title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.85rem !important;
+    color: #b59d47 !important;
+    letter-spacing: 0.05em;
+  }
+
+  /* Back to top button: hidden on wide screens */
+  .back-to-top-btn { display: none; }
+
+  @media (max-width: 1200px) {
+    .back-to-top-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      z-index: 201;
+      background: #26221a;
+      border: 1.5px solid #b59d47;
+      border-radius: 3px;
+      color: #b59d47;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+      text-decoration: none !important;
+    }
+
+    .back-to-top-btn:hover {
+      background: #b59d47;
+      color: #1c1c1c !important;
+    }
+  }
+</style>
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#railjack-optimization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner" aria-label="Header">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-header__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <span class="md-header__topic">Charithw's WF Guide Hub</span>
+    </div>
+    <div class="md-header__spacer"></div>
+    <nav class="md-header-nav" aria-label="Site navigation">
+      
+      
+      <a href="../.." class="md-header-nav__link">
+        Home
+      </a>
+      
+      
+      
+      <a href="../../guide_index/" class="md-header-nav__link">
+        Guide Index
+      </a>
+      
+      
+      
+      <div class="md-header-nav__item--dropdown" data-md-dropdown="">
+        <button class="md-header-nav__link md-header-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          More
+        </button>
+        <ul class="md-header-nav__dropdown-menu" role="menu">
+          
+          <li role="none">
+            <a href="../../feedback/" class="md-header-nav__dropdown-link" role="menuitem">
+              Feedback
+            </a>
+          </li>
+          
+          <li role="none">
+            <a href="../../credits/" class="md-header-nav__dropdown-link" role="menuitem">
+              Credits
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
+    </nav>
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide_index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../feedback/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-nav__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    Charithw's WF Guide Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    More
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Engines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plating
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reactor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armaments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Armaments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plexus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plexus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plexus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integrated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrated
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tactical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tactical
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intrinsics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intrinsics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crew
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crew">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crew-stats-by-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crew Stats by Role
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+
+<h1 id="railjack-optimization">Railjack Optimization</h1>
+<div class="inline-toc">
+<p class="inline-toc__title">Table of Contents</p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#components">Components</a></li>
+<li><a href="#armaments">Armaments</a></li>
+<li><a href="#plexus">Plexus</a></li>
+<li><a href="#intrinsics">Intrinsics</a></li>
+<li><a href="#crew">Crew</a></li>
+</ul>
+</div>
+<h2 id="overview">Overview</h2>
+<p>This guide touches on the major Railjack systems and provides practical recommendations for getting the most out of your Railjack. The goal of this is to give you a clear guideline to an optimized Railjack setup that can comfortably cruise through anything up to Veil Proxima missions. </p>
+<hr>
+<h2 id="components">Components</h2>
+<p>Your Railjack has 4 main components: Shields, Engines, Plating, and Reactor. The following subsections cover each of these parts. </p>
+<p>Component stats have ranges because Railjack parts use the same Valence Fusion system as adversary weapons. Check out the <a href="../valence/">Valence Fusion</a> guide for tips on maxing gear in the fewest fusions. When valence fusing Railjack parts, parts do not need to be of the same tier or fully repaired first. You can fuse scrap parts to built ones at 40% crafting cost, and lower tier parts can be fused for a smaller fusion percentage gain.</p>
+<p>All stats listed are for MK3 parts (the highest tier). MK3 parts can also roll special traits, which are covered in each section below.</p>
+<h3 id="shields">Shields</h3>
+<p>House Lavan shields have higher shield values while House Zekti shields have faster recharges and more offensive trait options. For tankier builds, House Lavan shields with the "+1000% energy consumed as shields" trait is great. For a damage oriented build, House Zekti shields with the 25% Railjack damage trait are the better pick.</p>
+<table style="width: 100%; border-collapse: collapse; font-family: 'Lato', sans-serif; font-size: 0.64rem; color: #dbd2ad;">
+  <thead>
+    <tr>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35); border-right: 1px solid rgba(219,210,173,0.25);"></th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Sigma</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Lavan</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Vidar</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Zetki</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0.4rem 1rem; background: rgba(219,210,173,0.06); border-top: 1px solid rgba(219,210,173,0.1); border-bottom: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);"></td>
+      <td colspan="4" style="padding: 0.4rem 1rem; text-align: center; font-weight: 700; background: rgba(219,210,173,0.06); border-top: 1px solid rgba(219,210,173,0.1); border-bottom: 1px solid rgba(219,210,173,0.1);">Item Stats</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Shield Capacity</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">1,500</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">1,400 - 2,000</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">1,200 - 1,750</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">1,050 - 1,500</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Shield Recharge Delay Reduction</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">1.00s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">0.10s - 1.00s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">0.50s - 2.00s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">1.00s - 4.00s</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Shield Recharge per second</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">7.00%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">15% - 30%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">15% - 30%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">10% - 12%</td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width: 100%; border-collapse: collapse; font-family: 'Lato', sans-serif; font-size: 0.64rem; color: #dbd2ad;">
+  <thead>
+    <tr>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">House</th>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Component</th>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Trait</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Lavan</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Shield Array</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Shields replenish 50x faster while cloaked</td>
+    </tr>
+    <tr style="background: rgba(181, 157, 71, 0.09);">
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e; border-left: 1px solid #7dc87e;">Lavan</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e;">Shield Array</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e; border-right: 1px solid #7dc87e;">+1000% of Energy consumed using Battle Mods is converted to Shields</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Vidar</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Shield Array</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">30% of Shield Damage is diverted to increase Turret Damage by up to 300 for the next shot fired</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Vidar</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Shield Array</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Every 10s shields apply an Electrical proc to all enemies within 50m</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Vidar</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Shield Array</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Redirect 50 Energy to Shields with every kill</td>
+    </tr>
+    <tr style="background: rgba(181, 157, 71, 0.09);">
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e; border-left: 1px solid #7dc87e;">Zetki</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e;">Shield Array</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e; border-right: 1px solid #7dc87e;">+25% Railjack damage while shield depleted</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Zetki</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Shield Array</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">+10% Tenno shields on Railjack</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="engines">Engines</h3>
+<p>House Lavan engines have the highest boost speed while House Vidar engines have the highest cruise speed. However, since boosting has no cooldown or duration, you can always be boosting when you're not shooting. Since boosting is effectively 'infinite' we always aim for House Lavan engines due to their higher speeds.</p>
+<blockquote>
+<p><strong>Note:</strong> Vidar engines will be faster with the "+50% boost speed while shield depleted" perk, but this is very inconsistent, so I recommend choosing the Lavan engines. </p>
+</blockquote>
+<table style="width: 100%; border-collapse: collapse; font-family: 'Lato', sans-serif; font-size: 0.64rem; color: #dbd2ad;">
+  <thead>
+    <tr>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35); border-right: 1px solid rgba(219,210,173,0.25);"></th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Sigma</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Lavan</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Vidar</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Zetki</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0.4rem 1rem; background: rgba(219,210,173,0.06); border-top: 1px solid rgba(219,210,173,0.1); border-bottom: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);"></td>
+      <td colspan="4" style="padding: 0.4rem 1rem; text-align: center; font-weight: 700; background: rgba(219,210,173,0.06); border-top: 1px solid rgba(219,210,173,0.1); border-bottom: 1px solid rgba(219,210,173,0.1);">Item Stats</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Engine Speed</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">30 m/s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">10 - 30 m/s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">30 - 60 m/s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">20 - 40 m/s</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Engine Boost</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">0.20x</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">0.30 - 0.60x</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">0.05 - 0.20x</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">0.10 - 0.30x</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.4rem 1rem; background: rgba(219,210,173,0.06); border-top: 1px solid rgba(219,210,173,0.1); border-bottom: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);"></td>
+      <td colspan="4" style="padding: 0.4rem 1rem; text-align: center; font-weight: 700; background: rgba(219,210,173,0.06); border-top: 1px solid rgba(219,210,173,0.1); border-bottom: 1px solid rgba(219,210,173,0.1);">Equipped Stats</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Engine Speed</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">180 m/s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">160 - 180 m/s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">180 - 210 m/s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">170 - 190 m/s</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Engine Boost</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">1.45x</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">1.55 - 1.85x</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">1.30 - 1.45x</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">1.35 - 1.55x</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Speed While Boosting</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">261 m/s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">248 - 333 m/s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">234 - 305 m/s</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">230 - 295 m/s</td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width: 100%; border-collapse: collapse; font-family: 'Lato', sans-serif; font-size: 0.64rem; color: #dbd2ad;">
+  <thead>
+    <tr>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">House</th>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Component</th>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Trait</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Lavan</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Engines</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Tenno gain 500 overshields after being launched from the Slingshot</td>
+    </tr>
+    <tr style="background: rgba(181, 157, 71, 0.09);">
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e; border-left: 1px solid #7dc87e;">Lavan</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e;">Engines</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e; border-right: 1px solid #7dc87e;">+20% Top Speed while shields are depleted</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Vidar</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Engines</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">-10% Intruders armor</td>
+    </tr>
+    <tr style="background: rgba(181, 157, 71, 0.09);">
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e; border-left: 1px solid #7dc87e;">Vidar</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e;">Engines</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-bottom: 1px solid #7dc87e; border-right: 1px solid #7dc87e;">+50% boost speed while shield depleted</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Zetki</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Engines</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Shields regenerate 50% faster when Railjack is stationary</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Zetki</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Engines</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">+20% Tenno weapon damage onboard Railjack</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="plating">Plating</h3>
+<p>House Lavan plating gives the largest amount of effective health, but House Vidar plating is a close second. There are no special traits for MK3 Plating which means there's not really an incentive to pick anything but the best plating.</p>
+<table style="width: 100%; border-collapse: collapse; font-family: 'Lato', sans-serif; font-size: 0.64rem; color: #dbd2ad;">
+  <thead>
+    <tr>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35); border-right: 1px solid rgba(219,210,173,0.25);"></th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Sigma</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Lavan</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Vidar</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Zetki</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Hull (Health)</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">2,450</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">4,500 - 6,000</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">3,300 - 4,400</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">3,600 - 4,800</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Armor</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">1,625</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">2,150 - 2,688</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">2,950 - 3,688</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">2,350 - 2,938</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Effective Health</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">15,721</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">36,750 - 59,760</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">35,750 - 58,491</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">31,800 - 51,808</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="reactor">Reactor</h3>
+<p>I recommend House Zekti MK3 reactors for the added Strength and Range. As covered in the Plexus section below, Seeker Volley is the best battle mod due to its insane damage output, and Strength buffs its damage further. For the traits, pick based on the hazard you find most annoying. Fire hazards are more common, but I went with electric hazards since I find them more inconvenient.</p>
+<table style="width: 100%; border-collapse: collapse; font-family: 'Lato', sans-serif; font-size: 0.64rem; color: #dbd2ad;">
+  <thead>
+    <tr>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35); border-right: 1px solid rgba(219,210,173,0.25);"></th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Sigma</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Lavan</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Vidar</th>
+      <th style="padding: 0.6rem 1rem; text-align: center; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Zetki</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Duration</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">15%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">40 - 60%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">20 - 40%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">0%</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Range</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">15%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">0%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">40 - 60%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">20 - 40%</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; font-weight: 700; border-top: 1px solid rgba(219,210,173,0.1); border-right: 1px solid rgba(219,210,173,0.25);">Strength</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1);">15%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #d4813a;">20 - 40%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #e05555;">0%</td>
+      <td style="padding: 0.6rem 1rem; text-align: center; border-top: 1px solid rgba(219,210,173,0.1); color: #4caf76;">40 - 60%</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+<p><strong>Note:</strong> A MK2 Zekti reactor can reach up to 80% strength but does lose out on the range and the hazard trait, which I find more valuable.</p>
+</blockquote>
+<table style="width: 100%; border-collapse: collapse; font-family: 'Lato', sans-serif; font-size: 0.64rem; color: #dbd2ad;">
+  <thead>
+    <tr>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">House</th>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Component</th>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Trait</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Lavan</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Reactor</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Equipping Lavan Hull Plating increases max Shields by 25%.</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Lavan</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Reactor</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Tenno gain 50% Damage increase for 5s after being launched from the Slingshot</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Vidar</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Reactor</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">+100% damage immunity duration after a Major Breach is repaired</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Vidar</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Reactor</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">Tenno gain 50% Speed Boost for 5s when deploying their Archwing</td>
+    </tr>
+    <tr style="background: rgba(181, 157, 71, 0.09);">
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-left: 1px solid #7dc87e;">Zetki</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e;">Reactor</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid #7dc87e; border-right: 1px solid #7dc87e;">50% chance that an Electric Hazard will repair automatically after 5s</td>
+    </tr>
+    <tr style="background: rgba(181, 157, 71, 0.09);">
+      <td style="padding: 0.6rem 1rem; border-left: 1px solid #7dc87e;">Zetki</td>
+      <td style="padding: 0.6rem 1rem;">Reactor</td>
+      <td style="padding: 0.6rem 1rem; border-right: 1px solid #7dc87e;">50% chance that a Fire Hazard will repair automatically after 5s</td>
+    </tr>
+    <tr style="background: rgba(181, 157, 71, 0.09);">
+      <td style="padding: 0.6rem 1rem; border-bottom: 1px solid #7dc87e; border-left: 1px solid #7dc87e;">Zetki</td>
+      <td style="padding: 0.6rem 1rem; border-bottom: 1px solid #7dc87e;">Reactor</td>
+      <td style="padding: 0.6rem 1rem; border-bottom: 1px solid #7dc87e; border-right: 1px solid #7dc87e;">50% chance that an Ice Hazard will repair automatically after 5s</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h2 id="armaments">Armaments</h2>
+<p><strong>Nose Turret (Pilot's gun)</strong></p>
+<p>I recommend the Photor. It fires a hitscan heat-based laser with large amounts of punch through. It's exceptionally good at taking out Corpus crewship shield generators which are usually blocked by protective energy shields. </p>
+<p><strong>Swivel Turrets (Side guns)</strong></p>
+<p>The biggest factor for turret damage is usually travel time. Plenty of weapons like the Vort and Cryophon have great damage but will miss targets due to their low projectile speeds. As such I recommend the Talyns, Apoc or Carcinoxx. Crew also have incredible aim so they can abuse hitscan weapons to pump out lots of damage.</p>
+<p>Run House Lavan or Vidar armaments until you reach Gunnery Rank 9. Zekti armaments have the best damage but have significantly higher heat gain, and the Gunnery Rank 9 perk lets you rapidly cool your turrets. This ends up making Zekti the best option at that point. </p>
+<p><strong>Ordinance</strong></p>
+<p>Tycho Seeker MK3. Other options are not worth considering.</p>
+<hr>
+<h2 id="plexus">Plexus</h2>
+<p>The Plexus is your personal modable console for Railjack and has 3 sections: Integrated, Battle, and Tactical. This section covers my personal modding recommendations for each section.</p>
+<h3 id="integrated">Integrated</h3>
+<p><strong>Auras</strong></p>
+<p>You have two options: </p>
+<ul>
+<li><strong>Onslaught Matrix</strong> (damage) - Increases turret damage when Hull is 100%, reflects damage when shields are over 80%, and provides Battle mod efficiency</li>
+<li><strong>Ironclad Matrix</strong> (defense) - Increases Hull, Armor, Shields and Shield Regen for your Railjack</li>
+</ul>
+<p><strong>Speed mods</strong></p>
+<ul>
+<li><strong>Ion Burn</strong> - Increases boost speed</li>
+<li><strong>Conic Nozzle</strong> - Increases cruise speed</li>
+</ul>
+<p><strong>Artillery</strong></p>
+<p>Artillery is needed to take out Crew Ships easily.</p>
+<ul>
+<li><strong>Artillery Cheap Shot</strong> - 60% artillery efficiency (mandatory mod IMO)</li>
+<li><strong>Forward Artillery</strong> - Extra damage</li>
+</ul>
+<p><strong>Other Slots</strong></p>
+<p>Remaining slots can go towards but it all depends on personal preference. Options include:</p>
+<ul>
+<li>Turret mods (e.g. Crimson Fugue, Turret Velocity, Hyperstrike)</li>
+<li>Ordinance mods (e.g. Ripload, Warhead, Ordnance Velocity)</li>
+<li>Other utility mods</li>
+</ul>
+<h3 id="battle">Battle</h3>
+<p>Battle mods provide combat abilities and each plexus can fit 3: a Defensive, an Offensive, and a Super. Casting a Battle mod uses your Warframe's energy so standard energy regen methods can be used to spam abilities endlessly. As such, the ideal pilots include Lavos (no cost, just cooldowns), Protea (Dispensary), and Harrow (Thurible).</p>
+<p><strong>Defensive</strong></p>
+<p>Blackout Pulse is the best pick here. It locks down Crew Ships and lets you set up easy Forward Artillery shots. </p>
+<p><strong>Offensive</strong></p>
+<p>All three options are strong. Pick what you find most fun! I personally run Particle Ram.</p>
+<p><strong>Super</strong></p>
+<p>Seeker Volley is the best Railjack mod available. It releases a swarm of homing missiles that can easily take down multiple enemy ships at once. Phoenix Blaze and Void Hole have decent damage, but they're just nowhere near Seeker Volley's damage output.</p>
+<h3 id="tactical">Tactical</h3>
+<p>Tactical mods provide neat utility effects. None of these are mandatory but I recommend:</p>
+<ul>
+<li><strong>Form Up</strong> - Brings everyone back to the Railjack</li>
+<li><strong>Death Blossom</strong> - Disables turret overheating</li>
+<li><strong>Void Cloak</strong> - Turn the Railjack invisible</li>
+</ul>
+<hr>
+<h2 id="intrinsics">Intrinsics</h2>
+<p>There are five main Intrinsic classes: Tactical, Piloting, Gunnery, Engineering, and Command. Each rank unlocks new perks that can affect both Railjack <strong>and</strong> regular missions. Intrinsics also give mastery points (1500 per rank).</p>
+<p><strong>Early Priority</strong></p>
+<ul>
+<li><strong>Engineering 4</strong> - Lets you craft Artillery shells in the forge</li>
+<li><strong>Piloting 1</strong> - Unlocks boosting</li>
+<li><strong>Tactical 3-4</strong> - Lets you teleport around ship (Rank 3) and quick teleport back to ship with your Omni (Rank 4)</li>
+<li><strong>Command 1-5</strong> - Crew can fill empty spots and do basic functions. If you play in full parties, this isn't as important.</li>
+<li><strong>Gunnery 1</strong> - Enables Ordnance lock-on and target lead indicators</li>
+</ul>
+<p><strong>Mid / Late Priority</strong></p>
+<ul>
+<li><strong>Piloting 5</strong> - Marks hidden derelicts which have special extra drops</li>
+<li><strong>Tactical 6</strong> - Improves energy efficiency for Seeker Volley</li>
+<li><strong>Gunnery 9</strong> - Lets you rapidly cool your overheated turrets. Lets you comfortably use Zekti weapons</li>
+<li><strong>Command 9</strong> - Unlocks the on-call crew summon that you can use in regular missions. Damage scales with enemy level so it can output a lot of damage on level 100+ missions</li>
+<li><strong>Command 10</strong> - Lets Ticker offer elite crew which have more stats and bonus perks</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Gunnery 10 adds aim assist when aiming down sights (ADS) along with increased heat gain while doing so. This is often called a nerf, but in practice, the heat gain is mitigated by the Gunnery 9 perk and <strong>only</strong> applies when ADS</p>
+</blockquote>
+<p><strong>Extras</strong></p>
+<p>Several intrinsics buff Archwings and Necramechs outside of Railjack missions (Piloting 8, Tactical 8, Gunnery 8, Engineering 8 and 9). These are worth picking up if you enjoy using either.</p>
+<hr>
+<h2 id="crew">Crew</h2>
+<p>Crewmates are your replacement for other players and can repair damage (Engineers), use turrets (Gunners), or fly the Railjack (Pilots). You can get crewmates from Ticker on Fortuna once you start putting ranks into Command. Crewmates cannot be permanently lost in mission and if one dies, you'll need to return to the Dry Dock to get them back. The only way to lose a crewmate is to terminate their contract at Ticker.</p>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>My recommended crew setup is:</p>
+<ul>
+<li>Engineer (left slot)</li>
+<li>Gunner/Pilot (middle slot)</li>
+<li>Gunner (right slot)</li>
+</ul>
+<p>When other players join, crew will get replaced by real players from right to left. Keeping the engineer in the left slot ensures they're the last to be replaced. The engineer will handle ship repairs and protect the ship, which makes it a very valuable role.</p>
+</div>
+<figure class="guide-text-image__img" style="flex: 0 0 40%;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/railjack/on-call.webp" data-desc-position="bottom"><img src="../../images/railjack/on-call.webp" alt="My on-call"></a>
+</figure>
+</div>
+<p><strong>Crew Weapons</strong></p>
+<p>The best weapons for crew are AOE options. Crewmates have infinite ammo so it's best to prioritize weapons with large AOEs. Good options include the Kuva Zarr, Kuva Ogris, Sporelacer, and Tenet Arca Plasmor.</p>
+<p>Crew and on-call crew cannot benefit from arcanes, galvanized mods, conditional mods like Argon Scope, or Rivens. That means it's best to focus on maximizing crit, elementals, AOE, and fire rate. As an example, this is my Kuva Zarr build that I run on my on-call crew.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/affinity-farming/on-call-gear.webp" data-desc-position="bottom"><img alt="My Kuva Zarr" class="center bordered floored" src="../../images/affinity-farming/on-call-gear.webp" width="70%"></a></p>
+<p><strong>Crew Stats</strong></p>
+<p>Crew can have 8, 10, or 12 (elite crew) competency points plus up to 3 trainable points for a maximum of 15 with an elite crew. These points are distributed across 5 stats.</p>
+<ul>
+<li><strong>Piloting</strong> - Increases maximum Railjack speed when the crewmate is piloting</li>
+<li><strong>Gunnery</strong> - Boosts turret accuracy and lowers heat accretion for the crewmate</li>
+<li><strong>Repair</strong> - Increases Railjack repair time and self-healing speed</li>
+<li><strong>Combat</strong> - Boosts the crewmate's weapon damage. Is additive with other %Damage mods</li>
+<li><strong>Endurance</strong> - Gives crewmates extra Health and Shields</li>
+</ul>
+<h3 id="crew-stats-by-role">Crew Stats by Role</h3>
+<p><strong>Engineer / On-Call</strong></p>
+<ul>
+<li>Pure Engineer - Repair 5 &gt; Combat 5 &gt; Endurance 5</li>
+<li>On-Call - Combat 5 &gt; Endurance 5 &gt; Repair 5</li>
+</ul>
+<p>Best Perk Options:</p>
+<ul>
+<li>Combat - +150% Critical Chance with Rifles</li>
+<li>Endurance - Killing an enemy heals all nearby allies by 500 over 10 seconds</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Gunner</strong></p>
+<ul>
+<li>Gunnery 5 &gt; Endurance 5 &gt; Repair 5</li>
+</ul>
+<p>Best Perk Options:</p>
+<ul>
+<li>Gunnery - +50% damage for Vidar/Lavan/Zetki turrets</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Pilot (pseudo-Gunner)</strong> </p>
+<p>Crewmate piloting AI is a bit too slow to be worth using as an actual pilot. However, the elite crew trait "+25% speed for X engines" gives a global speed buff to your Railjack. This means we can turn a 'pilot' crewmate into a bootleg-gunner.</p>
+<ul>
+<li>Pilot 5 &gt;&gt; Gunnery 5 = Endurance 5</li>
+</ul>
+<p>Best Perk Options:</p>
+<ul>
+<li>Piloting - +25% speed for Vidar/Lavan engines</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+<a class="back-to-top-btn" href="#" aria-label="Back to top">
+  <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+    <path d="M8 2 L15 13 L1 13 Z"></path>
+  </svg>
+  Top
+</a>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/glightbox-scroll-zoom.js"></script>
+      
+        <script src="../../javascripts/amp.js"></script>
+      
+        <script src="../../javascripts/items-cache.js"></script>
+      
+        <script src="../../javascripts/prime-list.js"></script>
+      
+        <script src="../../javascripts/resurgence.js"></script>
+      
+        <script src="../../javascripts/sentinel-images.js"></script>
+      
+        <script src="../../javascripts/nav-dropdown.js"></script>
+      
+        <script src="../../javascripts/feedback-form.js"></script>
+      
+        <script src="../../javascripts/riven-stats.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

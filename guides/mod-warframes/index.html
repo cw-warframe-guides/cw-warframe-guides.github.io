@@ -1,0 +1,1110 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cw-warframe-guides.github.io/guides/mod-warframes/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Modding: A Checklist for Warframes - Charithw's WF Guide Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+<meta name="darkreader-lock">
+<script>window.__mkdocsBase = "../..";</script>
+<style>
+  /* Hide left nav sidebar (but not on mobile — drawer uses it) */
+  @media (min-width: 631px) {
+    .md-sidebar--primary { display: none !important; }
+  }
+
+  /* Hide Material footer generator line */
+  .md-footer-meta { display: none !important; }
+
+  /* Expand layout to full viewport width, dead space on left only */
+  .md-main__inner {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: clamp(0rem, 12vw, 12.1rem) !important;
+    padding-right: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TOC: sticky in normal flow, sits at right edge */
+  .md-sidebar--secondary {
+    position: sticky !important;
+    top: 3.5rem !important;
+    width: 12.1rem !important;
+    flex-shrink: 0 !important;
+    height: fit-content !important;
+    background-color: #1c1c1c !important;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    height: fit-content !important;
+    overflow: visible !important;
+    background-color: #1c1c1c !important;
+  }
+
+  /* Text + image side by side, image vertically centered */
+  .guide-text-image {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .guide-text-image__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .guide-text-image__img {
+    flex: 0 0 50%; /* ← default image column width; override per-instance via inline style on <figure> */
+    min-width: 0;
+    margin: 0;
+  }
+
+  .guide-text-image__img img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-text-image__img figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* Hide TOC sidebar earlier than Material's default ~960px breakpoint */
+  @media (max-width: 1200px) {
+    .md-sidebar--secondary { display: none !important; }
+  }
+
+  /* Stack text above image at narrow widths */
+  @media (max-width: 1000px) {
+    .guide-text-image {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-text-image__text {
+      width: 100%;
+    }
+
+    .guide-text-image__img {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Two images side by side */
+  .guide-image-pair {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .guide-image-pair figure {
+    flex: 1 1 0; /* default: equal split — override per-figure with style="flex: 0 0 40%" */
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .guide-image-pair figure img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-image-pair figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  figure > .guide-image-pair ~ figcaption {
+    display: block;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  @media (max-width: 1000px) {
+    .guide-image-pair {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-image-pair figure {
+      width: 100%;
+      max-width: 480px;
+    }
+  }
+
+  /* Page title: centered, matching guide index size */
+  .md-content h1 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  /* TOC sidebar: "Table of contents" label */
+  .md-sidebar--secondary .md-nav__title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.85rem !important;
+    color: #b59d47 !important;
+    letter-spacing: 0.05em;
+  }
+
+  /* Back to top button: hidden on wide screens */
+  .back-to-top-btn { display: none; }
+
+  @media (max-width: 1200px) {
+    .back-to-top-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      z-index: 201;
+      background: #26221a;
+      border: 1.5px solid #b59d47;
+      border-radius: 3px;
+      color: #b59d47;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+      text-decoration: none !important;
+    }
+
+    .back-to-top-btn:hover {
+      background: #b59d47;
+      color: #1c1c1c !important;
+    }
+  }
+</style>
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modding-a-checklist-for-warframes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner" aria-label="Header">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-header__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <span class="md-header__topic">Charithw's WF Guide Hub</span>
+    </div>
+    <div class="md-header__spacer"></div>
+    <nav class="md-header-nav" aria-label="Site navigation">
+      
+      
+      <a href="../.." class="md-header-nav__link">
+        Home
+      </a>
+      
+      
+      
+      <a href="../../guide_index/" class="md-header-nav__link">
+        Guide Index
+      </a>
+      
+      
+      
+      <div class="md-header-nav__item--dropdown" data-md-dropdown="">
+        <button class="md-header-nav__link md-header-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          More
+        </button>
+        <ul class="md-header-nav__dropdown-menu" role="menu">
+          
+          <li role="none">
+            <a href="../../feedback/" class="md-header-nav__dropdown-link" role="menuitem">
+              Feedback
+            </a>
+          </li>
+          
+          <li role="none">
+            <a href="../../credits/" class="md-header-nav__dropdown-link" role="menuitem">
+              Credits
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
+    </nav>
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide_index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../feedback/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-nav__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    Charithw's WF Guide Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    More
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-do-all-the-abilities-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What Do All the Abilities Do?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-whats-my-playstyle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. What's My Playstyle?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-do-i-survive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. How Do I Survive?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. How Do I Survive?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-tanking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Tanking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shield-tanking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shield Tanking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage-reduction-dr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage Reduction (DR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invisibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invisibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overguard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overguard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invincibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invincibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-stats-should-i-mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. What Stats Should I Mod?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-what-qol-would-be-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. What QoL Would Be Good?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Putting It All Together
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-basic-frost-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Basic Frost Build
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-sp-frost-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: SP Frost Build
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+
+<h1 id="modding-a-checklist-for-warframes">Modding: A Checklist for Warframes</h1>
+<div class="inline-toc">
+<p class="inline-toc__title">Table of Contents</p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#the-checklist">The Checklist</a></li>
+<li><a href="#1-what-do-all-the-abilities-do">1. What Do All the Abilities Do?</a></li>
+<li><a href="#2-whats-my-playstyle">2. What's My Playstyle?</a></li>
+<li><a href="#3-how-do-i-survive">3. How Do I Survive?</a></li>
+<li><a href="#4-what-stats-should-i-mod">4. What Stats Should I Mod?</a></li>
+<li><a href="#5-what-qol-would-be-good">5. What QoL Would Be Good?</a></li>
+<li><a href="#putting-it-all-together">Putting It All Together</a></li>
+<li><a href="#example-basic-frost-build">Example: Basic Frost Build</a></li>
+<li><a href="#example-sp-frost-build">Example: SP Frost Build</a></li>
+</ul>
+</div>
+<h2 id="overview">Overview</h2>
+<p>This guide walks through my personal checklist for building Warframes from scratch and is based on lessons and tips I've picked up through my time playing Warframe. The goal of this guide, along with my other checklists, is to give you a repeatable thought process that you can apply to any moddable item in Warframe. Builds created this way may not be 'perfect', but they will be functional and can serve as a great starting point for refining your final builds. Even if you decide to always follow build guides, this thought process will be helpful for evaluating guides and understanding how they function. </p>
+<p>My Warframe checklist has 5 questions to help plan your build, and at the end I've included regular and Steel Path Frost builds to show the process.</p>
+<hr>
+<h2 id="the-checklist">The Checklist</h2>
+<ol>
+<li>What Do All the Abilities Do?</li>
+<li>What Style of Play Do I Want?</li>
+<li>How Do I Survive?</li>
+<li>What Stats Do I Want?</li>
+<li>What QoL Would Be Good?</li>
+</ol>
+<hr>
+<h2 id="1-what-do-all-the-abilities-do">1. What Do All the Abilities Do?</h2>
+<p>The first step is simply to read over all of your Warframe's abilities. Get a general idea of what each ability does and how they might synergize with each other. For example, abilities that buff melee critical chance, grant invisibility, or allow for flight will drastically change how a Warframe functions and how you might want to play it.</p>
+<hr>
+<h2 id="2-whats-my-playstyle">2. What's My Playstyle?</h2>
+<p>Most Warframes have multiple build archetypes so the second step is to figure out how you want to play the frame. </p>
+<p>Most builds fall into three general archetypes:</p>
+<ul>
+<li><strong>Weapon Platforms</strong> - Builds that focus purely on buffing your weapons and letting your guns or melee do the damage (e.g. Roar Rhino builds)</li>
+<li><strong>Casters</strong> - Builds that focus on abilities or exalted weapons as your primary damage source (e.g. Grasp of Lohk Xaku)</li>
+<li><strong>Hybrid / Utility</strong> - Builds that provide utility or flexibility where you don't specialize into either of the above (e.g. Despoil Desecrate Nekros)</li>
+</ul>
+<p>For example, here are my weapon platform and caster summoner Volt builds side by side. Each functions very differently and as such are modded quite differently. </p>
+<div class="guide-image-pair">
+  <figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/modding/wfchk-volt-wp.webp" data-desc-position="bottom"><img src="../../images/modding/wfchk-volt-wp.webp" alt="Volt Weapon Platform"></a>
+  </figure>
+  <figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/modding/wfchk-volt-sum.webp" data-desc-position="bottom"><img src="../../images/modding/wfchk-volt-sum.webp" alt="Volt Summoner"></a>
+  </figure>
+</div>
+
+<hr>
+<h2 id="3-how-do-i-survive">3. How Do I Survive?</h2>
+<blockquote>
+<p><strong>Note:</strong> This section goes into a lot more detail than the rest of the guide because it covers a lot of info about defensive layers. Don't worry if everything doesn't click immediately. The goal is to just give you an idea of how defenses work in Warframe and how you want to mod for these. </p>
+</blockquote>
+<p>One of the core concepts of Warframe is that you need to stay alive to do anything. As such, the third step is to figure out how you'd like to do that based on your Warframe's stats, its abilities, and your chosen playstyle. A good rule of thumb is to aim for 2-3 synergistic effects, such as pairing health tanking with armor and damage reduction mods.</p>
+<p>Below are some of the defensive 'layers' you can consider for your builds</p>
+<h3 id="health-tanking">Health Tanking</h3>
+<p>Health tanking is one of your basic defensive layers and works well on frames with decent base health and armor values or abilities that can generate either of these stats. Generally you'll want 2-3 of the following:</p>
+<ul>
+<li>Health mod (e.g. Vitality)</li>
+<li>Armor mod (e.g. Steel Fiber)</li>
+<li>Health regen or restore (e.g. Rejuvenation or Arcane Grace)</li>
+</ul>
+<p>Health tanking does have its limitations at very high levels where enemy damage can eventually kill you in one hit.</p>
+<blockquote>
+<p><strong>Note:</strong> Arcane Persistence is a late game Arcane that makes health tanking viable at higher levels by removing the limitation mentioned above. With it equipped, if your armor is over 700, you cannot take more than 500 damage per second.</p>
+</blockquote>
+<h3 id="shield-tanking">Shield Tanking</h3>
+<p>If a frame has poor health or armor, shield tanking and shield gating are your main alternatives. Shields function differently to health and have a built-in 50% damage reduction. When your shields are fully drained, you also gain a brief period of invincibility called a 'Shield Gate'. This gate negates any overflow damage that you would have taken and its duration scales based on the amount of shield you had recharged since your last shield gate. This is what allows some builds to survive enormous amounts of damage in the late game. There are multiple forms of shield tanking which I'll cover below.</p>
+<p>&nbsp;</p>
+<p><strong>Basic Shield Tanking</strong></p>
+<p>This is your early game shield defensive layer. It will allow you to take some hits and will recharge quickly when you're not taking damage. Slot a shield mod and a shield recharge rate mod and you'll be good. However, at higher levels, this won't be sufficient and instead you'll want to focus on some form of shield gating. </p>
+<p>&nbsp;</p>
+<p><strong>Shield Gating (Shield on Energy Spent)</strong></p>
+<p>Shield gating is a strategy which involves quickly regenerating shields after your shield gate invincibility period to set yourself up for another shield gate when you next take damage. One method of doing that is with Brief Respite or Augur mods, which restore shields based on your energy spent. This works particularly well with one easily recastable ability and some good method of energy restoration. Do note that efficiency will hurt builds that use exclusively Brief Respite or Augur mods since it will reduce your energy spent per ability and thus reduce the shields you restore on cast.</p>
+<p>&nbsp;</p>
+<p><strong>Shield Gating (Catalyzing Shields)</strong></p>
+<p>Catalyzing Shields is another mod that augments shield gating. It lowers your total shields by 80% but grants a 1.33 second shield gate if your shields fully recharge before being broken again. You can pair this with either Brief Respite and Augur mods or with recharge mods (mentioned next) to help restore shields quickly.</p>
+<blockquote>
+<p><strong>Note:</strong> Catalyzing Shields has been bugged since release and currently grants the 1.33 second shield gate with <strong>any</strong> amount of shields restored, making it much stronger and easier to use</p>
+</blockquote>
+<p>&nbsp;</p>
+<p><strong>Shield Gating (Recharge Rate)</strong></p>
+<p>Mods and arcanes like Fast Deflection and Arcane Aegis can lower your shield recharge delay, which is the time it takes for your shields to recharge after taking damage. These can be run alone in lower level content or paired with Catalyzing Shields as an additional layer for mid to late game builds. Arcane Aegis is included here because it has an undisclosed effect that removes all shield recharge delay while active, so due to how shield gating works, it will effectively give you 12 seconds of invincibility (except for Toxin damage).</p>
+<h3 id="damage-reduction-dr">Damage Reduction (DR)</h3>
+<p>Some frames have abilities that grant percentage damage reduction (DR), such as Nova's Null Star or Mirage's Eclipse. Outside of frame abilities, Adaptation is the main way to get DR. It synergizes really well with basic health and shield tanking, but generally will fall off at higher levels where players start to swap to shield gating and Arcane Persistence builds.</p>
+<h3 id="invisibility">Invisibility</h3>
+<p>Some frames can turn invisible with abilities and pure ability caster builds can also make use of Shade's Ghost or the Huras Kubrow's Stalk precepts for semi-permanent invisibility. Invisibility is a strong defensive option but has two important caveats. Firstly, gunfire will still alert enemies who will fire at your general location. Using silencer mods like Hush or staying mobile can fix this. Second, in parties you may still be hit by stray shots. </p>
+<h3 id="overguard">Overguard</h3>
+<p>Overguard is a special defensive stat that grants immunity to statuses and crowd control. It does not benefit from <strong>any</strong> form of damage reduction, but it does provide a 0.5 second period of invincibility when broken. Some frames and arcanes can generate Overguard consistently, potentially making this a reliable defensive layer. </p>
+<h3 id="invincibility">Invincibility</h3>
+<p>True invincibility is the holy grail of defensive options. However, outside of a few frames like Revenant and Oberon, frames looking to get conditional invincibility on their builds can use the Rolling Guard mod, which cleanses status effects and grants 3 seconds of invincibility on roll and which goes on a 7 second cooldown afterwards.</p>
+<hr>
+<h2 id="4-what-stats-should-i-mod">4. What Stats Should I Mod?</h2>
+<p>After deciding on a build style and defensive options, the fourth step is to figure out what stats to focus on. To do this, you'll need to pick 1 or 2 abilities that you want to focus on. For a weapon platform build this could be your buffing and debuffing abilities. For a caster build this would be your core damage abilities. Once you've picked your abilities, take a look at what aspects of the ability scale with what stats.</p>
+<p>For example, Rhino's Roar scales with Strength, Range, and Duration. For a solo weapon platform build, you can skip range and focus on Strength and Duration to get a very strong lengthy buff.</p>
+<blockquote>
+<p><strong>Note:</strong> Some abilities have augment mods that can greatly change how the ability works or add much needed QoL. It's good to start looking into these at this point in the checklist.</p>
+</blockquote>
+<hr>
+<h2 id="5-what-qol-would-be-good">5. What QoL Would Be Good?</h2>
+<p>Quality of Life (QoL) mods improve how smoothly a build functions instead of focusing on defenses or damage. Common examples include mods for energy management, casting speed, parkour velocity, and knockdown resistance. Most builds have room for 1-2 QoL mods and they're often worth the slots for the added comfort.</p>
+<hr>
+<h2 id="putting-it-all-together">Putting It All Together</h2>
+<p>With the checklist covered and some ideas in your head about your build, here's how I'd start modding:</p>
+<ol>
+<li>Aura mod - pick based on polarities, what you have, or what best fits your build goals</li>
+<li>Build defining features - augments, subsumes or anything that's needed for your desired playstyle</li>
+<li>Defensive layers - as mentioned, at least 2-3 layers</li>
+<li>Stat mods - Focus on stats to boost your core abilities</li>
+<li>QoL mods - Slot em in based on need and comfort. Want more comfort? Add more QoL mods</li>
+</ol>
+<hr>
+<h2 id="example-basic-frost-build">Example: Basic Frost Build</h2>
+<p>So Frost is one of my favorite frames and is obtainable relatively early on (from Vor &amp; Lech Kril on Exta, Ceres). His kit is pretty straightforward to build around and this basic build is geared towards base star chart with no augments, prime mods, arcanes, or subsumes. Furthermore, only Nightwave-earnable Aura mods are used. </p>
+<p><strong>1. What Do All the Abilities Do?</strong></p>
+<p>Frost's kit revolves around cold effects and crowd control. His abilities focus on locking down areas and debuffing enemies.</p>
+<p><strong>2. What's My Playstyle?</strong></p>
+<p>For a basic build, I'm running Frost as a support caster with all his crowd control and letting my weapons do the damage.</p>
+<p><strong>3. How Do I Survive?</strong></p>
+<p>Health tanking. Frost has solid base armor and gets even more from his passive. I'll add a health mod and an armor mod at first. Adaptation can replace the armor mod later on since the passive gives so much armor.</p>
+<p><strong>4. What Stats Should I Mod?</strong></p>
+<p>With a support build, I'm mainly going to focus on Frost's Avalanche, which scales with Strength, Duration, and Range. These are the stats I'll invest in.</p>
+<p><strong>5. What QoL Would Be Good?</strong></p>
+<p>Frost has a low energy max and his abilities are expensive. For QoL mods, Flow and Streamline solve both of these issues.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/modding/wfchk-frost-basic.webp" data-desc-position="bottom"><img alt="Frost Basic" class="center bordered floored" src="../../images/modding/wfchk-frost-basic.webp" width="80%"></a></p>
+<hr>
+<h2 id="example-sp-frost-build">Example: SP Frost Build</h2>
+<p>This is my general Steel Path Frost build. It uses augments, a subsume, and arcanes, and I'll assume you're familiar with those systems. Do note, this build isn't the 'ultimate' Frost build. It's my SP build which is geared towards comfortably clearing Steel Path missions.</p>
+<p><strong>1. What Do All the Abilities Do?</strong></p>
+<p>Same as the basic build, but I'm also adding the Biting Frost augment and subsuming Breach Surge.</p>
+<p><strong>2. What's My Playstyle?</strong></p>
+<p>Hybrid. Biting Frost's crit chance and crit damage buff helps buff Frost's weapons, and Breach surge can inherit this effect allowing Breach Surge sparks to red crit dealing potentially massive amounts of damage.</p>
+<p><strong>3. How Do I Survive?</strong></p>
+<p>Tanking with Overguard via the Icy Avalanche augment and pairing this with standard shield tanking and Snow Globe to protect myself during the window when my Overguard is down. </p>
+<p><strong>4. What Stats Should I Mod?</strong></p>
+<p>It's the same as the basic build, but investing more in Range and Strength for Avalanche and Breach Surge. Higher values will give more coverage and armor strip enemies fully.</p>
+<p><strong>5. What QoL Would Be Good?</strong></p>
+<p>Mod slots are much more limited in this build. I've offloaded casting speed and energy management to Archon Shards to free up mod slots. <em>What isn't shown here is Synth Deconstruct on my companions to synergize with the 2 Violet Archon Shards (Equilibrium Shards)</em></p>
+<div class="guide-image-pair">
+  <figure style="flex: 0 0 56.5%">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/modding/wfchk-frost-sp.webp" data-desc-position="bottom"><img src="../../images/modding/wfchk-frost-sp.webp" alt="Frost SP"></a>
+  </figure>
+  <figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/modding/wfchk-frost-sp-shards.webp" data-desc-position="bottom"><img src="../../images/modding/wfchk-frost-sp-shards.webp" alt="Frost SP Shards"></a>
+  </figure>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+<a class="back-to-top-btn" href="#" aria-label="Back to top">
+  <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+    <path d="M8 2 L15 13 L1 13 Z"></path>
+  </svg>
+  Top
+</a>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/glightbox-scroll-zoom.js"></script>
+      
+        <script src="../../javascripts/amp.js"></script>
+      
+        <script src="../../javascripts/items-cache.js"></script>
+      
+        <script src="../../javascripts/prime-list.js"></script>
+      
+        <script src="../../javascripts/resurgence.js"></script>
+      
+        <script src="../../javascripts/sentinel-images.js"></script>
+      
+        <script src="../../javascripts/nav-dropdown.js"></script>
+      
+        <script src="../../javascripts/feedback-form.js"></script>
+      
+        <script src="../../javascripts/riven-stats.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

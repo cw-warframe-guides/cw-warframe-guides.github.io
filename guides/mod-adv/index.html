@@ -1,0 +1,1179 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cw-warframe-guides.github.io/guides/mod-adv/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Modding: Advanced Concepts - Charithw's WF Guide Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+<meta name="darkreader-lock">
+<script>window.__mkdocsBase = "../..";</script>
+<style>
+  /* Hide left nav sidebar (but not on mobile — drawer uses it) */
+  @media (min-width: 631px) {
+    .md-sidebar--primary { display: none !important; }
+  }
+
+  /* Hide Material footer generator line */
+  .md-footer-meta { display: none !important; }
+
+  /* Expand layout to full viewport width, dead space on left only */
+  .md-main__inner {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: clamp(0rem, 12vw, 12.1rem) !important;
+    padding-right: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TOC: sticky in normal flow, sits at right edge */
+  .md-sidebar--secondary {
+    position: sticky !important;
+    top: 3.5rem !important;
+    width: 12.1rem !important;
+    flex-shrink: 0 !important;
+    height: fit-content !important;
+    background-color: #1c1c1c !important;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    height: fit-content !important;
+    overflow: visible !important;
+    background-color: #1c1c1c !important;
+  }
+
+  /* Text + image side by side, image vertically centered */
+  .guide-text-image {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .guide-text-image__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .guide-text-image__img {
+    flex: 0 0 50%; /* ← default image column width; override per-instance via inline style on <figure> */
+    min-width: 0;
+    margin: 0;
+  }
+
+  .guide-text-image__img img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-text-image__img figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* Hide TOC sidebar earlier than Material's default ~960px breakpoint */
+  @media (max-width: 1200px) {
+    .md-sidebar--secondary { display: none !important; }
+  }
+
+  /* Stack text above image at narrow widths */
+  @media (max-width: 1000px) {
+    .guide-text-image {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-text-image__text {
+      width: 100%;
+    }
+
+    .guide-text-image__img {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Two images side by side */
+  .guide-image-pair {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .guide-image-pair figure {
+    flex: 1 1 0; /* default: equal split — override per-figure with style="flex: 0 0 40%" */
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .guide-image-pair figure img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-image-pair figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  figure > .guide-image-pair ~ figcaption {
+    display: block;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  @media (max-width: 1000px) {
+    .guide-image-pair {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-image-pair figure {
+      width: 100%;
+      max-width: 480px;
+    }
+  }
+
+  /* Page title: centered, matching guide index size */
+  .md-content h1 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  /* TOC sidebar: "Table of contents" label */
+  .md-sidebar--secondary .md-nav__title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.85rem !important;
+    color: #b59d47 !important;
+    letter-spacing: 0.05em;
+  }
+
+  /* Back to top button: hidden on wide screens */
+  .back-to-top-btn { display: none; }
+
+  @media (max-width: 1200px) {
+    .back-to-top-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      z-index: 201;
+      background: #26221a;
+      border: 1.5px solid #b59d47;
+      border-radius: 3px;
+      color: #b59d47;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+      text-decoration: none !important;
+    }
+
+    .back-to-top-btn:hover {
+      background: #b59d47;
+      color: #1c1c1c !important;
+    }
+  }
+</style>
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modding-advanced-concepts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner" aria-label="Header">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-header__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <span class="md-header__topic">Charithw's WF Guide Hub</span>
+    </div>
+    <div class="md-header__spacer"></div>
+    <nav class="md-header-nav" aria-label="Site navigation">
+      
+      
+      <a href="../.." class="md-header-nav__link">
+        Home
+      </a>
+      
+      
+      
+      <a href="../../guide_index/" class="md-header-nav__link">
+        Guide Index
+      </a>
+      
+      
+      
+      <div class="md-header-nav__item--dropdown" data-md-dropdown="">
+        <button class="md-header-nav__link md-header-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          More
+        </button>
+        <ul class="md-header-nav__dropdown-menu" role="menu">
+          
+          <li role="none">
+            <a href="../../feedback/" class="md-header-nav__dropdown-link" role="menuitem">
+              Feedback
+            </a>
+          </li>
+          
+          <li role="none">
+            <a href="../../credits/" class="md-header-nav__dropdown-link" role="menuitem">
+              Credits
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
+    </nav>
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide_index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../feedback/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-nav__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    Charithw's WF Guide Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    More
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additive-vs-multiplicative-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additive vs Multiplicative Scaling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raw-value-vs-relative-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raw Value vs Relative Change
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diminishing-returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diminishing Returns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crit-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crit Tiers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-weighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Weighting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faction-mods-double-dipping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faction Mods &amp; Double Dipping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadratic-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quadratic Scaling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-element-combining" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Element Combining
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Element Combining">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hcet-ordering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HCET Ordering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riven-element-ordering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riven Element Ordering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+
+<h1 id="modding-advanced-concepts">Modding: Advanced Concepts</h1>
+<div class="inline-toc">
+<p class="inline-toc__title">Table of Contents</p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#additive-vs-multiplicative-scaling">Additive vs Multiplicative Scaling</a></li>
+<li><a href="#raw-value-vs-relative-change">Raw Value vs Relative Change</a></li>
+<li><a href="#diminishing-returns">Diminishing Returns</a></li>
+<li><a href="#crit-tiers">Crit Tiers</a></li>
+<li><a href="#status-weighting">Status Weighting</a></li>
+<li><a href="#faction-mods-double-dipping">Faction Mods &amp; Double Dipping</a></li>
+<li><a href="#quadratic-scaling">Quadratic Scaling</a></li>
+<li><a href="#advanced-element-combining">Advanced Element Combining</a></li>
+</ul>
+</div>
+<h2 id="overview">Overview</h2>
+<p>This page covers more technical and math heavy concepts in Warframe's modding system. These concepts are less relevant early on, but they become increasingly important as you push into Steel Path and start optimizing builds. For simplicity, none of the math here requires anything beyond basic algebra. The goal is to give you the tools to evaluate your own builds or at least understand what people are talking when you look at their build guides. </p>
+<blockquote>
+<p><strong>Note:</strong> This info is not geared towards new players</p>
+</blockquote>
+<hr>
+<h2 id="additive-vs-multiplicative-scaling">Additive vs Multiplicative Scaling</h2>
+<p>In Warframe, stats from different mods can interact in two ways. They either scale additively or multiplicatively with each other, and understanding the difference is an important concept when you're trying to optimize your damage. </p>
+<blockquote>
+<p><strong>Note:</strong> Mods can scale both additively and multiplicatively based on what you're comparing. For example, Serration (165% Damage) is additive to other mods but multiplicative to Elemental mods like Hellfire. </p>
+</blockquote>
+<p><strong>Additive scaling</strong> means mod stats are summed together before being applied. This generally happens when two mods affect the same stat. For example, Serration and Heavy Caliber both add base damage (% Damage) so they're additive to each other. </p>
+<p><code>Serration (+165%) + Heavy Caliber (+165%) = +330% Damage</code></p>
+<p>On a hypothetical weapon with 140 base damage this gives us:</p>
+<p><code>140 x (1 + 330%) = 602 damage</code></p>
+<p><strong>Multiplicative scaling</strong>, on the other hand, means mod stats are multiplied with each other. This usually happens when mods affect two different stats. For example, Serration adds base damage (% Damage) and Hellfire adds elemental damage (% Heat). In Warframe's damage formula, elemental damage scales with base damage, so the two stats effectively multiply. For that hypothetical 140 damage weapon, that looks like:</p>
+<p><code>140 x (1 + 165%) x (1 + 90%) = 704.9 damage (371 base damage + 333.9 Heat damage)</code></p>
+<p>As a rule of thumb, the more good multiplicative stat groups you can invest in, the better. Stacking multiple additive mods will lead to diminished returns, which we'll discuss in a later section. This is generally why a well rounded build will outperform one that stacks a single stat heavily.</p>
+<hr>
+<h2 id="raw-value-vs-relative-change">Raw Value vs Relative Change</h2>
+<p>When evaluating changes to your damage in Warframe, it’s important to distinguish between the raw change in a stat and the relative improvement to it. These two ideas are often confused and can lead to very different conclusions about whether an upgrade is worth it.</p>
+<p><strong>Raw value</strong> is simply the difference between two numbers. It's intuitive but can be misleading since it doesn't account for what you already have.</p>
+<p><strong>Relative change</strong> is how much something has changed compared to its initial value and is calculated as:</p>
+<p><code>% change = (final value - initial value) / initial value</code></p>
+<p><strong>An Example</strong></p>
+<p>Consider two setups looking to armor strip high level enemies. The first setup has no Archon Shards, while the second has a Tau Emerald Archon Shard (+3 maximum Corrosive stacks).</p>
+<ul>
+<li>10 Corrosive stacks leave them with 20% armor (540 armor), granting ~40% damage reduction.</li>
+<li>13 Corrosive stacks (with the shard) leave enemies with 2% armor (54 armor), granting ~13% damage reduction</li>
+</ul>
+<p>With the first build you're effectively dealing ~60% damage and with the second you're dealing ~87% damage. </p>
+<p>At first glance this looks like a 27% damage increase (87 - 60 = 27). However, if you look at the relative change you'll see that your damage increase is nearly double that!</p>
+<p><code>(87 - 60) / 60 = 0.45 or 45%</code></p>
+<p>We can verify this by multiplying 60% by 1.45, which gives us 87%.</p>
+<p><strong>Why Relative Change Matters</strong></p>
+<p>Warframe is a game of scarcity. Builds have limited slots, limited capacity, and limited mod options. Every mod or shard you put in your build comes at the cost of something else. Raw value differences just cannot account for all of these tradeoffs, so relative change becomes the better metric to use. </p>
+<hr>
+<h2 id="diminishing-returns">Diminishing Returns</h2>
+<p>As we touched on in the previous two sections, stacking additive mods can lead to diminished returns and relative change is the proper way to measure damage returns from putting on more mods. Diminished returns is the concept that as you add additional mods that affect one stat, the relative value of the next one decreases.</p>
+<p>To show this, let's take a hypothetical weapon with 140 damage and four scenarios where we keep adding 100% damage mods for the first 3 and instead substitute a 90% heat mod for the last one:</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Formula</th>
+<th>Final Damage</th>
+<th>Percent Increase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Base</td>
+<td>140 x (1)</td>
+<td>140</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2. 1x +100% Damage</td>
+<td>140 x (1 + 100%)</td>
+<td>280</td>
+<td>100% vs scenario 1</td>
+</tr>
+<tr>
+<td>3. 2x +100% Damage</td>
+<td>140 x (1 + 100% + 100%)</td>
+<td>420</td>
+<td>50% vs scenario 2</td>
+</tr>
+<tr>
+<td>4. 3x +100% Damage</td>
+<td>140 x (1 + 100% + 100% + 100%)</td>
+<td>560</td>
+<td>33% vs scenario 3</td>
+</tr>
+<tr>
+<td>5. 2x +100% Damage + 90% Heat</td>
+<td>(140 x (1 + 100% + 100%)) x (1 + 90%)</td>
+<td>798</td>
+<td>90% vs scenario 3</td>
+</tr>
+</tbody>
+</table>
+<p>Each 100% Damage mod adds the same raw 140% damage, but the relative increase drops sharply from 100% to 50% to 33% with each addition. This is diminishing returns in action. Scenario 5 shows why diversifying into multiplicative stat groups matters. Swapping that third additive damage mod for a 90% Heat mod gives a 90% relative increase compared to scenario 3. That's nearly three times the value you would have gotten from stacking another 100% Damage mod.</p>
+<blockquote>
+<p><strong>Note:</strong> Numbers in Warframe will never be this clean, but hopefully this simplification makes this concept easier to understand. </p>
+</blockquote>
+<hr>
+<h2 id="crit-tiers">Crit Tiers</h2>
+<p>In Warframe, crit chance can go over 100% and, rather than being wasted, anything over 100% can lead to higher tier critical hits. Each tier does increased damage based on your damage multiplier and is indicated by a different color or symbol.</p>
+<table style="width: 100%; border-collapse: collapse; font-family: 'Lato', sans-serif; font-size: 0.64rem; color: #dbd2ad;">
+  <thead>
+    <tr>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Tier</th>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Color</th>
+      <th style="padding: 0.6rem 1rem; text-align: left; font-weight: 700; color: #dbd2ad; border-bottom: 2px solid rgba(219,210,173,0.35);">Crit Chance Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">1</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1); font-weight: 600; color: #f5d800;">Yellow</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">0–100%</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">2</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1); font-weight: 600; color: #ff8c00;">Orange</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">100–200%</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">3</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1); font-weight: 600; color: #e03030;">Red (Super)</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">200–300%</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">4</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1); font-weight: 600; color: #e03030;">Red (! tier)</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">300–400%</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">5</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1); font-weight: 600; color: #e03030;">Red (!! tier)</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">400–500%</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">6+</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1); font-weight: 600; color: #e03030;">Red (!!! tiers)</td>
+      <td style="padding: 0.6rem 1rem; border-top: 1px solid rgba(219,210,173,0.1);">500%+</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+<p><strong>Note:</strong> The chart above shows all <strong>visible</strong> crit tiers in the game. Crit tiers can go higher than 6 but will be represented in the exact same way (red with '!!!')</p>
+</blockquote>
+<p>The damage multiplier for a standard crit hit can be calculated with:</p>
+<p><code>Crit Tier Multiplier = 1 + Crit Tier x (Total Crit Damage Multiplier − 1)</code></p>
+<p>For weakpoint crit hits, the formula is:</p>
+<p><code>Weakpoint Crit Multiplier = Weakpoint Multiplier x (1 + Crit Tier x (2 x Total Crit Damage Multiplier - 1))</code></p>
+<p>Do note, that while higher crit tiers look nice, there are diminishing returns to heavily investing in crit to push higher crit tiers. As we mentioned earlier all stats have diminishing returns when you invest more and more into them and crit chance is no exception. The table below shows this concept in action with a hypothetical weapon modded to have a 4.4x crit damage multiplier.</p>
+<table>
+<thead>
+<tr>
+<th>Crit Tier</th>
+<th>Crit Damage Multiplier</th>
+<th>Percent Increase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>4.4x</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2</td>
+<td>7.8x</td>
+<td>77.3%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>11.2x</td>
+<td>43.6%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>14.6x</td>
+<td>30.4%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>18.0x</td>
+<td>23.3%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>21.4x</td>
+<td>18.9%</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="status-weighting">Status Weighting</h2>
+<p>As mentioned in the Damage Types &amp; Status Effects page, when a weapon triggers a status, each damage type's chance is equal to its percentage of the total damage. This is known as status weighting.</p>
+<p>For example, imagine a weapon has 25 impact, 50 puncture, and 75 slash for a total of 150 base damage. </p>
+<table>
+<thead>
+<tr>
+<th>Damage Type</th>
+<th>Damage</th>
+<th>Percent of Total Damage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Impact</td>
+<td>25</td>
+<td>16.7%</td>
+</tr>
+<tr>
+<td>Puncture</td>
+<td>50</td>
+<td>33.3%</td>
+</tr>
+<tr>
+<td>Slash</td>
+<td>75</td>
+<td>50%</td>
+</tr>
+</tbody>
+</table>
+<p>Whenever this weapon would apply a status, it would have a 50% chance to be a Slash proc, 33% chance to be a Puncture proc, and only 16.7% chance to be an Impact proc. Understanding this concept lets you control which statuses you want your weapon to apply and minimize the ones you don't want. </p>
+<p>One mistake I see constantly is running a <strong>high</strong> strength Nourish build with status focused weapons like the Phantasma. Nourish adds Viral damage to your weapons and can grant large percentages with high strength values. This can heavily skew your status weighting towards Viral, and for a weapon like the Phantasma which relies on applying lots of DoT status effects, this can significantly hurt the weapon's DPS.</p>
+<hr>
+<h2 id="faction-mods-double-dipping">Faction Mods &amp; Double Dipping</h2>
+<p>If you look at builds online you’ll often see people stress the use of faction mods and use terms like 'Double Dipping' or 'Triple Dipping'. </p>
+<p>Faction mods are a special type of mod that applies a faction damage multiplier against a specific group. Prime faction mods can give up to a 1.55x, which is a sizeable damage boost. However damaging status procs benefit from faction mods more than you'd expect. </p>
+<p>The formula for status DoT damage can be simplified to:</p>
+<p><code>DoT Damage = Modified Base Damage x Damage Type Scalers x Status Damage Multipliers x Faction Modifier</code></p>
+<p>And interestingly, modified base damage is calculated by:</p>
+<p><code>Modified Base Damage = Base Damage x % Damage Mods x Faction Modifier</code></p>
+<p>Notice something? The 'Faction Modifier' appears twice! This means status DoTs effectively scale with the faction modifier squared:</p>
+<p><code>DoT Damage = Base Damage x % Damage Mods x Faction Modifier² x Damage Type Scalers x Status Damage Multipliers</code></p>
+<p>This is what players mean when they say that a mod or effect 'double dips' or 'triple dips'. Faction mods and damaging status DoTs is the most common example of double dipping but there are other effects like Saryn's Toxic Lash that can have stat modifiers appear twice or three times in a formula, leading to greatly improved effects. </p>
+<hr>
+<h2 id="quadratic-scaling">Quadratic Scaling</h2>
+<p>Quadratic scaling is the concept where certain damaging effects can scale based on both the number of enemies hit and the number of enemies nearby. This can cause damage instances to grow exponentially instead of linearly.</p>
+<p>A great example for this is Gas procs. Gas creates a poisonous cloud around the target that will damage nearby enemies. In tightly clustered groups of enemies this creates a compounding effect.</p>
+<p>Hitting a group of 5 enemies and applying Gas procs to each:</p>
+<ul>
+<li>Each enemy creates a Gas cloud that hits all 5 enemies in range</li>
+<li>Total damage instances: 5 x 5 = 25</li>
+</ul>
+<p>Hitting a group of 10 enemies and applying Gas procs to each:</p>
+<ul>
+<li>Each enemy creates a Gas cloud that hits all 10 enemies in range</li>
+<li>Total damage instances: 10 x 10 = 100</li>
+</ul>
+<p>By doubling the number of enemies hit and apply Gas procs to, you can effectively quadruple the number of damage instances. This X² scaling is where the term 'quadratic scaling' comes from, and this is why Gas and similar effects can produce incredibly high DPS numbers in dense enemy groups. </p>
+<hr>
+<h2 id="advanced-element-combining">Advanced Element Combining</h2>
+<p>The following section covers two edge cases in Warframe's elemental combining system you might encounter in niche situations but are worth knowing about. </p>
+<h3 id="hcet-ordering">HCET Ordering</h3>
+<div class="guide-text-image">
+<div class="guide-text-image__text">
+<p>HCET stands for Heat, Cold, Electricity, Toxin. As mentioned on the <a href="../mod-damage/">Damage Types &amp; Status Effects</a> page, innate elements and progenitors occupy an imaginary slot at the end of your mod order. In reality, these can be thought of as <strong>four</strong> invisible slots 9-12 which are mapped to Heat (9), Cold (10), Electricity (11), and Toxin (12). This nuance becomes important when you're considering weapons that have both a progenitor element and an innate element. </p>
+<p>As an example, the Tenet Envoy has an innate Cold AOE. If the progenitor element is Toxin, then Cold occupies slot 10 and Toxin occupies slot 12, giving you Viral by default. However, if a Heat mod is added, it will combine with the innate Cold first since Cold (slot 10) comes before Toxin (slot 12), and you'll get Blast and Toxin on your weapon instead of Viral + Heat like you might expect.</p>
+</div>
+<figure class="guide-text-image__img" style="flex: 0 0 40%;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/modding/adv-hcet.webp" data-desc-position="bottom"><img src="../../images/modding/adv-hcet.webp" alt="HCET example"></a>
+</figure>
+</div>
+<p>To get Viral and Heat on the Tenet Envoy in this situation, you'd need to add both a Toxin and a Cold mod before your Heat mod, so that they combine into Viral first. The progenitor and innate elements would then just feed into the existing Viral damage instead of combining with the Heat damage. </p>
+<h3 id="riven-element-ordering">Riven Element Ordering</h3>
+<p>Another oddity with elemental combining comes from Rivens with multiple elemental stats. Rather than read left to right, top to bottom like standard mods, Riven elements are read bottom to top.</p>
+<p>For example, the Riven below would be read as (1) Cold -&gt; (2) Heat. </p>
+<p>Placing a Toxin mod before the Riven would give you Gas (Toxin + Heat) and Cold, while placing it after the riven gives you Blast (Heat + Cold) + Toxin. </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/modding/adv-riven.webp" data-desc-position="bottom"><img alt="Zylok Riven" class="center bordered floored" src="../../images/modding/adv-riven.webp" width="15%"></a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+<a class="back-to-top-btn" href="#" aria-label="Back to top">
+  <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+    <path d="M8 2 L15 13 L1 13 Z"></path>
+  </svg>
+  Top
+</a>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/glightbox-scroll-zoom.js"></script>
+      
+        <script src="../../javascripts/amp.js"></script>
+      
+        <script src="../../javascripts/items-cache.js"></script>
+      
+        <script src="../../javascripts/prime-list.js"></script>
+      
+        <script src="../../javascripts/resurgence.js"></script>
+      
+        <script src="../../javascripts/sentinel-images.js"></script>
+      
+        <script src="../../javascripts/nav-dropdown.js"></script>
+      
+        <script src="../../javascripts/feedback-form.js"></script>
+      
+        <script src="../../javascripts/riven-stats.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
