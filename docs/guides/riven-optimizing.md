@@ -42,10 +42,12 @@ While there's no set list of 'best' traits, here's my list of traits to look at 
 - Reload While Holstered
 - Parry Angle
 
+Additionally, this resource also exists which covers ideal rolls for every Riven. [Good Rolls for Selling](https://docs.google.com/spreadsheets/d/1zbaeJBuBn44cbVKzJins_E3hTDpnmvOk8heYN-G8yy8/edit?gid=1687910063#gid=1687910063)
+
 ---
 ## The Rolling Strategy
 
-This locking strategy assumes you want a spliced trait. If you just want non-spliced traits, skip steps 3 & 4. 
+This locking strategy assumes you want a spliced trait and know what traits you want. If you just want non-spliced traits, skip steps 3 & 4. 
 
 1. First, roll for your ideal configuration. In most cases this'll be a 3p1n.
 2. Lock a trait to keep the config. If you're aiming for Slam Damage, Status Damage on melees, or any elemental spliced traits, lock the negative; otherwise, lock a random positive.
