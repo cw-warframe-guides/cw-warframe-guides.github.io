@@ -1,5 +1,6 @@
 ---
 template: guide.html
+last_updated: April 2026
 ---
 
 # Arbitrations
@@ -33,6 +34,6 @@ Completing rounds in your Arbitration will grant you one of several potential re
 ---
 ## Guide Resources
 
-[**The Arbitration Guide**](https://docs.google.com/document/d/14yAA4rv82MVjDJKasm70oL_peegCHPQioDeMGdvf4DM/edit?tab=t.0#heading=h.rfjqg022dj7p)
+[**The Arbitration Guide**](https://arbi.guide)
 
-This community document covers meta strategies and Vitus Essence farming optimization. Following the strategies outlined and selecting favorable tilesets can net upward of 400-600 Vitus Essence per hour.
+This community site covers meta strategies and Vitus Essence farming optimization. Following the strategies outlined and selecting favorable tilesets can net upward of 400-600 Vitus Essence per hour.

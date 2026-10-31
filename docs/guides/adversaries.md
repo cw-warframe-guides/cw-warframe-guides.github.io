@@ -1,5 +1,6 @@
 ---
 template: guide.html
+last_updated: April 2026
 ---
 
 # Kuva Lichs & Sisters of Parvos

@@ -1,5 +1,6 @@
 ---
 template: guide.html
+last_updated: June 2026
 ---
 
 # Credit Farming

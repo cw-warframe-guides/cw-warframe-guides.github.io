@@ -1,5 +1,6 @@
 ---
 template: guide.html
+last_updated: April 2026
 ---
 
 # Focus and the Five Schools

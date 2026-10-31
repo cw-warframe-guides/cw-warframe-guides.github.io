@@ -54,4 +54,3 @@ extra_javascript:
   - javascripts/sentinel-images.js
   - javascripts/nav-dropdown.js
   - javascripts/feedback-form.js
-  - javascripts/riven-stats.js

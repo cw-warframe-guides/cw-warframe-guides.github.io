@@ -66,7 +66,14 @@ template: guide-index.html
             <li><a href="../guides/companion-robo/">Other Robotics</a></li>
           </ul>
         </li>
-        <li><a href="../guides/rivens/">Riven Guide</a></li>
+        <li class="guide-subgroup">
+          <span class="guide-subgroup__label">Rivens</span>
+          <ul class="guide-subgroup__items">
+            <li><a href="../guides/rivens/">Basics</a></li>
+            <li><a href="../guides/riven-spliced/">Spliced Traits</a></li>
+            <li><a href="../guides/riven-optimizing/">Optimizing Your Rolls</a></li>
+          </ul>
+        </li>
         <li><a href="../guides/valence/">Valence Fusion</a></li>
         <li><a href="../guides/helminth/">Helminth System</a></li>
       </ul>
@@ -105,7 +112,6 @@ template: guide-index.html
         <li><a href="../guides/aleca/">AlecaFrame</a></li>
         <li><a href="../guides/amp/">Amp Chart</a></li>
         <li><a href="../guides/gun-co/">GunCO Spreadsheet</a></li>
-        <li><a href="../guides/riven-stats/">Riven Stat Recommender</a></li>
         <li><a href="../guides/wfm/">Warframe.Market</a></li>
         <li><a href="../guides/wf-colorpicker/">Warframe Color Picker</a></li>
       </ul>

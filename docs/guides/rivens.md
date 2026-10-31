@@ -1,84 +1,94 @@
 ---
 template: guide.html
+last_updated: October 2026
 ---
 
-# Riven Guide
+# Rivens: Basics
 
 <div class="inline-toc" markdown="1">
 <p class="inline-toc__title">Table of Contents</p>
 
 - [Overview](#overview)
 - [Where to Get Rivens](#where-to-get-rivens)
-- [Riven Disposition](#riven-disposition)
-- [Rerolling Stats](#rerolling-stats)
-- [Recommended Riven Stats](#recommended-riven-stats)
-- [How to Price Your Riven](#how-to-price-your-riven)
+- [Changing a Riven's Stats](#changing-a-rivens-stats)
+- [Stat Grading](#stat-grading)
+- [Riven Splicing](#riven-splicing)
+- [Optimizing Your Rolls](#optimizing-your-rolls)
+- [Trading and Pricing Rivens](#trading-and-pricing-rivens)
 
 </div>
 
 ## Overview
 
-Riven mods are special weapon-specific mods that were originally meant to boost underused or niche weapons. Rivens start veiled and give a challenge that's required to unveil it and make it usable. Each unveiled Riven is tied to a specific weapon family and cannot be equipped on other weapons. Each mod also rolls up to 3 random positive stats and one negative stat.
+Riven mods are special weapon-specific mods that provide unique combinations of stats. Each Riven mod can also roll 2-3 random positive stats and 0-1 negative stats. These configurations are described with the shorthand '#p#n' (e.g. a Riven with 3 positive traits and 1 negative would be shortened to 3p1n). 
+
+> **Note:** While having a negative stat may sound unappealing, the presence of a negative stat will boost the numerical value of all of your positive stats.
+
+Rivens start in a 'veiled' state and give challenges that are required to make them usable. Completing the challenge will 'unveil' the Riven and assign it to a weapon. Once unveiled a Riven can only be equipped on its linked weapon or weapon variants (e.g. MK-1 Braton, Braton, Braton Vandal, and Braton Prime can all use Braton Rivens). If a challenge is too difficult or tedious, a Riven Cipher can be used to instantly complete the challenge. 
 
 ---
 ## Where to Get Rivens
 
 At the moment, Rivens can be obtained from the following sources:
 
-- Palladino in Iron Wake (2 Rivens for 10 Riven Slivers each)
-- Archon Hunts (potential reward)
-- Daily Sorties (potential reward)
-- Teshin Steel Path shop (potential weekly offering)
-- Acrithis's shop (random weekly offering)
-- Steel Path Circuit (random offering in weekly reward track)
+### Guaranteed / Purchasable
+- Palladino in Iron Wake (2 Rivens weekly for 10 Riven Slivers each)
 - Arbitration Honors vendor (Archgun Riven for 35 Vitus Essence)
 - Cephalon Simaris (Companion Weapon Rivens for 100,000 standing)
+- Transmuting 4 Rivens with a Riven Transmuter
+
+### Chance-based
+- Archon Hunts
+- Daily Sorties
+- Teshin Steel Path shop (weekly offering every 8 weeks)
+- Acrithis's shop
+- Steel Path Circuit (random offering in weekly reward track)
+- Nightwave Calendar
+- Höllvania Calendar Rewards
+- Icebind (potential drop from regular and crested frozen chests)
 
 ---
-## Riven Disposition
-### The Short Answer
+## Changing a Riven's Stats
 
-- Every weapon has a Riven disposition
-- Disposition affects the stat values that a Riven can roll
-- In the arsenal, this is displayed as 1 to 5 dots with 1 being a low disposition and 5 being high
-- Low disposition generally means worse stat values, while higher means better ones. 
+Most of the time a Riven's stats won't be good out of the gate. Cycling (commonly called rerolling) will randomize the stats and their values on a Riven in exchange for Kuva.
 
-### The Full Picture
+To reroll your Riven, go to your mod bench, select the Riven, and click the Cycle option. Spending Kuva will then present you with two options: keep the original or take the new roll. Since stats are entirely random, it may take quite a few rolls before you find a roll you're happy with. 
 
-On the backend, disposition isn't a simple 1-5 scale. Each weapon is assigned a disposition value from 0.5 - 1.55 that acts as a stat multiplier, affecting the potential range that stats can roll within.
+> **Note:** Each roll will increase the amount of Kuva needed to roll again, up to a cap of 3.5k.
 
-For example, let's say Rivens can normally roll a multishot value from 50% to 100% multishot. With different dispositions, Rivens can only roll within higher or lower stat ranges. 
+### Riven Stat Locking
 
-Weapon | Disposition | Multishot roll range |
-|--------|-------------|----------------------|
-| Standard | 1 | 50% — 100% |
-| Weapon A | 0.5 | 25% — 50% |
-| Weapon B | 1.5 | 75% — 150% |
-
-This is important because weapons with the same “dots” can have different disposition values. One great example is the Boltor vs Boltor Prime. In game, both show a disposition of 4 dots, but the Boltor has a disposition of 1.3x while the Boltor Prime sits at 1.2x. If you equip the same Riven on both weapon you'll notice that your Riven has different numbers. 
-
-> **Note:** All new weapons start with a disposition of 0.5 and are gradually increased until they reach a level DE is satisfied with. This system was set in place to avoid having to reduce the disposition of weapons that were too strong on release.
+Additionally, if you find a desirable stat, up to one stat can be locked, preventing you from losing the stat while rerolling. Do note that this will double the cost of all future rolls and lock your Riven into its current configuration. This means if you lock a Riven while it's 2p1n, it will always stay as a 2p1n Riven until you unlock the trait. 
 
 ---
-## Rerolling Stats
+## Stat Grading
 
-When you unveil a Riven it's assigned to a random weapon family and given a random set of stats. Sometimes these are great, but most of the time they won't be good out of the gate. Cycling (commonly called rerolling) will randomize the stats and their values on a Riven in exchange for Kuva.
-
-To reroll your Riven, go to your mod bench, select the riven, and click the Cycle option. Spending kuva will then present you with two options: keep the original or take the new roll. Since stats are entirely random, it may take quite a few rolls before you find a roll you're happy with. 
+You may also notice that every time you roll the same stat, the number is usually different. This is because Riven stats have a raw value and can then roll anywhere from 0.9x to 1.1x of that raw value. How well they roll is often referred to as a 'grade' and can be used for determining some of the value of Rivens. 
 
 ---
-## Recommended Riven Stats
+## Riven Splicing
 
-What makes a Riven 'good' varies by weapon, and with experience you'll naturally figure out what stats are desirable and what stats aren't. The tool below lets you search any weapon and pull up recommended stat combinations and notes.
+With the release of Icebind, players now have access to Riven Splicers and new compound 'spliced' stats that they can get on their Riven. Each spliced stat is created by combining two specific regular stats.
 
-[**Open the Riven Stat Tool**](riven-stats.md)
+[**Spliced Stats Chart**](riven-spliced.md)
 
-> **Note**: Due to how some late game mods are, lower disposition weapons will often need better Riven rolls to have them outperform standard mods.
+Spliced stats inherit the highest grade between the two stats used to create it. This means you only really need to get a good grade for 1 of the stats.
 
 ---
-## How to Price Your Riven
+## Optimizing Your Rolls
 
-Riven prices are highly subjective. Much like fine-art, people can generally agree on what's objectively good. However, what someone is willing to pay for said art can vary wildly from person to person.
+Getting a good Riven can be tricky. Knowing what stats to aim for while also trying to manage Kuva and Riven Splicers can be a challenge. However, there are strategies to reduce the amount of RNG you need to deal with. Check the page below to learn more about my optimized Riven rolling strategy.
 
-There's no perfect method, but one strategy is to search for similar rivens on [Warframe.Market](https://warframe.market). Keep in mind that the listings you see are ones that haven't sold yet, but if you see multiple listings at a similar price, that can be a good baseline.
+[**Optimizing Riven Rolls**](riven-optimizing.md)
+
+---
+## Trading and Pricing Rivens
+
+Riven prices are highly subjective. Much like fine art, people can generally agree on what's objectively good. However, what someone is willing to pay for said art can vary wildly from person to person.
+
+Generally, weapon popularity, ideal stats (good positives and harmless negatives), and high grades will positively affect the price of Rivens.
+
+There's no perfect method to pricing, but one strategy is to search for similar Rivens on [Warframe.Market](https://warframe.market). Keep in mind that the listings you see are ones that haven't sold yet, but if you see multiple listings at a similar price, that can be a good baseline. 
+
+If you're in a Warframe group with experienced Riven traders, you can always ask them for insight as well. 
 

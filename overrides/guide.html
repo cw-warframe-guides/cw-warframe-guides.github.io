@@ -158,6 +158,16 @@
     letter-spacing: 0.05em;
   }
 
+  /* Manual "Last updated" line, set via last_updated in page front matter */
+  .guide-last-updated {
+    margin-top: 2.5rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(219, 210, 173, 0.15);
+    font-size: 0.7rem;
+    font-style: italic;
+    color: rgba(219, 210, 173, 0.6);
+  }
+
   /* Back to top button: hidden on wide screens */
   .back-to-top-btn { display: none; }
 
@@ -193,6 +203,9 @@
 
 {% block content %}
 {{ super() }}
+{% if page.meta.last_updated %}
+<p class="guide-last-updated">Last updated {{ page.meta.last_updated }}</p>
+{% endif %}
 <a class="back-to-top-btn" href="#" aria-label="Back to top">
   <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
     <path d="M8 2 L15 13 L1 13 Z"/>

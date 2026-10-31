@@ -12,6 +12,8 @@ A big thank you to everyone who gave advice on the site or looked over my guides
 
 I hope you enjoy my guides! If you have any feedback or if there's something specific you'd like a guide on, please [submit a message here](feedback.md) or feel free to hit me up on Discord/WF (User/IGN: Charithw)!
 
+Last updated: 10/30/2026
+
 <div class="home-cta">
   <a href="guide_index/" class="guide-index-btn">View Guide Index</a>
 </div>
