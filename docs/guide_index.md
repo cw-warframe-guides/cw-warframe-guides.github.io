@@ -27,7 +27,7 @@ template: guide-index.html
     </div>
 
     <div class="guide-category" id="modding-and-optimization">
-      <h2>Learning Modding &amp; Optimization</h2>
+      <h2>Learning Modding</h2>
       <ul>
         <li><a href="../guides/mod-basics-1/">The Basics: Modding Terminology</a></li>
         <li><a href="../guides/mod-basics-2/">The Basics: Stats &amp; Combat Terminology</a></li>
@@ -36,7 +36,6 @@ template: guide-index.html
         <li><a href="../guides/mod-warframes/">Modding: A Checklist for Warframes</a></li>
         <li><a href="../guides/mod-guns/">Modding: A Checklist for Guns</a></li>
         <li><a href="../guides/mod-melees/">Modding: A Checklist for Melees</a></li>
-        <li><a href="../guides/railjack-max/">Railjack Optimization</a></li>
       </ul>
     </div>
 
@@ -49,7 +48,13 @@ template: guide-index.html
         <li><a href="../guides/invasions/">Invasions</a></li>
         <li><a href="../guides/prime-vault/">Primes, Vaulting, &amp; Resurgence</a></li>
         <li><a href="../guides/void-relics/">Void Relics Explained</a></li>
-        <li><span class="tbd">Railjack (TBD)</span></li>
+        <li class="guide-subgroup">
+          <span class="guide-subgroup__label">Railjack</span>
+          <ul class="guide-subgroup__items">
+            <li><a href="../guides/railjack-fundamentals/">Fundamentals</a></li>
+            <li><a href="../guides/railjack-max/">Optimization</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
 
@@ -124,7 +129,7 @@ template: guide-index.html
     <ul>
       <li><a href="#getting-started">Getting Started</a></li>
       <li><a href="#core-farm">Farming Guides</a></li>
-      <li><a href="#modding-and-optimization">Modding &amp; Optimization</a></li>
+      <li><a href="#modding-and-optimization">Learning Modding</a></li>
       <li><a href="#game-systems">Game Systems</a></li>
       <li><a href="#gear-systems">Companions &amp; Gear Systems</a></li>
       <li><a href="#mid-late-systems">Mid / Late Game Systems</a></li>
