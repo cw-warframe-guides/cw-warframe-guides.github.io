@@ -58,7 +58,6 @@ Additionally, optional objectives will net additional rewards in the form of exc
 ---
 ## Components & Armaments
 
-<!-- TODO: The four components (Shields, Engines, Plating, Reactor), MK tiers, and where MK3 parts come from (wreckage, which regions drop which houses). -->
 There are 4 basic components and 3 armaments for every Railjack. These are the:
 - Shields - affects your ship's shields and shield recharge stats
 - Engines - affects your ship's speed
