@@ -1,0 +1,975 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cw-warframe-guides.github.io/guides/railjack-fundamentals/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Railjack: Fundamentals - Charithw's WF Guide Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+<meta name="darkreader-lock">
+<script>window.__mkdocsBase = "../..";</script>
+<style>
+  /* Hide left nav sidebar (but not on mobile — drawer uses it) */
+  @media (min-width: 631px) {
+    .md-sidebar--primary { display: none !important; }
+  }
+
+  /* Hide Material footer generator line */
+  .md-footer-meta { display: none !important; }
+
+  /* Expand layout to full viewport width, dead space on left only */
+  .md-main__inner {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: clamp(0rem, 12vw, 12.1rem) !important;
+    padding-right: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TOC: sticky in normal flow, sits at right edge */
+  .md-sidebar--secondary {
+    position: sticky !important;
+    top: 3.5rem !important;
+    width: 12.1rem !important;
+    flex-shrink: 0 !important;
+    height: fit-content !important;
+    background-color: #1c1c1c !important;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    height: fit-content !important;
+    overflow: visible !important;
+    background-color: #1c1c1c !important;
+  }
+
+  /* Text + image side by side, image vertically centered */
+  .guide-text-image {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .guide-text-image__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .guide-text-image__img {
+    flex: 0 0 50%; /* ← default image column width; override per-instance via inline style on <figure> */
+    min-width: 0;
+    margin: 0;
+  }
+
+  .guide-text-image__img img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-text-image__img figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* Hide TOC sidebar earlier than Material's default ~960px breakpoint */
+  @media (max-width: 1200px) {
+    .md-sidebar--secondary { display: none !important; }
+  }
+
+  /* Stack text above image at narrow widths */
+  @media (max-width: 1000px) {
+    .guide-text-image {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-text-image__text {
+      width: 100%;
+    }
+
+    .guide-text-image__img {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Two images side by side */
+  .guide-image-pair {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .guide-image-pair figure {
+    flex: 1 1 0; /* default: equal split — override per-figure with style="flex: 0 0 40%" */
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .guide-image-pair figure img {
+    width: 100%;
+    border-radius: 3px;
+    border: 2.5px solid #b59d47;
+  }
+
+  .guide-image-pair figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  figure > .guide-image-pair ~ figcaption {
+    display: block;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #b59d47;
+    font-style: italic;
+  }
+
+  @media (max-width: 1000px) {
+    .guide-image-pair {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guide-image-pair figure {
+      width: 100%;
+      max-width: 480px;
+    }
+  }
+
+  /* Page title: centered, matching guide index size */
+  .md-content h1 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  /* TOC sidebar: "Table of contents" label */
+  .md-sidebar--secondary .md-nav__title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.85rem !important;
+    color: #b59d47 !important;
+    letter-spacing: 0.05em;
+  }
+
+  /* Manual "Last updated" line, set via last_updated in page front matter */
+  .guide-last-updated {
+    margin-top: 2.5rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(219, 210, 173, 0.15);
+    font-size: 0.7rem;
+    font-style: italic;
+    color: rgba(219, 210, 173, 0.6);
+  }
+
+  /* Back to top button: hidden on wide screens */
+  .back-to-top-btn { display: none; }
+
+  @media (max-width: 1200px) {
+    .back-to-top-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      z-index: 201;
+      background: #26221a;
+      border: 1.5px solid #b59d47;
+      border-radius: 3px;
+      color: #b59d47;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+      text-decoration: none !important;
+    }
+
+    .back-to-top-btn:hover {
+      background: #b59d47;
+      color: #1c1c1c !important;
+    }
+  }
+</style>
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#railjack-fundamentals" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner" aria-label="Header">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-header__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <span class="md-header__topic">Charithw's WF Guide Hub</span>
+    </div>
+    <div class="md-header__spacer"></div>
+    <nav class="md-header-nav" aria-label="Site navigation">
+      
+      
+      <a href="../.." class="md-header-nav__link">
+        Home
+      </a>
+      
+      
+      
+      <a href="../../guide_index/" class="md-header-nav__link">
+        Guide Index
+      </a>
+      
+      
+      
+      <div class="md-header-nav__item--dropdown" data-md-dropdown="">
+        <button class="md-header-nav__link md-header-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          More
+        </button>
+        <ul class="md-header-nav__dropdown-menu" role="menu">
+          
+          <li role="none">
+            <a href="../../feedback/" class="md-header-nav__dropdown-link" role="menuitem">
+              Feedback
+            </a>
+          </li>
+          
+          <li role="none">
+            <a href="../../credits/" class="md-header-nav__dropdown-link" role="menuitem">
+              Credits
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
+    </nav>
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide_index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../feedback/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Charithw's WF Guide Hub" class="md-nav__button md-logo" aria-label="Charithw's WF Guide Hub" data-md-component="logo">
+      
+  <img src="../../images/Logo.svg" alt="logo">
+
+    </a>
+    Charithw's WF Guide Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    More
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-a-railjack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting a Railjack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#railjack-missions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Railjack Missions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-armaments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components &amp; Armaments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-plexus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Plexus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-forge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Forge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intrinsics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intrinsics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crew
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+
+<h1 id="railjack-fundamentals">Railjack: Fundamentals</h1>
+<div class="inline-toc">
+<p class="inline-toc__title">Table of Contents</p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#getting-a-railjack">Getting a Railjack</a></li>
+<li><a href="#railjack-missions">Railjack Missions</a></li>
+<li><a href="#components">Components</a></li>
+<li><a href="#the-plexus">The Plexus</a></li>
+<li><a href="#the-forge">The Forge</a></li>
+<li><a href="#intrinsics">Intrinsics</a></li>
+<li><a href="#crew">Crew</a></li>
+</ul>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Railjacks are large space warships piloted by the Tenno, which allow them to travel outside of the standard planetary systems in Empyrean missions. Railjack allows up to 4 players to man a ship and tackle various missions against the Grineer, the Corpus, and the Sentients. Railjack is also tied into several quests and required for the end-stage of <a href="../adversaries/">adversaries</a> and <a href="../coda/">coda</a> enemies. </p>
+<p>For a quick run through on the optimal Railjack gear check out our <a href="../railjack-max/">Railjack optimization</a> page</p>
+<hr>
+<h2 id="getting-a-railjack">Getting a Railjack</h2>
+<p>Railjacks are unlocked during the Rising Tide quest after The War Within. Alternatively, they can also be obtained through the market for 175p which will also autocomplete the quest. To interact with your Railjack, you'll need to visit a Dry Dock on the Saturn Relay, Pluto Relay, or in your Clan's Dojo if it's been constructed. </p>
+<hr>
+<h2 id="railjack-missions">Railjack Missions</h2>
+<p>Railjack missions can be launched from the navigator on your Railjack or from your regular navigation screen by clicking the Railjack icon in the top right corner to switch to the map of the Proxima regions. Railjack missions typically have a mixture of space combat objectives and mandatory/optional points of interest which require you to exit your Railjack and complete a mission. In Grineer Railjack missions, some of these points of interest will require you to coordinate tasks between people on Grineer vessels and people in the Railjack. </p>
+<p><strong>Damage, Hazards, &amp; Repairs</strong></p>
+<p>As your Railjack takes damage, it can suffer boarding attempts and hazards like fires and electrical malfunction. These damage and debuff your ship until they're either purged with your weapons or repaired with your Omni tool. If your hull (HP) reaches zero, your ship will recieve a catastrophic hull breach. This stalls your engines and puts the ship in a 'bleed-out' state for a minute. If the breach is not repaired in that time, the mission will automatically fail. </p>
+<p>Repairing hazards uses Revolite. If you run out of Revolite during a mission, visit the forge in your ship to refill on Revolite. A section explaining the forge can be found below or just click <a href="#the-forge">here</a>!</p>
+<p><strong>Sentient Anomalies</strong></p>
+<p>In the Veil Proxima, you may find Sentient Anomalies in some of your Grineer missions. These are indicated by flashing red pulses around the mission nodes. In these missions you'll get the opportunity to raid a Sentient Murex, and completing them will get you an Anomaly Shard which is used for several recipes. </p>
+<p><strong>Void Storms</strong></p>
+<p>Void Storms are the Railjack equivalent to Void Fissures in regular missions and function nearly the exact same. One difference of note is that Reactant pickups are shared for all players. </p>
+<p><strong>Loot</strong></p>
+<p>Railjack missions drop Railjack-specific resources (e.g. Titanium, Asterite, Carbides, Pustrels) used to build parts and craft consumables in the Forge. Enemy ships can also drop components and armaments that you can inspect and repair at the Dry Dock to upgrade your ship. See <a href="#components">Components</a> to learn more.</p>
+<p>Additionally, optional objectives will net additional rewards in the form of exclusive blueprints (e.g. Carmine Penta &amp; Nautilus), relics for the Valkyr Prime and Nyx Prime series (both the Warframes and their weapons), and mods like (Hemorrhage and Internal Bleeding).</p>
+<hr>
+<h2 id="components-armaments">Components &amp; Armaments</h2>
+<p>There are 4 basic components and 3 armaments for every Railjack. These are the:
+- Shields - affects your ship's shields and shield recharge stats
+- Engines - affects your ship's speed
+- Plating - determines how much health and armor your ships have
+- Reactor - gives a combination of duration, range, and strength
+- Nose Turret - the turret controlled by the pilot
+- Swivel Turret - all the other turrets on the Railjack
+- Ordnance - special weapon with limited charges</p>
+<p>Component and armament stats (except for Ordnance) can vary from piece to piece. This is because Railjack parts use the same stat range and Valence Fusion systems as adversary weapons. When valence fusing Railjack parts, parts do not need to be of the same tier or fully repaired first. You can fuse scrap parts to built ones at 40% crafting cost, and lower tier parts can be fused for a smaller fusion percentage gain.</p>
+<blockquote>
+<p><strong>Note:</strong> You can check out the <a href="../valence/">Valence Fusion</a> guide if you want tips on maxing your Railjack gear in the fewest number of fusions.</p>
+</blockquote>
+<hr>
+<h2 id="the-plexus">The Plexus</h2>
+<p>The Plexus is the Railjack version of modding which impacts your and your crew's performance. It's divided into three sections: Integrated, Battle, and Tactical</p>
+<p>The integrated section has a limited capacity that scales with Plexus rank (like a Warframe) and consists of mods that provide passive stats to you and your crew. The Battle and Tactical sections have no capacity and allow you to slot in 3 battle mods and 3 tactical mods which give you access to Railjack abilities. </p>
+<hr>
+<h2 id="the-forge">The Forge</h2>
+<p>The Forge is a part of the ship that allows you to replenish specific Railjack supplies. The Forge can be found in the back of the ship on the lowest level and is interactable from 4 forge terminals. Crafting at any of these terminals locks it down and puts it on a temporary cooldown. The Forge can produce 5 resources
+- Revolite - Used for repairing the ship
+- Dome Charges - Ammo for the forward artillery
+- Munitions - Ammo for your ordnance
+- Energy
+- Hull Restore - Fully repair your Railjack's hull (HP)</p>
+<hr>
+<h2 id="intrinsics">Intrinsics</h2>
+<p>There are five main Intrinsic classes: Tactical, Piloting, Gunnery, Engineering, and Command. Each rank unlocks new perks that can affect both Railjack <strong>and</strong> regular missions. Intrinsics also give mastery points (1500 per rank).</p>
+<p><strong>Early Priority</strong></p>
+<ul>
+<li><strong>Engineering 4</strong> - Lets you craft Artillery shells in the forge</li>
+<li><strong>Piloting 1</strong> - Unlocks boosting</li>
+<li><strong>Tactical 3-4</strong> - Lets you teleport around ship (Rank 3) and quick teleport back to ship with your Omni (Rank 4)</li>
+<li><strong>Command 1-5</strong> - Crew can fill empty spots and do basic functions. If you play in full parties, this isn't as important.</li>
+<li><strong>Gunnery 1</strong> - Enables Ordnance lock-on and target lead indicators</li>
+</ul>
+<p><strong>Mid / Late Priority</strong></p>
+<ul>
+<li><strong>Piloting 5</strong> - Marks hidden derelicts which have special extra drops</li>
+<li><strong>Tactical 6</strong> - Improves energy efficiency for Seeker Volley</li>
+<li><strong>Gunnery 9</strong> - Lets you rapidly cool your overheated turrets. Lets you comfortably use Zekti weapons</li>
+<li><strong>Command 9</strong> - Unlocks the on-call crew summon that you can use in regular missions. Damage scales with enemy level so it can output a lot of damage on level 100+ missions</li>
+<li><strong>Command 10</strong> - Lets Ticker offer elite crew which have more stats and bonus perks</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Older guides may recommend avoiding Gunnery 10 due to it increasing heat build up on turrets. However, this was recently changed and the heat build up was removed, making Gunnery 10 a non-harmful upgrage.</p>
+</blockquote>
+<p><strong>Extras</strong></p>
+<p>Several intrinsics buff Archwings and Necramechs outside of Railjack missions (Piloting 8, Tactical 8, Gunnery 8, Engineering 8 and 9). These are worth picking up if you enjoy using either.</p>
+<hr>
+<h2 id="crew">Crew</h2>
+<p>Crewmates are your replacement for other players and can repair damage (Engineers), use turrets (Gunners), or fly the Railjack (Pilots). You can get crewmates from Ticker on Fortuna once you start putting ranks into Command. Crewmates cannot be permanently lost in mission and if one dies, you'll need to return to the Dry Dock to get them back. The only way to lose a crewmate is to terminate their contract at Ticker.</p>
+<p>When other players join, crew will get replaced by real players from right to left. Keeping the engineer in the left slot ensures they're the last to be replaced. The engineer will handle ship repairs and protect the ship, which makes it a very valuable role.</p>
+<p><strong>Crew Stats</strong></p>
+<p>Crew can have 8, 10, or 12 (elite crew) competency points plus up to 3 trainable points for a maximum of 15 with an elite crew. These points are distributed across 5 stats.</p>
+<ul>
+<li><strong>Piloting</strong> - Increases maximum Railjack speed when the crewmate is piloting</li>
+<li><strong>Gunnery</strong> - Boosts turret accuracy and lowers heat accretion for the crewmate</li>
+<li><strong>Repair</strong> - Increases Railjack repair time and self-healing speed</li>
+<li><strong>Combat</strong> - Boosts the crewmate's weapon damage. Is additive with other %Damage mods</li>
+<li><strong>Endurance</strong> - Gives crewmates extra Health and Shields</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+<p class="guide-last-updated">Last updated November 2026</p>
+
+<a class="back-to-top-btn" href="#" aria-label="Back to top">
+  <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+    <path d="M8 2 L15 13 L1 13 Z"></path>
+  </svg>
+  Top
+</a>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/glightbox-scroll-zoom.js"></script>
+      
+        <script src="../../javascripts/amp.js"></script>
+      
+        <script src="../../javascripts/items-cache.js"></script>
+      
+        <script src="../../javascripts/prime-list.js"></script>
+      
+        <script src="../../javascripts/resurgence.js"></script>
+      
+        <script src="../../javascripts/sentinel-images.js"></script>
+      
+        <script src="../../javascripts/nav-dropdown.js"></script>
+      
+        <script src="../../javascripts/feedback-form.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
